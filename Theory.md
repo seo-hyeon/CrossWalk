@@ -16,6 +16,7 @@
 ## 윤예진 (서버)
 
 커리큘럼: https://drive.google.com/file/d/1hWKmAKVd9QHTAbL-SvcfnMoXdfqkGDcW/view?usp=sharing
+1주차(MySQL 기본 초반): https://drive.google.com/file/d/1G11uZw4_h18COuG47_SuDkU2_LDi_jjh/view?usp=sharing
 
 ---
 
