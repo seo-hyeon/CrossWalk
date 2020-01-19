@@ -8,6 +8,8 @@
 
 커리큘럼: https://drive.google.com/file/d/1KJs6BEacFvyJvRpHiXAk7YB0CcJxn-YO/view?usp=sharing
 
+1주차 (비지도학습 중 'K-means 알고리즘' 정리)
+: https://drive.google.com/file/d/1ELBnTpV1-yQsG3SRpqjG0rxekruqDqa5/view?usp=sharing
 
 ---
 
