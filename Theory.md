@@ -13,7 +13,7 @@
 
 ## 윤예진 (서버)
 
-https://drive.google.com/file/d/1KJs6BEacFvyJvRpHiXAk7YB0CcJxn-YO/view?usp=sharing
+커리큘럼: https://drive.google.com/file/d/1hWKmAKVd9QHTAbL-SvcfnMoXdfqkGDcW/view?usp=sharing
 
 ---
 
