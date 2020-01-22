@@ -22,4 +22,5 @@
 
 ## 이유정 (안드로이드)
 
-
+커리큘럼 : https://drive.google.com/file/d/1q9UlsgHmqG2CHKC8HllEOtML1s5C5Y-7/view?usp=sharing
+1주차(뷰와 레이아웃) : https://drive.google.com/file/d/1_Pz4GTbbaFsczB_a8ziDtfSDOU9rSj_z/view?usp=sharing
