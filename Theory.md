@@ -11,6 +11,8 @@
 1주차 (비지도학습 중 'K-means 알고리즘' 정리)
 : https://drive.google.com/file/d/1ELBnTpV1-yQsG3SRpqjG0rxekruqDqa5/view?usp=sharing
 
+2주차 ('병합 군집' 알고리즘, 'DBSCAN' 알고리즘 정리)
+: https://drive.google.com/file/d/1sc91baLwpL2PSnd36sCSo9QbPRlZ835N/view?usp=sharing
 ---
 
 ## 윤예진 (서버)
