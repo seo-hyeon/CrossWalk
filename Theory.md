@@ -17,7 +17,7 @@
 
 ## 윤예진 (서버)
 
-커리큘럼(수정+1): https://drive.google.com/file/d/1KM20yPKczrxsiwhLrsm6V92bzgbwmyAK/view?usp=sharing
+커리큘럼(수정+2): https://drive.google.com/file/d/19-St2E_8lqS69b5d8vwMF4fGnr9jFDb6/view?usp=sharing
 
 1주차(MySQL 기본 초반): https://drive.google.com/file/d/1G11uZw4_h18COuG47_SuDkU2_LDi_jjh/view?usp=sharing
 
