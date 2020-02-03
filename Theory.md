@@ -31,6 +31,12 @@
 
 ## 이유정 (안드로이드)
 
-수정
+커리큘럼 : https://drive.google.com/file/d/1q9UlsgHmqG2CHKC8HllEOtML1s5C5Y-7/view?usp=sharing
+
+1주차(뷰와 레이아웃) : https://drive.google.com/file/d/1_Pz4GTbbaFsczB_a8ziDtfSDOU9rSj_z/view?usp=sharing
+
+2주차(기본위젯과 레이어블 : https://drive.google.com/file/d/1NAMC2i-AmMdrbQ2SlztmNmGe57k1Q8LY/view?usp=sharing 
+
+2주차_소스 파일 : https://drive.google.com/file/d/1eJBulA9W6bG7AUj_D_piBCbvD4EBLSVj/view?usp=sharing
 
 
