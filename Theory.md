@@ -39,4 +39,4 @@
 
 2주차_소스 파일 : https://drive.google.com/file/d/1eJBulA9W6bG7AUj_D_piBCbvD4EBLSVj/view?usp=sharing
 
-
+3주차(이벤트 처리와 토스트 등등) : https://drive.google.com/file/d/1nmKgcCrGeyCrRBWo0jD-Ce_7dTsCzkeX/view?usp=sharing
