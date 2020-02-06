@@ -13,6 +13,9 @@
 
 2주차 ('병합 군집' 알고리즘, 'DBSCAN' 알고리즘 정리)
 : https://drive.google.com/file/d/1sc91baLwpL2PSnd36sCSo9QbPRlZ835N/view?usp=sharing
+
+3주차 ('K-means', '병합 군집', 'DBSCAN' 알고리즘 실습)
+: https://drive.google.com/file/d/13K3GYWinPrm23bLbjYcRGm4ET1EPjpFg/view?usp=sharing
 ---
 
 ## 윤예진 (서버)
