@@ -35,6 +35,7 @@ public class subActivity extends AppCompatActivity {
                 map.setVisibility(View.VISIBLE);
             }
         });
+
         map_close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
