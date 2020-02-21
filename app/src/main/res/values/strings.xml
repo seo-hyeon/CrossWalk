@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">EDC</string>
+    <string name="title">Exit Dragon Castle</string>
+    <string name="start">Start</string>
+    <string name="load">Load Data</string>
+    <string name="collection">Collection</string>
+    <string name="click">click</string>
+
+    //캐릭터
+    <string name="goldP">황금 공주</string>
+    <string name="starP">별 공주</string>
+    <string name="tigerP">호랑이 공주</string>
+
+    //1F NPC
+    <string name="doll_dog">강아지 인형</string>
+
+    //1F _ cage
+    <string name="f1_51_1">정신을 차려보니 새장 안에 있다.\n 앞에 강아지 인형이 꾸벅꾸벅 졸다 나와 눈이 마주치고 벌떡 일어났다.</string>
+    <string name="f1_51_2">으아 띠발 언제 깼누.... \n그.... 당신을 뭐라고 불러야함?</string>
+    <string name="f1_52">글쿤요, 반가워요 %s 난 당신 담당이니 필요한게 있으면 말하셈</string>
+    <string name="f1_52c1">날 꺼내줘</string>
+    <string name="f1_52c2">나ㅏㄹ 꺼내 샹</string>
+    <string name="f1_0">안돼 뭐가 됐던 새장에서는 못꺼내줌. 뭔일인진 \n 모르지만 열어주지 말랬단 말임..열어주는 건 절대로 안됨, 대신 필요한건 다 해드림 필요한거 있음?</string>
+    <string name="f1_0c1">여기 어디임?</string>
+    <string name="f1_0c2">갈아입을 옷 좀</string>
+    <string name="f1_0c3">배고팡</string>
+    <string name="f1_0c4">(item:황금주머니)님 돈 줄테니 날 꺼내줘</string>
+    <string name="f1_1">여기 드래곤님 성임. 님은 잡혀오심ㅠ 그밖에 필요한건?</string>
+    <string name="f1_2_1">헐 샹 진짜네, 옷 찢어져 있잖 옷 가져올테니 기달\n 재봉사한테 물어보고 옴</string>
+    <string name="f1_2_2">강아지 인형이 호다닥 가버렸다</string>
+    <string name="f1_2c1">강아지 인형을 기다린다</string>
+    <string name="f1_23c2">시발 이때다 새장을 탐색하자</string>
+    <string name="f1_3">그런가용 요리사한테 말해 밥 가져옴, 기다리셈</string>
+    <string name="f1_3c1">밥을 기다린다.</string>
+    <string name="f1_4_1">뭐? 황금 오졌다. 흠흠.... 어이쿠 열쇠를 떨어트렸네, 갑자기 바빠서 이만... </string>
+    <string name="f1_4_2">(소근소근)이 이상은 내 소관 밖이라,,, 빠이</string>
+    <string name="f1_4_3">강아지 인형이 가버렸다. 인형이 앉았던 의자를 받침삼아 책상위로 안전히 내렸왔다.</string>
+    <string name="f1_4_4">(item : 새장 열쇠)를 얻었다.</string>
+    <string name="f1_4c1">열고 튄다.</string>
+    <string name="f1_5_1">기달렸더니 강아지 인형이 하녀옷을 가지고 왔다.</string>
+    <string name="f1_5_2">일단 이거 입으셈, 옷 고쳐 드림. 그 외에 내가 더 할거 있음?</string>
+    <string name="f1_5_3">(item : 하녀옷)을 얻었다.</string>
+    <string name="f1_6">새장은 책상 위 대롱대롱함, 금색~~~ 바닥이 덜걱거림. 바닥 이음쇠를 뺄 수 있을 것 같다.</string>
+    <string name ="f1_6c1">그냥 있는다.</string>
+    <string name = "f1_6c2">이음쇠를 빼고 발을 세게 구른다.</string>
+    <string name = "f1_7">아무리 기다려도 강아지 인형은 오지 않는다. 탈출의 기회인듯.</string>
+    <string name = "f1_7c1">이음쇠를 빼고 발을 세게 구른다.</string>
+    <string name = "f1_7c2">시발 이때다 새장을 탐색하자</string>
+    <string name = "f1_8">이음쇠를 빼고 퍽 치니 바닥을 훅 꺼졌다. 와 새장 탈출!</string>
+    <string name = "f1_53"> 이라기에는 너무 아팠다.  생명 -1</string>
+    <string name = "f1_54"> 육감의 티아라~ 착지를 가볍게 해버림.</string>
+    <string name = "f1_8c1">책상 위에서 주변을 관찰하자.</string>
+
+
+
+    <string name = "f1_9_1">여기는 방구석의 작은 책상 위, 방의 구조가 훤하게 보인다.</string>
+    <string name = "f1_9_2">이 층의 모든 장소를 가려면 이곳을 거쳐야 할듯함. 뭐할까?</string>
+    <string name = "f1_9c1">큰 문이 보이는 쪽으로 가보자</string>
+    <string name = "f1_9c2">스튜가 있는 조리대가 가자</string>
+    <string name = "f1_9c3">창문이 있어, 가보자!</string>
+    <string name = "f1_9c4">계단 쪽으로 가보자</string>
+    <string name = "f1_10_1">책상에서 의자를 타고 내려와 문이 보이는 곳까지 높은 러그를 해처가야함.</string>
+    <string name = "f1_10_2">러그 사이에서 반짝이는 뭔가가 보인다. 집을까?</string>
+    <string name = "f1_10c1">아 아이템 빳다죠, 개꿀</string>
+    <string name = "f1_10c2">ㄴㄴ 일단 지나친다.</string>
+    <string name = "f1_10c3">아씨 바늘이네, 조심히 줍는다. // 현재 선택x</string>
+<!--    10c3 _ 재봉사의 이야기를 들어야함, 나중에 구현,,, -->
+    <string name = "f1_11">조리대로 넘어왔다. 무언가 끓이는 큰 곰 인형이 보인다. 끓고 있는 냄비에선 좋은 냄새가 난다.</string>
+    <string name = "f1_11c1">곰에게 말을 건다</string>
+    <string name = "f1_11c2">다시 돌아가서 다른 곳부터 본다.</string>
+    <string name = "f1_12">이어진 창틀을 따라 창문에 도착, 창문은 이음쇠로 막혀있음. 열려면 지랫대같은 도구가 필요할 것 같다.</string>
+    <string name = "f1_12c1">다른곳을 살펴보자</string>
+    <string name = "f1_12c2">(item : 지랫대)</string>
+    <string name = "f1_13">위로 가는 계단과 아래로 가는 계단이 있다.</string>
+    <string name = "f1_13c1">위로 // 3_1 구현x</string>
+    <string name = "f1_13c2">아래로 // 2_1 구현x</string>
+    <string name = "f1_13c3">탁자로 돌아가자</string>
+    <string name = "f1_14">아 아파!! 바늘에 찔렸다. 생명 -1 (item : 바늘) 추가</string>
+    <string name = "f1_14c1">문으로 계속 가자</string>
+    <string name = "f1_14c2">돌아가자</string>
+    <string name = "f1_15">드래곤이 다닐만한 크기의 문이 있다. 문 앞에 경비병이 막고 있다.</string>
+    <string name = "f1_60">강아지 인형이 경비병과 말하고 있다.</string>
+    <string name = "f1_61">//강아지 인형이 경비병에게 주의를 준 후이다.</string>
+    <string name = "f1_15c1">경비병과 대화한다</string>
+    <string name = "f1_15c2">돌아가자</string>
+    <string name = "f1_16">조심하여 바늘을 얻었다.(item : 바늘) 추가</string>
+    <string name = "f1_16c1">문으로 계속 가자</string>
+    <string name = "f1_16c2">돌아가자</string>
+
+    <string name = "f1_5859"> 음... 어딘가 익숙한데, 뭐 작업복을 입었으니 시종이겠죠.</string>
+    <string name = "f1_17_1">아 마침 잘왔어요, 우유가 없어 스튜를 완성 못해, 우유 심부름으로 강아지씨를 보냈죠. 근데 후추도 없는걸 발견했거든요</string>
+    <string name = "f1_17_2">후추 좀 가져다 주세요. 지하실의 아주 작은 상자에 후추와 향신료가 들은 상자가 있어.</string>
+    <string name = "f1_17_3">그 동안 상자를 정리를 안해 못 꺼냈지만 현재 정리작업을 하고 있으니 찾을 수 있을지도 몰라</string>
+    <string name = "f1_17c1">조아용(찾아본다 말하고 다시 책상으로)</string>
+    <string name = "f1_55_1">마침 잘왔어요, 지금 우유가 다 떨어져서 이대로면 드래곤님 식사 전까지 완성을 못함. 평소엔 지하실에 우유가 잔뜩인데,</string>
+    <string name = "f1_55_2">뭐 어쨋든, 신입인거 같아 마을에는 걱정되서 심부름은 못 보내겠고,</string>
+    <string name = "f1_55_3">지금 지하 창고 정리 중이니 거기서 우유 대체품을 찾아봐죠 없으면 뭐 야채스프로 메뉴를 바꿔야지,,</string>
+    <string name = "f1_55c1">조아용(찾아본다 말하고 다시 책상으로)</string>
+    <string name = "f1_55c2">엄,,, 이걸로 될 것 같은데요</string>
+
+    <string name = "f1_18_1">엥 시종인형인가?? 작업복이 아닌데,,, 아앗 그 복장은 드래곤님이 모셔 온 공주님이잖아요! \n 여기서 이러시면 안돼요.</string>
+    <string name = "f1_18_2">다시 새장으로 가세요, 지금 공주님하고 드래곤님 드실 식사를 만드는 중이니까 조금만 더 기달려 주세요</string>
+    <string name = "f1_18_3">곰인형이 새장 윗부분을 때서 나를 대강 가둬놓고 조리대로 후다닥 갔다.</string>
+    <string name = "f1_18c1">탐색한다.</string>
+    <string name = "f1_18c2">기다린다.</string>
+    <string name = "f1_57_1"> 옷을 든 가</string>
+
+
+
+    <string name="cd">상황에 따른 일러</string>
+    <string name="extalk">나레기</string>
+    <string name="extext">어쩌구 저쩌구 솰라쏼라 배가 고프다 졸립다 서브웨이 참치 먹고 싶다 3줄을 만들어볼 생각이다. 4줄도 가능한듯.</string>
+    <string name="button">button</string>
+</resources>
