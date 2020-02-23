@@ -21,7 +21,7 @@ public class subActivity extends AppCompatActivity {
     String position = " ";
     String player = " ";
     int []choices = new int [70];
-
+    int []prev = new int [2];
     int life = 5;
     //0황금주머니, 1수정구슬, 2육감티아라, 3새장열쇠, 4하녀옷, 5우유, 7후추, 8지랫대, 9바늘, 10밧줄, 11맛있는 스튜, 12허가증
     int [] itemlist = new int [20];
@@ -40,6 +40,17 @@ public class subActivity extends AppCompatActivity {
         //heart.setText(life);
 
         //일단 임시로 setting 버튼 첫화면으로 가는 버튼으로 바꿈, 이후 팝업창 만들어서 저장등 메뉴 띄울 생각
+        Button Back = findViewById(R.id.back);
+        Back.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                choice1.setVisibility(View.INVISIBLE); choice2.setVisibility(View.INVISIBLE);
+                choice3.setVisibility(View.INVISIBLE); choice4.setVisibility(View.INVISIBLE);
+                choice5.setVisibility(View.INVISIBLE);
+                back1(prev[0], prev[1]);
+            }
+        });
+
+
         Button home = findViewById(R.id.b45);
         home.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -121,7 +132,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_51(){
-        choices[51] = 1;
+        choices[51] = 1; prev[1] = 51;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1);
         choice1.setVisibility(View.VISIBLE);
@@ -134,6 +145,7 @@ public class subActivity extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 51;
                 character.setText(getString(R.string.doll_dog));
                 mainText.setText(getString(R.string.f1_51_2));
                 choice1.setVisibility(View.INVISIBLE);
@@ -145,7 +157,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_52(){
-        choices[52] = 1;
+        choices[52] = 1;prev[1] = 52;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice2 = findViewById(R.id.choice_no2);
         choice2.setVisibility(View.VISIBLE);
@@ -159,6 +171,7 @@ public class subActivity extends AppCompatActivity {
         c21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 52;
                 choice2.setVisibility(View.INVISIBLE);
                 f1_0();
             }
@@ -166,6 +179,7 @@ public class subActivity extends AppCompatActivity {
         c22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 52;
                 choice2.setVisibility(View.INVISIBLE);
                 f1_0();
             }
@@ -174,7 +188,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_0(){
-        choices[0] = 1;
+        choices[0] = 1; prev[1] = 0;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         if(itemlist[0] == 1) {
             choice4 = findViewById(R.id.choice_no4); choice4.setVisibility(View.VISIBLE);
@@ -198,6 +212,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice4.setVisibility(View.INVISIBLE);
+                    prev[0] = 0;
                     f1_4();
                 }
             });
@@ -208,6 +223,7 @@ public class subActivity extends AppCompatActivity {
             public void onClick(View v) {
                 choice4.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
+                prev[0] = 0;
                 f1_1();
             }
         });
@@ -216,6 +232,7 @@ public class subActivity extends AppCompatActivity {
             public void onClick(View v) {
                 choice4.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
+                prev[0] = 0;
                 f1_2();
             }
         });
@@ -224,6 +241,7 @@ public class subActivity extends AppCompatActivity {
             public void onClick(View v) {
                 choice4.setVisibility(View.INVISIBLE);
                 choice3.setVisibility(View.INVISIBLE);
+                prev[0] = 0;
                 f1_3();
             }
         });
@@ -231,7 +249,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_1(){
-        choices[1] = 1;
+        choices[1] = 1; prev[1] = 1;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice3 = findViewById(R.id.choice_no3); choice2 = findViewById(R.id.choice_no2);
 
@@ -258,6 +276,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice3.setVisibility(View.INVISIBLE);
+                    prev[0] = 1;
                     f1_4();
                 }
             });
@@ -267,6 +286,7 @@ public class subActivity extends AppCompatActivity {
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.INVISIBLE);
+                prev[0] = 1;
                 f1_2();
             }
         });
@@ -275,6 +295,7 @@ public class subActivity extends AppCompatActivity {
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.INVISIBLE);
+                prev[0] = 1;
                 f1_3();
             }
         });
@@ -282,7 +303,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_2(){
-        choices[2] = 1;
+        choices[2] = 1; prev[1] = 2;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice2 = findViewById(R.id.choice_no2); choice1 = findViewById(R.id.choice_no1);
         c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
@@ -296,6 +317,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice2.setVisibility(View.INVISIBLE);
+                    prev[0] = 2;
                     f1_5();
                 }
             });
@@ -303,6 +325,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice2.setVisibility(View.INVISIBLE);
+                    prev[0] = 2;
                     f1_6();
                 }
             });
@@ -326,7 +349,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_3(){
-        choices[3] = 1;
+        choices[3] = 1; prev[1] = 3;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice2 = findViewById(R.id.choice_no2); choice2.setVisibility(View.VISIBLE);
@@ -341,6 +364,7 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice2.setVisibility(View.INVISIBLE);
+                prev[0] = 3;
                 f1_7();
             }
         });
@@ -349,13 +373,14 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice2.setVisibility(View.INVISIBLE);
+                prev[0] = 3;
                 f1_6();
             }
         });
     }
 
     public void f1_4(){
-        choices[4] = 1;
+        choices[4] = 1; prev[1] = 4;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
@@ -377,7 +402,9 @@ public class subActivity extends AppCompatActivity {
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    choice1.setVisibility(View.INVISIBLE);
+                   mainText.setText(getString(R.string.f1_4_4)); //이후 토스트 삭제 후 인벤에서 확인 가능하면 삭제 예정
+                   choice1.setVisibility(View.INVISIBLE);
+                   prev[0] = 4;
                     f1_9();
                 }
             });
@@ -397,7 +424,7 @@ public class subActivity extends AppCompatActivity {
         }
     }
     public void f1_5(){
-        choices[5] = 1;
+        choices[5] = 1; prev[1] = 5;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1); choice2 = findViewById(R.id.choice_no2);
@@ -430,6 +457,7 @@ public class subActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         choice2.setVisibility(View.INVISIBLE);
+                        prev[0] = 5;
                         f1_3();
                     }
                 });
@@ -437,6 +465,7 @@ public class subActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         choice2.setVisibility(View.INVISIBLE);
+                        prev[0] = 5;
                         f1_4();
                     }
                 });
@@ -445,6 +474,7 @@ public class subActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         choice1.setVisibility(View.INVISIBLE);
+                        prev[0] = 5;
                         f1_3();
                     }
                 });
@@ -466,7 +496,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_6(){
-        choices[6] = 1;
+        choices[6] = 1; prev[1] = 6;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice2 = findViewById(R.id.choice_no2); choice2.setVisibility(View.VISIBLE);
@@ -482,6 +512,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice2.setVisibility(View.INVISIBLE);
+                    prev[0] = 6;
                     f1_5();
                 }
             });
@@ -491,6 +522,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice2.setVisibility(View.INVISIBLE);
+                    prev[0] = 6;
                     f1_7();
                 }
             });
@@ -499,13 +531,14 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice2.setVisibility(View.INVISIBLE);
+                prev[0] = 6;
                 f1_8();
             }
         });
     }
 
     public void f1_7(){
-        choices[7] = 1;
+        choices[7] = 1; prev[1] = 7;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
@@ -517,6 +550,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice1.setVisibility(View.INVISIBLE);
+                    prev[0] = 7;
                     f1_8();
                 }
             });
@@ -526,13 +560,14 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice1.setVisibility(View.INVISIBLE);
+                    prev[0] = 7;
                     f1_6();
                 }
             });
         }
     }
     public void f1_8(){
-        choices[8] = 1;
+        choices[8] = 1; prev[1] = 8;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
         c11 = findViewById(R.id.choice1_1);
@@ -543,6 +578,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice1.setVisibility(View.INVISIBLE);
+                    prev[0] = 8;
                     f1_9();
                 }
             });
@@ -554,6 +590,7 @@ public class subActivity extends AppCompatActivity {
                 c11.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        choices[54] = 1;
                         mainText.setText(getString(R.string.f1_54));
                         choice1.setVisibility(View.INVISIBLE);
                         f1_8();
@@ -563,6 +600,7 @@ public class subActivity extends AppCompatActivity {
                 c11.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        choices[53] = 1;
                         mainText.setText(getString(R.string.f1_53));
                         choice1.setVisibility(View.INVISIBLE);
                         f1_8();
@@ -574,7 +612,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_9(){
-        choices[9] = 1;
+        choices[9] = 1; prev[1] = 9;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1); choice4 = findViewById(R.id.choice_no4);
@@ -602,8 +640,10 @@ public class subActivity extends AppCompatActivity {
             public void onClick(View v) {
                 choice4.setVisibility(View.INVISIBLE);
                 if(choices[14] == 0 && choices[15] == 0) {
+                    prev[0] = 9;
                     f1_10();
                 } else {
+                    prev[0] = 9;
                     f1_15();
                 }
             }
@@ -612,6 +652,7 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice4.setVisibility(View.INVISIBLE);
+                prev[0] = 9;
                 f1_11();
             }
         });
@@ -619,6 +660,7 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice4.setVisibility(View.INVISIBLE);
+                prev[0] = 9;
                 f1_12();
             }
         });
@@ -626,6 +668,7 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice4.setVisibility(View.INVISIBLE);
+                prev[0] = 9;
                 f1_13();
             }
         });
@@ -633,7 +676,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_10(){
-        choices[10] = 1;
+        choices[10] = 1; prev[1] = 10;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1); choice2 = findViewById(R.id.choice_no2); choice3 = findViewById(R.id.choice_no3);
@@ -662,6 +705,7 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
+                prev[0] = 10;
                 f1_14();
             }
         });
@@ -669,6 +713,7 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
+                prev[0] = 10;
                 f1_15();
             }
         });
@@ -676,13 +721,14 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
+                prev[0] = 10;
                 f1_16();
             }
         });
     }
 
     public void f1_11(){
-        choices[11] = 1;
+        choices[11] = 1; prev[1] = 11;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice2 = findViewById(R.id.choice_no2);
@@ -697,25 +743,25 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice2.setVisibility(View.INVISIBLE);
-
-                //우유나 후추가 없을 경우
+                prev[0]= 11;
+                //우유나 후추가 없을 경우 itemlist[5] = 우유, itemlist[7] = 후추
                 if(itemlist[5] == 0 && itemlist[7] == 0 ) {
                     if (choices[3] == 1 && itemlist[4] == 1 && choices[17] == 0) {
                         f1_17();
-                    } else if (choices[3] == 1 && itemlist[4] == 0 && choices[56] == 0) {
-                        f1_56();
                     } else if (choices[3] == 0 && itemlist[4] == 1 && choices[55] == 0) {
                         f1_55();
-                    } else if (choices[3] == 0 && itemlist[4] == 0 && choices[18] == 0) {
+                    } else if (choices[4] == 1 && itemlist[4] == 0 && choices[56] == 0) {
+                        f1_56();
+                    } else if (choices[4] == 0 && itemlist[4] == 0 && choices[18] == 0) {
                         f1_18();
-                    } else if (choices[18] == 1 && itemlist[4] == 0 && choices[29] == 0) {
+                    } else if ((choices[56] == 1 || choices[18] == 1) && itemlist[4] == 0 && choices[29] == 0) {
                         f1_29();
-                    } else if (choices[36] == 1 || choices[35] == 1){
-                        f1_63();
-                    } else if ((choices[17] == 1 && choices[34] == 0) || (choices[55] == 1 && choices[33] == 0)
+                    }  else if ((choices[17] == 1 && choices[34] == 0) || (choices[55] == 1 && choices[33] == 0)
                                 || (choices[33] == 1 && choices[36] == 0 && choices[35] == 0) || (choices[34] == 1 && choices[36] == 0 && choices[35] == 0)){
                         f1_37();
-                    }else{
+                    } else if (choices[36] == 1 || choices[35] == 1){
+                        f1_63();
+                    } else{
                         f1_100();
                     }
                 } //우유나 후추가 있을 경우.
@@ -733,6 +779,7 @@ public class subActivity extends AppCompatActivity {
         c22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 11;
                 choice2.setVisibility(View.INVISIBLE);
                 if(choices[57] == 1 || choices[19] == 1){
                     f1_9();
@@ -748,7 +795,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_12(){
-        choices[12] = 1;
+        choices[12] = 1; prev[1] = 12;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1); choice2 = findViewById(R.id.choice_no2);
@@ -769,6 +816,7 @@ public class subActivity extends AppCompatActivity {
         c21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 12;
                 choice2.setVisibility(View.INVISIBLE);
                 choice1.setVisibility(View.INVISIBLE);
                 if(choices[57] == 1 || choices[19] == 1){
@@ -785,6 +833,7 @@ public class subActivity extends AppCompatActivity {
         c22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 12;
                 choice2.setVisibility(View.INVISIBLE);
                 f1_21();
             }
@@ -792,7 +841,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_13(){
-        choices[13] = 1;
+        choices[13] = 1; prev[1] = 13;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice3 = findViewById(R.id.choice_no3); choice3.setVisibility(View.VISIBLE);
@@ -817,6 +866,7 @@ public class subActivity extends AppCompatActivity {
         c33.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 13;
                 choice3.setVisibility(View.INVISIBLE);
                 if(choices[57] == 1 || choices[19] == 1){
                     f1_9();
@@ -832,17 +882,19 @@ public class subActivity extends AppCompatActivity {
 
     }
     public void f1_14(){
-        choices[14] = 1;
+        choices[14] = 1; prev[1] = 14;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice2 = findViewById(R.id.choice_no2); choice2.setVisibility(View.VISIBLE);
         c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
         mainText.setText(getString(R.string.f1_14));
+        itemlist[9] = 1;
         c21.setText(getString(R.string.f1_14c1));  c22.setText(getString(R.string.f1_14c2));
 
         c21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 14;
                 choice2.setVisibility(View.INVISIBLE);
                 f1_15();
             }
@@ -850,6 +902,7 @@ public class subActivity extends AppCompatActivity {
         c22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 14;
                 choice2.setVisibility(View.INVISIBLE);
                 if(choices[57] == 1 || choices[19] == 1){
                     f1_9();
@@ -866,6 +919,7 @@ public class subActivity extends AppCompatActivity {
 
     public void f1_15() {
         //추가 서술 조건상 choices[15]는 f1_152()에서 1로 체크됨.
+        prev[1] = 15;
         character = findViewById(R.id.character);
         mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1);
@@ -879,6 +933,7 @@ public class subActivity extends AppCompatActivity {
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    prev[0] = 15;
                     choice1.setVisibility(View.INVISIBLE);
                     mainText.setText(getString(R.string.f1_60));
                     choices[60] = 1;
@@ -891,6 +946,7 @@ public class subActivity extends AppCompatActivity {
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    prev[0] = 15;
                     choice1.setVisibility(View.INVISIBLE);
                     mainText.setText(getString(R.string.f1_61));
                     choices[61] = 1;
@@ -898,6 +954,7 @@ public class subActivity extends AppCompatActivity {
                 }
             });
         }else {
+            prev[0] = 15;
             f1_152();
         }
 
@@ -949,7 +1006,7 @@ public class subActivity extends AppCompatActivity {
         }
     }
     public void f1_16(){
-        choices[16] = 1;
+        choices[16] = 1; prev[1] = 16;
         choice2 = findViewById(R.id.choice_no2); choice2.setVisibility(View.VISIBLE);
         c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
@@ -963,6 +1020,7 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice2.setVisibility(View.INVISIBLE);
+                prev[0] = 16;
                 f1_15();
             }
         });
@@ -970,6 +1028,7 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice2.setVisibility(View.INVISIBLE);
+                prev[0] = 16;
                 if (choices[57] == 1 || choices[19] == 1) {
                     f1_9();
                 } else if (choices[2] == 1 && choices[5] == 0 && itemlist[1] == 0) {
@@ -983,7 +1042,7 @@ public class subActivity extends AppCompatActivity {
         });
     }
     public void f1_17(){
-        choices[17] = 1;
+        choices[17] = 1; prev[1] = 17;
         choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
         c11 = findViewById(R.id.choice1_1);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
@@ -1025,13 +1084,15 @@ public class subActivity extends AppCompatActivity {
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    choice1.setVisibility(View.INVISIBLE);
+                    prev[0] = 17;
                     f1_9();
                 }
             });
         }
     }
     public void f1_55(){
-        choices[55] = 1;
+        choices[55] = 1; prev[1] = 55;
         choice1 = findViewById(R.id.choice_no1);
         c11 = findViewById(R.id.choice1_1);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
@@ -1086,6 +1147,7 @@ public class subActivity extends AppCompatActivity {
             c21.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    prev[0] = 55;
                     choice2.setVisibility(View.INVISIBLE);
                     if(choices[57] == 1 || choices[19] == 1){
                         f1_9();
@@ -1102,6 +1164,7 @@ public class subActivity extends AppCompatActivity {
             c22.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    prev[0] = 55;
                     choice2.setVisibility(View.INVISIBLE);
                     f1_50();
                 }
@@ -1114,7 +1177,7 @@ public class subActivity extends AppCompatActivity {
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
 
         if(choices[18] == 0) {
-            choices[18] = 1;
+            choices[18] = 1; prev[1] = 18;
             mainText.setText(getString(R.string.f1_18_1));
             choice1.setVisibility(View.VISIBLE);
             c11.setText(getString(R.string.click));
@@ -1146,6 +1209,7 @@ public class subActivity extends AppCompatActivity {
                 c21.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        prev[0] = 18;
                         choice2.setVisibility(View.INVISIBLE);
                         f1_28();
                     }
@@ -1153,6 +1217,7 @@ public class subActivity extends AppCompatActivity {
                 c22.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        prev[0] = 18;
                         choice2.setVisibility(View.INVISIBLE);
                         f1_27();
                     }
@@ -1163,6 +1228,7 @@ public class subActivity extends AppCompatActivity {
                 c11.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        prev[0] = 18;
                         choice1.setVisibility(View.INVISIBLE);
                         f1_28();
                     }
@@ -1179,7 +1245,7 @@ public class subActivity extends AppCompatActivity {
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
 
         if(choices[57] == 0) {
-            choices[57] = 1;
+            choices[57] = 1; prev[1] = 57;
             c11.setText(getString(R.string.click));
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -1204,6 +1270,7 @@ public class subActivity extends AppCompatActivity {
                     mainText.setText(getString(R.string.f1_57_3));
                     choice1.setVisibility(View.INVISIBLE);
                     itemlist[4] = 1;
+                    prev[0] = 57;
                     f1_18();
                 }
             });
@@ -1215,7 +1282,7 @@ public class subActivity extends AppCompatActivity {
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
 
         if(choices[56] == 0) {
-            choices[56] = 1;
+            choices[56] = 1; prev[1] = 56;
             mainText.setText(getString(R.string.f1_18_1));
             choice1.setVisibility(View.VISIBLE);
             c11.setText(getString(R.string.click));
@@ -1240,6 +1307,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice1.setVisibility(View.INVISIBLE);
+                    prev[0] = 56;
                     f1_48();
                 }
             });
@@ -1251,7 +1319,7 @@ public class subActivity extends AppCompatActivity {
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
 
         if(choices[19] == 0) {
-            choices[19] = 1;
+            choices[19] = 1; prev[1] = 19;
             mainText.setText(getString(R.string.f1_19_1));
             choice1.setVisibility(View.VISIBLE);
             c11.setText(getString(R.string.click));
@@ -1269,6 +1337,7 @@ public class subActivity extends AppCompatActivity {
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    prev[0] = 19;
                     choice1.setVisibility(View.INVISIBLE);
                     if(itemlist[0] == 1){
                         f1_30();
@@ -1290,7 +1359,7 @@ public class subActivity extends AppCompatActivity {
         }
     }
     public void f1_20(){
-        choices[20] = 1;
+        choices[20] = 1; prev[1] = 20;
         choice2 = findViewById(R.id.choice_no2);
         c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
         choice2.setVisibility(View.VISIBLE);
@@ -1300,6 +1369,7 @@ public class subActivity extends AppCompatActivity {
         c21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 20;
                 choice2.setVisibility(View.INVISIBLE);
                 f1_19();
             }
@@ -1307,6 +1377,7 @@ public class subActivity extends AppCompatActivity {
         c22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 20;
                 choice2.setVisibility(View.INVISIBLE);
                 f1_9();
             }
@@ -1318,7 +1389,7 @@ public class subActivity extends AppCompatActivity {
         c11 = findViewById(R.id.choice1_1);
         choice1.setVisibility(View.VISIBLE);
         if(choices[21] == 0) {
-            choices[21] = 1;
+            choices[21] = 1; prev[1] = 21;
             mainText = findViewById(R.id.main_text);
             character = findViewById(R.id.character);
             mainText.setText(getString(R.string.f1_21_1));
@@ -1340,6 +1411,7 @@ public class subActivity extends AppCompatActivity {
                     c31.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            prev[0] = 21;
                             choice3.setVisibility(View.INVISIBLE);
                             f1_9();
                         }
@@ -1370,6 +1442,7 @@ public class subActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             choice2.setVisibility(View.INVISIBLE);
+                            prev[0] = 21;
                             f1_9();
                         }
                     });
@@ -1389,6 +1462,7 @@ public class subActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         mainText.setText(getString(R.string.f1_21_2));
                         choice1.setVisibility(View.INVISIBLE);
+                        prev[0] = 21;
                         f1_9();
                     }
                 });
@@ -1424,7 +1498,7 @@ public class subActivity extends AppCompatActivity {
         });
     }
     public void f1_24(){
-        choices[24] = 1;
+        choices[24] = 1; prev[1] = 24;
         choice2 = findViewById(R.id.choice_no2);
         c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
         choice2.setVisibility(View.VISIBLE);
@@ -1434,6 +1508,7 @@ public class subActivity extends AppCompatActivity {
         c21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 24;
                 choice2.setVisibility(View.INVISIBLE);
                 f1_38();
             }
@@ -1441,13 +1516,14 @@ public class subActivity extends AppCompatActivity {
         c22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 24;
                 choice2.setVisibility(View.INVISIBLE);
                 f1_39();
             }
         });
     }
     public void f1_25(){
-        choices[25] = 1;
+        choices[25] = 1; prev[1] = 25;
         choice1 = findViewById(R.id.choice_no1);
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         choice2 = findViewById(R.id.choice_no2);
@@ -1468,6 +1544,7 @@ public class subActivity extends AppCompatActivity {
         c21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 25;
                 choice2.setVisibility(View.INVISIBLE);
                 f1_41();
             }
@@ -1475,6 +1552,7 @@ public class subActivity extends AppCompatActivity {
         c22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 25;
                 choice2.setVisibility(View.INVISIBLE);
                 f1_39();
             }
@@ -1497,7 +1575,7 @@ public class subActivity extends AppCompatActivity {
         });
     }
     public void f1_27(){
-        choices[27] = 1;
+        choices[27] = 1; prev[1] = 27;
         choice1 = findViewById(R.id.choice_no1);
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
@@ -1506,6 +1584,7 @@ public class subActivity extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 27;
                 choice1.setVisibility(View.INVISIBLE);
                 f1_28();
             }
@@ -1513,7 +1592,7 @@ public class subActivity extends AppCompatActivity {
     }
 
     public void f1_28(){
-        choices[28] = 1;
+        choices[28] = 1; prev[1] = 28;
         choice1 = findViewById(R.id.choice_no1);
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
@@ -1522,6 +1601,7 @@ public class subActivity extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                prev[0] = 28;
                 choice1.setVisibility(View.INVISIBLE);
                 f1_9();
             }
@@ -1562,7 +1642,7 @@ public class subActivity extends AppCompatActivity {
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         if(choices[30] == 0){
-            choices[30] = 1;
+            choices[30] = 1; prev[1] = 30;
             mainText.setText(getString(R.string.f1_30_1));
             c11.setText(getString(R.string.click));
             c11.setOnClickListener(new View.OnClickListener() {
@@ -1577,6 +1657,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice1.setVisibility(View.INVISIBLE);
+                    prev[0] = 30;
                     f1_9();
                 }
             });
@@ -1587,7 +1668,7 @@ public class subActivity extends AppCompatActivity {
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         if(choices[31] == 0) {
-            choices[31] = 1;
+            choices[31] = 1; prev[1] = 31;
             mainText.setText(getString(R.string.f1_31_1));
             c11.setText(getString(R.string.click));
             c11.setOnClickListener(new View.OnClickListener() {
@@ -1603,6 +1684,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice1.setVisibility(View.INVISIBLE);
+                    prev[0] = 31;
                     f1_9();
                 }
             });
@@ -1630,7 +1712,7 @@ public class subActivity extends AppCompatActivity {
         character = findViewById(R.id.character);
 
         if(choices[33] == 0){
-            choices[33] = 1;
+            choices[33] = 1;  prev[1] = 33;
             mainText.setText(getString(R.string.f1_33_1));
             c11.setText(getString(R.string.click));
             c11.setOnClickListener(new View.OnClickListener() {
@@ -1645,6 +1727,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     mainText.setText(getString(R.string.f1_33_3));
+                    itemlist[5] = 0;
                     f1_33();
                 }
             });
@@ -1653,8 +1736,8 @@ public class subActivity extends AppCompatActivity {
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    itemlist[5] = 0;
                     choice1.setVisibility(View.INVISIBLE);
+                    prev[0] = 33;
                     f1_9();
                 }
             });
@@ -1666,7 +1749,7 @@ public class subActivity extends AppCompatActivity {
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
 
         if(choices[34] == 0){
-            choices[34] = 1;
+            choices[34] = 1; prev[1] = 34;
             mainText.setText(getString(R.string.f1_34_1));
             choice1.setVisibility(View.VISIBLE);
             c11.setText(getString(R.string.click));
@@ -1682,6 +1765,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     mainText.setText(getString(R.string.f1_34_3));
+                    itemlist[5] = 0;
                     f1_34();
                 }
             });
@@ -1701,6 +1785,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice2.setVisibility(View.INVISIBLE);
+                    prev[0] = 34;
                     f1_9();
                 }
             });
@@ -1708,6 +1793,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice2.setVisibility(View.INVISIBLE);
+                    prev[0] = 34;
                     f1_35();
                 }
             });
@@ -1718,13 +1804,14 @@ public class subActivity extends AppCompatActivity {
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         if(choices[35] == 0){
-            choices[35] = 1;
+            choices[35] = 1;  prev[1] = 35;
             mainText.setText(getString(R.string.f1_35_1));
             c11.setText(getString(R.string.click));
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     mainText.setText(getString(R.string.f1_35_2));
+                    itemlist[5] = 0; itemlist[11] = 1;
                     f1_35();
                 }
             });
@@ -1734,6 +1821,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice1.setVisibility(View.INVISIBLE);
+                    prev[0] = 35;
                     f1_9();
                 }
             });
@@ -1744,13 +1832,14 @@ public class subActivity extends AppCompatActivity {
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         if(choices[36] == 0){
-            choices[36] = 1;
+            choices[36] = 1; prev[1] = 36;
             mainText.setText(getString(R.string.f1_36_1));
             c11.setText(getString(R.string.click));
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     mainText.setText(getString(R.string.f1_36_2));
+                    itemlist[5] = 0; itemlist[11] = 1;
                     f1_36();
                 }
             });
@@ -1760,13 +1849,14 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice1.setVisibility(View.INVISIBLE);
+                    prev[0] = 36;
                     f1_9();
                 }
             });
         }
     }
     public void f1_37(){
-        choices[37] = 1;
+        choices[37] = 1; prev[1] = 37;
         choice1 = findViewById(R.id.choice_no1);
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
@@ -1776,12 +1866,13 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice1.setVisibility(View.INVISIBLE);
+                prev[0] = 37;
                 f1_9();
             }
         });
     }
     public void f1_38(){
-        choices[38] = 1;
+        choices[38] = 1; prev[1] = 38;
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         mainText.setText(getString(R.string.f1_38));
 
@@ -1882,6 +1973,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice4.setVisibility(View.INVISIBLE);
+                    prev[0] = 38;
                     f1_45();
                 }
             });
@@ -1911,6 +2003,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice5.setVisibility(View.INVISIBLE);
+                    prev[0] = 38;
                     f1_45();
                 }
             });
@@ -1949,15 +2042,19 @@ public class subActivity extends AppCompatActivity {
        mainText = findViewById(R.id.main_text);
         if(txt.equals(getString(R.string.f1_38c2))){
             //mainText.setText("gold");
+            prev[0] = 38;
             f1_32();
         } else  if(txt.equals(getString(R.string.f1_38c3))){
             //mainText.setText("maid");
+            prev[0] = 38;
             f1_44();
         } else  if(txt.equals(getString(R.string.f1_38c4))){
             //mainText.setText("pill");
+            prev[0] = 38;
             f1_43();
         } else  if(txt.equals(getString(R.string.f1_38c5))){
             //mainText.setText("cook");
+            prev[0] = 38;
             f1_42();
         } else {
             mainText.setText("error");
@@ -1969,7 +2066,7 @@ public class subActivity extends AppCompatActivity {
        choice2 = findViewById(R.id.choice_no2); c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
         c11.setText(getString(R.string.click));
         if(choices[39] == 0){
-            choices[39] = 1;
+            choices[39] = 1; prev[1] = 39;
             choice1.setVisibility(View.VISIBLE);
             mainText.setText(getString(R.string.f1_39_1));
             c11.setOnClickListener(new View.OnClickListener() {
@@ -2011,6 +2108,7 @@ public class subActivity extends AppCompatActivity {
             c21.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    prev[0] = 39;
                     choice2.setVisibility(View.INVISIBLE);
                     if(choices[24] == 1 && choices[25] == 0){
                         f1_38();
@@ -2022,6 +2120,7 @@ public class subActivity extends AppCompatActivity {
             c22.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    prev[0] = 39;
                     choice2.setVisibility(View.INVISIBLE);
                     if(choices[57] == 1 || choices[19] == 1){
                         f1_9();
@@ -2037,7 +2136,7 @@ public class subActivity extends AppCompatActivity {
         }
    }
    public void f1_40(){
-        choices[40] = 1;
+        choices[40] = 1; prev[1] = 40;
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         mainText.setText(getString(R.string.f1_40));
         choice2 = findViewById(R.id.choice_no2); choice2.setVisibility(View.VISIBLE);
@@ -2046,13 +2145,17 @@ public class subActivity extends AppCompatActivity {
        c21.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-              f1_38();
+               choice2.setVisibility(View.INVISIBLE);
+               prev[0] = 40;
+               f1_38();
            }
        });
        c21.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-              f1_9();
+               choice2.setVisibility(View.INVISIBLE);
+               prev[0] = 40;
+               f1_9();
            }
        });
    }
@@ -2061,7 +2164,7 @@ public class subActivity extends AppCompatActivity {
        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
 
        if(choices[41] == 0){
-           choices[41] = 1;
+           choices[41] = 1; prev[1] = 41;
            mainText.setText(getString(R.string.f1_41_1));
            choice1.setVisibility(View.VISIBLE);
            c11.setText(getString(R.string.click));
@@ -2090,6 +2193,7 @@ public class subActivity extends AppCompatActivity {
                @Override
                public void onClick(View v) {
                    choice2.setVisibility(View.INVISIBLE);
+                   prev[0] = 41;
                    f1_9();
                }
            });
@@ -2097,6 +2201,7 @@ public class subActivity extends AppCompatActivity {
                @Override
                public void onClick(View v) {
                    choice2.setVisibility(View.INVISIBLE);
+                   prev[0] = 41;
                    f1_26();
                }
            });
@@ -2158,7 +2263,7 @@ public class subActivity extends AppCompatActivity {
        }
    }
    public void f1_45(){
-       choices[45] = 1;
+       choices[45] = 1; prev[1] = 45;
        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
        mainText.setText(getString(R.string.f1_45));
        if(itemlist[0] == 1){
@@ -2173,6 +2278,7 @@ public class subActivity extends AppCompatActivity {
        c21.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+               prev[0] = 45;
                choice2.setVisibility(View.INVISIBLE);
                f1_15();
            }
@@ -2180,13 +2286,14 @@ public class subActivity extends AppCompatActivity {
        c22.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+               prev[0] = 45;
                choice2.setVisibility(View.INVISIBLE);
                f1_46();
            }
        });
    }
    public void f1_46(){
-       choices[46] = 1;
+       choices[46] = 1; prev[1] = 46;
        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
        mainText.setText(getString(R.string.f1_46));
 
@@ -2197,12 +2304,13 @@ public class subActivity extends AppCompatActivity {
            @Override
            public void onClick(View v) {
                choice1.setVisibility(View.INVISIBLE);
+               prev[0] = 46;
                f1_9();
            }
        });
    }
    public void f1_47(){
-       choices[47] = 1;
+       choices[47] = 1; prev[1] = 47;
        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
        mainText.setText(getString(R.string.f1_47));
 
@@ -2213,12 +2321,13 @@ public class subActivity extends AppCompatActivity {
            @Override
            public void onClick(View v) {
                choice1.setVisibility(View.INVISIBLE);
+               prev[0] = 47;
                f1_9();
            }
        });
    }
    public void f1_48(){
-       choices[48] = 1;
+       choices[48] = 1; prev[1] = 48;
        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
        mainText.setText(getString(R.string.f1_48));
 
@@ -2229,6 +2338,7 @@ public class subActivity extends AppCompatActivity {
            @Override
            public void onClick(View v) {
                choice1.setVisibility(View.INVISIBLE);
+               prev[0] = 48;
                f1_9();
            }
        });
@@ -2263,13 +2373,14 @@ public class subActivity extends AppCompatActivity {
        mainText = findViewById(R.id.main_text);
        character = findViewById(R.id.character);
        if (choices[50] == 0) {
-           choices[50] = 1;
+           choices[50] = 1; prev[1] = 50;
            mainText.setText(getString(R.string.f1_50_1));
            c11.setText(getString(R.string.click));
            c11.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
                    mainText.setText(getString(R.string.f1_50_2));
+                   prev[0] = 50;
                    f1_44();
                }
            });
@@ -2278,13 +2389,14 @@ public class subActivity extends AppCompatActivity {
                @Override
                public void onClick(View v) {
                    choice1.setVisibility(View.INVISIBLE);
+                   prev[0] = 50;
                    f1_9();
                }
            });
        }
    }
    public void f1_62(){
-       choices[62] = 1;
+       choices[62] = 1; prev[1] = 62;
        choice2 = findViewById(R.id.choice_no2);
        c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
        choice2.setVisibility(View.VISIBLE);
@@ -2295,6 +2407,7 @@ public class subActivity extends AppCompatActivity {
            @Override
            public void onClick(View v) {
                choice2.setVisibility(View.INVISIBLE);
+               prev[0] = 62;
                f1_9();
            }
        });
@@ -2302,6 +2415,7 @@ public class subActivity extends AppCompatActivity {
            @Override
            public void onClick(View v) {
                choice2.setVisibility(View.INVISIBLE);
+               prev[0] = 62;
                if(itemlist[4] == 1){
                    if(choices[25] == 1){
                        f1_40();
@@ -2315,7 +2429,7 @@ public class subActivity extends AppCompatActivity {
        });
    }
    public void f1_63(){
-       choices[63] = 1;
+       choices[63] = 1; prev[1] = 63;
        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
        mainText.setText(getString(R.string.f1_63));
 
@@ -2326,6 +2440,7 @@ public class subActivity extends AppCompatActivity {
            @Override
            public void onClick(View v) {
                choice1.setVisibility(View.INVISIBLE);
+               prev[0] = 63;
                f1_9();
            }
        });
@@ -2335,4 +2450,60 @@ public class subActivity extends AppCompatActivity {
         mainText = findViewById(R.id.main_text);
         mainText.setText(getString(R.string.f1_100));
    }
+
+   public void back1(int prev, int now){
+        if(prev == 51){ f1_51();}
+        else if(prev == 52){ choices[now] = 0; f1_52();}
+        else if(prev == 0){choices[now] = 0;f1_0();}
+        else if(prev == 1){choices[now] = 0;f1_1();}
+        else if(prev == 2){choices[now] = 0;f1_2();}
+        else if(prev == 3){choices[now] = 0;f1_3();}
+        else if(prev == 4){choices[now] = 0;f1_4();}
+        else if(prev == 5){choices[now] = 0;f1_5();}
+        else if(prev == 6){choices[now] = 0;f1_6();}
+        else if(prev == 7){choices[now] = 0;f1_7();}
+        else if(prev == 8){choices[now] = 0;f1_8();}
+        else if(prev == 9){choices[now] = 0;f1_9();}
+        else if(prev == 10){choices[now] = 0;f1_10();}
+        else if(prev == 11){choices[now] = 0;f1_11();}
+        else if(prev == 12){choices[now] = 0;f1_12();}
+        else if(prev == 13){choices[now] = 0;f1_13();}
+        else if(prev == 14){choices[now] = 0;f1_14();}
+        else if(prev == 15){choices[now] = 0;f1_15();}
+        else if(prev == 16){choices[now] = 0;f1_16();}
+        else if(prev == 17){choices[now] = 0;f1_17();}
+        else if(prev == 55){choices[now] = 0;f1_55();}
+        else if(prev == 18){choices[now] = 0;f1_18();}
+        else if(prev == 57){choices[now] = 0;f1_57();}
+        else if(prev == 56){choices[now] = 0;f1_56();}
+        else if(prev == 19){choices[now] = 0;f1_19();}
+        else if(prev == 20){choices[now] = 0;f1_20();}
+        else if(prev == 21){choices[now] = 0;f1_21();}
+        else if(prev == 24){choices[now] = 0;f1_24();}
+        else if(prev == 25){choices[now] = 0;f1_25();}
+        else if(prev == 27){choices[now] = 0;f1_27();}
+        else if(prev == 28){choices[now] = 0;f1_28();}
+        else if(prev == 30){choices[now] = 0;f1_30();}
+        else if(prev == 31){choices[now] = 0;f1_31();}
+        else if(prev == 33){choices[now] = 0;f1_33();}
+        else if(prev == 34){choices[now] = 0;f1_34();}
+        else if(prev == 35){choices[now] = 0;f1_35();}
+        else if(prev == 36){choices[now] = 0;f1_36();}
+        else if(prev == 37){choices[now] = 0;f1_37();}
+        else if(prev == 38){choices[now] = 0;f1_38();}
+        else if(prev == 39){choices[now] = 0;f1_39();}
+        else if(prev == 40){choices[now] = 0;f1_40();}
+        else if(prev == 41){choices[now] = 0;f1_41();}
+        else if(prev == 45){choices[now] = 0;f1_45();}
+        else if(prev == 46){choices[now] = 0;f1_46();}
+        else if(prev == 47){choices[now] = 0;f1_47();}
+        else if(prev == 48){choices[now] = 0;f1_48();}
+        else if(prev == 50){choices[now] = 0;f1_50();}
+        else if(prev == 62){choices[now] = 0;f1_62();}
+        else if(prev == 63){choices[now] = 0;f1_63();}
+   }
+
+
+
+
 }
