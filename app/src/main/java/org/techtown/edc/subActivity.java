@@ -66,9 +66,8 @@ public class subActivity extends AppCompatActivity {
             }
         });
 
-        itemlist[5] = 1;
-        f1_30();
-        //f1_51();
+
+        f1_51();
     }
 
     public void choosePrincess() {
@@ -602,7 +601,11 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice4.setVisibility(View.INVISIBLE);
-                f1_10();
+                if(choices[14] == 0 && choices[15] == 0) {
+                    f1_10();
+                } else {
+                    f1_15();
+                }
             }
         });
         c42.setOnClickListener(new View.OnClickListener() {
@@ -666,13 +669,14 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                //f1_15();
+                f1_15();
             }
         });
         c33.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //f1_16();
+                choice3.setVisibility(View.INVISIBLE);
+                f1_16();
             }
         });
     }
@@ -703,20 +707,20 @@ public class subActivity extends AppCompatActivity {
                     } else if (choices[3] == 0 && itemlist[4] == 1 && choices[55] == 0) {
                         f1_55();
                     } else if (choices[3] == 0 && itemlist[4] == 0 && choices[18] == 0) {
-                        //f1_18();
+                        f1_18();
                     } else if (choices[18] == 1 && itemlist[4] == 0 && choices[29] == 0) {
                         f1_29();
                     } else if ((choices[36] == 1 || choices[35] == 1) && choices[37] == 0){
-                        //f1_37();
+                        f1_37();
                     }
                 } //우유나 후추가 있을 경우.
                 else if(itemlist[5] == 1 || itemlist[7] == 1){
                     if(itemlist[5] == 1 && choices[55] == 1 && choices[33] == 0){
                         f1_33();
                     } else if (itemlist[7] == 1 && choices[17] == 1 && choices[34] == 0){
-                        //f1_34();
+                        f1_34();
                     } else if (choices[36] == 0 && ((itemlist[7] == 1 && choices[33] == 1) || (itemlist[5] == 1 && choices[34] == 1))){
-                        //f1_36();
+                        f1_36();
                     }
                 }
             }
@@ -751,7 +755,7 @@ public class subActivity extends AppCompatActivity {
             choice2.setVisibility(View.VISIBLE);
 
             c21.setText(getString(R.string.f1_12c1));
-            c22.setText(getString(R.string.f1_11c2));
+            c22.setText(getString(R.string.f1_12c2));
         }else{
             c21 = findViewById(R.id.choice1_1);
             choice1.setVisibility(View.VISIBLE);
@@ -913,11 +917,11 @@ public class subActivity extends AppCompatActivity {
                     } else if (choices[60] == 0 && choices[61] == 0 && itemlist[4] == 0 && choices[25] == 0) {
                         f1_25();
                     } else if (choices[24] == 1 && choices[25] == 1) {
-                        //f1_62();
+                        f1_62();
                     } else if (choices[45] == 1) {
-                        //f1_47();
+                        f1_47();
                     } else {
-                        //f1_100();
+                        f1_100();
                     }
                 }
             });
@@ -1093,7 +1097,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice2.setVisibility(View.INVISIBLE);
-                    //f1_50();
+                    f1_50();
                 }
             });
         }
@@ -1226,7 +1230,7 @@ public class subActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice1.setVisibility(View.INVISIBLE);
-                    //f1_48();
+                    f1_48();
                 }
             });
         }
@@ -1420,13 +1424,15 @@ public class subActivity extends AppCompatActivity {
         c21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //f1_38();
+                choice2.setVisibility(View.INVISIBLE);
+                f1_38();
             }
         });
         c22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //f1_39();
+                choice2.setVisibility(View.INVISIBLE);
+                f1_39();
             }
         });
     }
@@ -1452,13 +1458,15 @@ public class subActivity extends AppCompatActivity {
         c21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //f1_41();
+                choice2.setVisibility(View.INVISIBLE);
+                f1_41();
             }
         });
         c22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //f1_39();
+                choice2.setVisibility(View.INVISIBLE);
+                f1_39();
             }
         });
     }
@@ -1474,6 +1482,7 @@ public class subActivity extends AppCompatActivity {
             public void onClick(View v) {
                 itemlist[12] = 0;
                 mainText.setText("도망 엔딩"); //도망 엔딩
+                choice1.setVisibility(View.INVISIBLE);
             }
         });
     }
@@ -1487,6 +1496,7 @@ public class subActivity extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                choice1.setVisibility(View.INVISIBLE);
                 f1_28();
             }
         });
@@ -1502,6 +1512,7 @@ public class subActivity extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                choice1.setVisibility(View.INVISIBLE);
                 f1_9();
             }
         });
@@ -1529,6 +1540,7 @@ public class subActivity extends AppCompatActivity {
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    choice1.setVisibility(View.INVISIBLE);
                     mainText.setText(getString(R.string.f1_29_3)); //베드엔딩
                 }
             });
@@ -1638,5 +1650,659 @@ public class subActivity extends AppCompatActivity {
             });
         }
     }
+    public void f1_34(){
+        choice1 = findViewById(R.id.choice_no1);
+        c11 = findViewById(R.id.choice1_1);
+        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
 
+        if(choices[34] == 0){
+            choices[34] = 1;
+            mainText.setText(getString(R.string.f1_34_1));
+            choice1.setVisibility(View.VISIBLE);
+            c11.setText(getString(R.string.click));
+            c11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mainText.setText(getString(R.string.f1_34_2));
+                    f1_34();
+                }
+            });
+        }else if(mainText.getText().toString().equals(getString(R.string.f1_34_2))){
+            c11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mainText.setText(getString(R.string.f1_34_3));
+                    f1_34();
+                }
+            });
+        }else if(mainText.getText().toString().equals(getString(R.string.f1_34_3))) {
+            c22 = findViewById(R.id.choice2_2);
+            if(itemlist[5] == 1) {
+                c21 = findViewById(R.id.choice2_1);
+                choice1.setVisibility(View.INVISIBLE);
+                choice2.setVisibility(View.VISIBLE);
+                c21.setText(getString(R.string.f1_34c1));
+                c22.setText(getString(R.string.f1_34c2));
+            }else{
+                c21 = findViewById(R.id.choice1_1);
+                c21.setText(getString(R.string.f1_34c1));
+            }
+            c21.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice2.setVisibility(View.INVISIBLE);
+                    f1_9();
+                }
+            });
+            c22.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice2.setVisibility(View.INVISIBLE);
+                    f1_35();
+                }
+            });
+        }
+    }
+    public void f1_35(){
+        choice1 = findViewById(R.id.choice_no1);
+        c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
+        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+        if(choices[35] == 0){
+            choices[35] = 1;
+            mainText.setText(getString(R.string.f1_35_1));
+            c11.setText(getString(R.string.click));
+            c11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mainText.setText(getString(R.string.f1_35_2));
+                    f1_35();
+                }
+            });
+        }else if(mainText.getText().toString().equals(getString(R.string.f1_35_2))){
+            c11.setText(getString(R.string.f1_35c1));
+            c11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice1.setVisibility(View.INVISIBLE);
+                    f1_9();
+                }
+            });
+        }
+    }
+    public void f1_36(){
+        choice1 = findViewById(R.id.choice_no1);
+        c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
+        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+        if(choices[36] == 0){
+            choices[36] = 1;
+            mainText.setText(getString(R.string.f1_36_1));
+            c11.setText(getString(R.string.click));
+            c11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mainText.setText(getString(R.string.f1_36_2));
+                    f1_36();
+                }
+            });
+        }else if(mainText.getText().toString().equals(getString(R.string.f1_36_2))){
+            c11.setText(getString(R.string.f1_36c1));
+            c11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice1.setVisibility(View.INVISIBLE);
+                    f1_9();
+                }
+            });
+        }
+    }
+    public void f1_37(){
+        choices[37] = 1;
+        choice1 = findViewById(R.id.choice_no1);
+        c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
+        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+        mainText.setText(getString(R.string.f1_37));
+        c11.setText(getString(R.string.f1_37c1));
+        c11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice1.setVisibility(View.INVISIBLE);
+                f1_9();
+            }
+        });
+    }
+    public void f1_38(){
+        choices[38] = 1;
+        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+        mainText.setText(getString(R.string.f1_38));
+
+        c41 = findViewById(R.id.choice4_1);  c42 = findViewById(R.id.choice4_2);
+        c43 = findViewById(R.id.choice4_3);  c44 = findViewById(R.id.choice4_4);
+        c42.setText("_"); c43.setText("_"); c44.setText("_");
+
+        int cook = 0, pill = 0, maid = 0, gold = 0, sumC = 0;
+        if((choices[17] == 1 || choices[33] == 1 || choices[34] == 1 || choices[55] == 1) && choices[36] == 0 && choices[35] == 0){
+            cook = 1;
+        }
+        if(itemlist[0] == 1){
+            gold = 1;
+        }
+        //maid와 pill 확인용 임시 조건
+        if(itemlist[3] == 1){
+            maid = 1;
+        }
+        if(itemlist[4] == 1){
+            pill = 1;
+        }
+        //시종장의 경우 choices를 어캐할 건지 고민 후 구현,,
+        //약사의 경우 2층 스크립터 완료 후 구현.
+
+        sumC = cook + pill + maid + gold;
+        switch (sumC){
+            case 0: choice4 = findViewById(R.id.choice_no1);
+                     c41 = findViewById(R.id.choice1_1);
+                     break;
+            case 1: choice4 = findViewById(R.id.choice_no2);
+                    c41 = findViewById(R.id.choice2_1);  c42 = findViewById(R.id.choice2_2);
+                    break;
+            case 2: choice4 = findViewById(R.id.choice_no3);
+                    c41 = findViewById(R.id.choice3_1);  c42 = findViewById(R.id.choice3_2);
+                    c43 = findViewById(R.id.choice3_3);
+                    break;
+            case 3: choice4 = findViewById(R.id.choice_no4);
+                    c41 = findViewById(R.id.choice4_1);  c42 = findViewById(R.id.choice4_2);
+                    c43 = findViewById(R.id.choice4_3);  c44 = findViewById(R.id.choice4_4);
+                    break;
+            case 4 : choice5 = findViewById(R.id.choice_no5); choice5.setVisibility(View.VISIBLE);
+                    c51 = findViewById(R.id.choice5_1);  c52 = findViewById(R.id.choice5_2);
+                    c53 = findViewById(R.id.choice5_3);  c54 = findViewById(R.id.choice5_4);
+                    c55 = findViewById(R.id.choice5_5);
+                    break;
+        }
+        if(sumC == 4){
+            c51.setText(getString(R.string.f1_38c1)); c52.setText(getString(R.string.f1_38c2));
+            c53.setText(getString(R.string.f1_38c3)); c54.setText(getString(R.string.f1_38c4));
+            c55.setText(getString(R.string.f1_38c5));
+        }
+        else if(sumC == 3){
+            if(gold == 0){
+                c42.setText(getString(R.string.f1_38c3)); c43.setText(getString(R.string.f1_38c4));
+                c44.setText(getString(R.string.f1_38c5));
+            }else if(maid == 0){
+                c42.setText(getString(R.string.f1_38c2)); c43.setText(getString(R.string.f1_38c4));
+                c44.setText(getString(R.string.f1_38c5));
+            } else if(pill == 0){
+                c42.setText(getString(R.string.f1_38c2)); c43.setText(getString(R.string.f1_38c3));
+                c44.setText(getString(R.string.f1_38c5));
+            } else if(cook == 0){
+                c42.setText(getString(R.string.f1_38c2)); c43.setText(getString(R.string.f1_38c3));
+                c44.setText(getString(R.string.f1_38c4));
+            }
+        } else if(sumC == 2){
+            if(gold == 0 && maid == 0){
+                c42.setText(getString(R.string.f1_38c4)); c43.setText(getString(R.string.f1_38c5));
+            } else if(gold == 0 && pill == 0){
+                c42.setText(getString(R.string.f1_38c3)); c43.setText(getString(R.string.f1_38c5));
+            } else if(gold == 0 && cook == 0){
+                c42.setText(getString(R.string.f1_38c3)); c43.setText(getString(R.string.f1_38c4));
+            } else if(maid == 0 && pill == 0){
+                c42.setText(getString(R.string.f1_38c2)); c43.setText(getString(R.string.f1_38c5));
+            } else if(maid == 0 && cook == 0){
+                c42.setText(getString(R.string.f1_38c2)); c43.setText(getString(R.string.f1_38c4));
+            } else if(pill == 0 && cook == 0){
+                c42.setText(getString(R.string.f1_38c2)); c43.setText(getString(R.string.f1_38c3));
+            } else{
+                c42.setText("error"); c43.setText("error");
+            }
+        } else if(sumC == 1){
+            if(gold == 1){
+                c42.setText(getString(R.string.f1_38c2));
+            }else if(maid == 1){
+                c42.setText(getString(R.string.f1_38c3));
+            } else if(pill == 1){
+                c42.setText(getString(R.string.f1_38c4));
+            } else if(cook == 1){
+                c42.setText(getString(R.string.f1_38c5));
+            }
+        }
+
+        if(sumC != 4) {
+            choice4.setVisibility(View.VISIBLE);
+            c41.setText(getString(R.string.f1_38c1));
+            c41.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice4.setVisibility(View.INVISIBLE);
+                    f1_45();
+                }
+            });
+            c42.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice4.setVisibility(View.INVISIBLE);
+                    f1_38go(c42.getText().toString());
+                }
+            });
+            c43.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice4.setVisibility(View.INVISIBLE);
+                    f1_38go(c43.getText().toString());
+                }
+            });
+            c44.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice4.setVisibility(View.INVISIBLE);
+                    f1_38go(c44.getText().toString());
+                }
+            });
+        } else {
+            c51.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice5.setVisibility(View.INVISIBLE);
+                    f1_45();
+                }
+            });
+            c52.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice5.setVisibility(View.INVISIBLE);
+                    f1_38go(c52.getText().toString());
+                }
+            });
+            c53.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice5.setVisibility(View.INVISIBLE);
+                    f1_38go(c53.getText().toString());
+                }
+            });
+            c54.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice5.setVisibility(View.INVISIBLE);
+                    f1_38go(c54.getText().toString());
+                }
+            });
+            c55.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice5.setVisibility(View.INVISIBLE);
+                    f1_38go(c55.getText().toString());
+                }
+            });
+        }
+    }
+   public void f1_38go(String txt){
+        //확인용 mainText
+       mainText = findViewById(R.id.main_text);
+        if(txt.equals(getString(R.string.f1_38c2))){
+            //mainText.setText("gold");
+            f1_32();
+        } else  if(txt.equals(getString(R.string.f1_38c3))){
+            //mainText.setText("maid");
+            f1_44();
+        } else  if(txt.equals(getString(R.string.f1_38c4))){
+            //mainText.setText("pill");
+            f1_43();
+        } else  if(txt.equals(getString(R.string.f1_38c5))){
+            //mainText.setText("cook");
+            f1_42();
+        } else {
+            mainText.setText("error");
+        }
+   }
+   public void f1_39(){
+        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+        choice1 = findViewById(R.id.choice_no1); c11 = findViewById(R.id.choice1_1);
+       choice2 = findViewById(R.id.choice_no1); c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
+        c11.setText(getString(R.string.click));
+        if(choices[39] == 0){
+            choices[39] = 1;
+            mainText.setText(getString(R.string.f1_39_1));
+            c11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mainText.setText(getString(R.string.f1_39_2));
+                    f1_39();
+                }
+            });
+        }else if(mainText.getText().toString().equals(getString(R.string.f1_39_2))){
+            c11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mainText.setText(getString(R.string.f1_39_3));
+                    f1_39();
+                }
+            });
+        } else if(mainText.getText().toString().equals(getString(R.string.f1_39_3))){
+            c11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mainText.setText(getString(R.string.f1_39_4));
+                    f1_39();
+                }
+            });
+        } else if(mainText.getText().toString().equals(getString(R.string.f1_39_4))){
+            c11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mainText.setText(getString(R.string.f1_39_5));
+                    f1_39();
+                }
+            });
+        }else if(mainText.getText().toString().equals(getString(R.string.f1_39_5))){
+            choice1.setVisibility(View.INVISIBLE);
+            choice2.setVisibility(View.VISIBLE);
+            c21.setText(getString(R.string.f1_39c1)); c22.setText(getString(R.string.f1_39c2));
+
+            c21.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(choices[24] == 1 && choices[25] == 0){
+                        f1_38();
+                    }else if(choices[24] == 0 && choices[25] == 1){
+                        f1_41();
+                    }
+                }
+            });
+            c22.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(choices[57] == 1 || choices[19] == 1){
+                        f1_9();
+                    }else if(choices[2] == 1 && choices[5] == 0 && itemlist[1] == 0){
+                        f1_19();
+                    }else if(choices[2] == 1 && choices[5] == 0 && itemlist[1] == 1){
+                        f1_20();
+                    }else{
+                        f1_9();
+                    }
+                }
+            });
+        }
+   }
+   public void f1_40(){
+        choices[40] = 1;
+        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+        mainText.setText(getString(R.string.f1_40));
+        choice2 = findViewById(R.id.choice_no2); choice2.setVisibility(View.VISIBLE);
+        c21 = findViewById(R.id.choice2_1); c22 =findViewById(R.id.choice2_2);
+        c21.setText(getString(R.string.f1_40c1)); c21.setText(getString(R.string.f1_40c2));
+       c21.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+              f1_38();
+           }
+       });
+       c21.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+              f1_9();
+           }
+       });
+   }
+   public void f1_41(){
+       choice1 = findViewById(R.id.choice_no1); c11 = findViewById(R.id.choice1_1);
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+
+       if(choices[41] == 0){
+           choices[41] = 1;
+           mainText.setText(getString(R.string.f1_41_1));
+           choice1.setVisibility(View.VISIBLE);
+           c11.setText(getString(R.string.click));
+           c11.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   mainText.setText(getString(R.string.f1_41_2));
+                   f1_41();
+               }
+           });
+       }else if(mainText.getText().toString().equals(getString(R.string.f1_41_2))) {
+           c22 = findViewById(R.id.choice2_2);
+           if(itemlist[12] == 1) {
+               c21 = findViewById(R.id.choice2_1);
+               choice1.setVisibility(View.INVISIBLE);
+               choice2 = findViewById(R.id.choice_no2);
+               choice2.setVisibility(View.VISIBLE);
+               c21.setText(getString(R.string.f1_41c1));
+               c22.setText(getString(R.string.f1_41c2));
+           }else{
+               c21 = findViewById(R.id.choice1_1);
+               choice2 = findViewById(R.id.choice_no1);
+               c21.setText(getString(R.string.f1_41c1));
+           }
+           c21.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   choice2.setVisibility(View.INVISIBLE);
+                   f1_9();
+               }
+           });
+           c22.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   choice2.setVisibility(View.INVISIBLE);
+                   f1_26();
+               }
+           });
+       }
+   }
+   public void f1_42(){
+       choices[42] = 1;
+       choice1 = findViewById(R.id.choice_no1);
+       c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       mainText.setText(getString(R.string.f1_42));
+       c11.setText(getString(R.string.click));
+       c11.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               mainText.setText("도망 엔딩"); //도망 엔딩
+               choice1.setVisibility(View.INVISIBLE);
+           }
+       });
+   }
+   public void f1_43(){
+       choices[43] = 1;
+       choice1 = findViewById(R.id.choice_no1);
+       c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       mainText.setText(getString(R.string.f1_43));
+       c11.setText(getString(R.string.click));
+       c11.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               mainText.setText("도망 엔딩"); //도망 엔딩
+               choice1.setVisibility(View.INVISIBLE);
+           }
+       });
+   }
+   public void f1_44(){
+       choice1 = findViewById(R.id.choice_no1);
+       c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       if(choices[44] == 0) {
+           choices[44] = 1;
+           mainText.setText(getString(R.string.f1_44_1));
+           c11.setText(getString(R.string.click));
+           c11.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   mainText.setText(getString(R.string.f1_44_2));
+                   f1_44();
+               }
+           });
+       }else{
+           c11.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   mainText.setText("도망 엔딩"); //도망 엔딩
+                   choice1.setVisibility(View.INVISIBLE);
+               }
+           });
+       }
+   }
+   public void f1_45(){
+       choices[45] = 1;
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       mainText.setText(getString(R.string.f1_45));
+       if(itemlist[0] == 1){
+           choice2 = findViewById(R.id.choice_no2); choice2.setVisibility(View.VISIBLE);
+           c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
+           c21.setText(getString(R.string.f1_45c1)); c22.setText(getString(R.string.f1_45c2));
+       }else{
+           choice2 = findViewById(R.id.choice_no1); choice2.setVisibility(View.VISIBLE);
+           c21 = findViewById(R.id.choice1_1);  c22 = findViewById(R.id.choice2_2);
+           c21.setText(getString(R.string.f1_45c1));
+       }
+       c21.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               choice2.setVisibility(View.INVISIBLE);
+               f1_15();
+           }
+       });
+       c22.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               choice2.setVisibility(View.INVISIBLE);
+               f1_46();
+           }
+       });
+   }
+   public void f1_46(){
+       choices[46] = 1;
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       mainText.setText(getString(R.string.f1_46));
+
+       choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
+       c11 = findViewById(R.id.choice1_1); c11.setText(getString(R.string.f1_46c1));
+
+       c11.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               choice1.setVisibility(View.INVISIBLE);
+               f1_9();
+           }
+       });
+   }
+   public void f1_47(){
+       choices[47] = 1;
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       mainText.setText(getString(R.string.f1_47));
+
+       choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
+       c11 = findViewById(R.id.choice1_1); c11.setText(getString(R.string.f1_47c1));
+
+       c11.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               choice1.setVisibility(View.INVISIBLE);
+               f1_9();
+           }
+       });
+   }
+   public void f1_48(){
+       choices[48] = 1;
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       mainText.setText(getString(R.string.f1_48));
+
+       choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
+       c11 = findViewById(R.id.choice1_1); c11.setText(getString(R.string.f1_48c1));
+
+       c11.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               choice1.setVisibility(View.INVISIBLE);
+               f1_9();
+           }
+       });
+   }
+   public void f1_49(){
+       choices[49] = 1;
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       mainText.setText(getString(R.string.f1_49_1));
+
+       choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
+       c11 = findViewById(R.id.choice1_1); c11.setText(getString(R.string.click));
+       c11.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               mainText.setText(getString(R.string.f1_49_2));
+           }
+       });
+       if(mainText.getText().toString().equals(getString(R.string.f1_49_2))){
+           c11.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   mainText.setText("베드엔딩");
+                   choice1.setVisibility(View.INVISIBLE);
+               }
+           });
+       }
+   }
+   public void f1_50() {
+       choice1 = findViewById(R.id.choice_no1);
+       c11 = findViewById(R.id.choice1_1);
+       choice1.setVisibility(View.VISIBLE);
+       mainText = findViewById(R.id.main_text);
+       character = findViewById(R.id.character);
+       if (choices[50] == 0) {
+           choices[50] = 1;
+           mainText.setText(getString(R.string.f1_50_1));
+           c11.setText(getString(R.string.click));
+           c11.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   mainText.setText(getString(R.string.f1_50_2));
+                   f1_44();
+               }
+           });
+       } else {
+           c11.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   choice1.setVisibility(View.INVISIBLE);
+                   f1_9();
+               }
+           });
+       }
+   }
+   public void f1_62(){
+       choices[62] = 1;
+       choice2 = findViewById(R.id.choice_no2);
+       c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
+       choice2.setVisibility(View.VISIBLE);
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       mainText.setText(getString(R.string.f1_62));
+       c21.setText(getString(R.string.f1_62c1)); c22.setText(getString(R.string.f1_62c2));
+       c21.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               choice2.setVisibility(View.INVISIBLE);
+               f1_9();
+           }
+       });
+       c22.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               choice2.setVisibility(View.INVISIBLE);
+               if(itemlist[4] == 1){
+                   if(choices[25] == 1){
+                       f1_40();
+                   }else if(choices[25] == 0){
+                       f1_38();
+                   }
+               } else if(itemlist[4] == 0){
+                   f1_41();
+               }
+           }
+       });
+   }
+   public void f1_100(){
+        mainText = findViewById(R.id.main_text);
+        mainText.setText(getString(R.string.f1_100));
+   }
 }

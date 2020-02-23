@@ -163,12 +163,13 @@
     <string name = "f1_36_2">식지 않게 빨리요! ,,, 뭐 식어도 맛있겠지만요!! (item :우유 -1)(item:스튜)</string>
     <string name = "f1_36c1">아 드디어 끝났다. 이제 여기 볼일 없음</string>
     <string name = "f1_37">재료를 가져왔나요??? 아니네요,,, 얼른 찾아와주세요</string>
+    <string name = "f1_37c1">힝구 찾으러 가자</string>
     <string name = "f1_38">아 그래요? 누구 심부름인가요? 형식상 물어보는거예요ㅎㅎ</string>
-    <string name = "f1_38c1">요리사님이요</string>
-    <string name = "f1_38c2">약사님이요 //현재 구현x</string>
+    <string name = "f1_38c5">요리사님이요</string>
+    <string name = "f1_38c4">약사님이요 //현재 구현x</string>
     <string name = "f1_38c3">시종장님이요 //현재 구현x</string>
-    <string name = "f1_38c4">(item 황금주머니)큼큼,,, 바깥바람을 쐬고 싶음</string>
-    <string name = "f1_38c5">알빠ㅉ</string>
+    <string name = "f1_38c2">(item 황금주머니)큼큼,,, 바깥바람을 쐬고 싶음</string>
+    <string name = "f1_38c1">알빠ㅉ</string>
 
     <string name = "f1_39_1">어휴 말도 말요, 1층에 꼬까옷 입은 인간 인형이 있었는데 잘못 만들었나봐요, 드래곤님이 새장에 넣으려고 했는데 그 인형이 눈을 뜨고는</string>
     <string name = "f1_39_2">책상도 뒤집어 엎고, 새장도 뿌시고 난리였어요. 드래곤님을 도와 그 인형이 들고 있던 흉기를 떨어트리는덴 성공했었는데,,,</string>
