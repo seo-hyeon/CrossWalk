@@ -23,7 +23,7 @@ public class subActivity extends AppCompatActivity {
     int []choices = new int [70];
 
     int life = 5;
-    //0황금주머니, 1수정구슬, 2육감티아라, 3새장열쇠, 4하녀옷, 5우유, 6치즈, 7후추, 8지랫대, 9바늘, 10밧줄, 11맛있는 스튜, 12허가증
+    //0황금주머니, 1수정구슬, 2육감티아라, 3새장열쇠, 4하녀옷, 5우유, 7후추, 8지랫대, 9바늘, 10밧줄, 11맛있는 스튜, 12허가증
     int [] itemlist = new int [20];
 
     @Override
@@ -710,8 +710,13 @@ public class subActivity extends AppCompatActivity {
                         f1_18();
                     } else if (choices[18] == 1 && itemlist[4] == 0 && choices[29] == 0) {
                         f1_29();
-                    } else if ((choices[36] == 1 || choices[35] == 1) && choices[37] == 0){
+                    } else if (choices[36] == 1 || choices[35] == 1){
+                        f1_63();
+                    } else if ((choices[17] == 1 && choices[34] == 0) || (choices[55] == 1 && choices[33] == 0)
+                                || (choices[33] == 1 && choices[36] == 0 && choices[35] == 0) || (choices[34] == 1 && choices[36] == 0 && choices[35] == 0)){
                         f1_37();
+                    }else{
+                        f1_100();
                     }
                 } //우유나 후추가 있을 경우.
                 else if(itemlist[5] == 1 || itemlist[7] == 1){
@@ -765,6 +770,7 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice2.setVisibility(View.INVISIBLE);
+                choice1.setVisibility(View.INVISIBLE);
                 if(choices[57] == 1 || choices[19] == 1){
                     f1_9();
                 }else if (choices[2] == 1 && choices[5] == 0 && itemlist[1] == 0){
@@ -1140,12 +1146,14 @@ public class subActivity extends AppCompatActivity {
                 c21.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        choice2.setVisibility(View.INVISIBLE);
                         f1_28();
                     }
                 });
                 c22.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        choice2.setVisibility(View.INVISIBLE);
                         f1_27();
                     }
                 });
@@ -1155,6 +1163,7 @@ public class subActivity extends AppCompatActivity {
                 c11.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        choice1.setVisibility(View.INVISIBLE);
                         f1_28();
                     }
                 });
@@ -1194,6 +1203,7 @@ public class subActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     mainText.setText(getString(R.string.f1_57_3));
                     choice1.setVisibility(View.INVISIBLE);
+                    itemlist[4] = 1;
                     f1_18();
                 }
             });
@@ -1535,7 +1545,7 @@ public class subActivity extends AppCompatActivity {
                     f1_29();
                 }
             });
-        } else if (mainText.getText().toString().equals(getString(R.string.f1_19_2))) {
+        } else if (mainText.getText().toString().equals(getString(R.string.f1_29_2))) {
             c11.setText(getString(R.string.click));
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -1956,10 +1966,11 @@ public class subActivity extends AppCompatActivity {
    public void f1_39(){
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         choice1 = findViewById(R.id.choice_no1); c11 = findViewById(R.id.choice1_1);
-       choice2 = findViewById(R.id.choice_no1); c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
+       choice2 = findViewById(R.id.choice_no2); c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
         c11.setText(getString(R.string.click));
         if(choices[39] == 0){
             choices[39] = 1;
+            choice1.setVisibility(View.VISIBLE);
             mainText.setText(getString(R.string.f1_39_1));
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -2000,6 +2011,7 @@ public class subActivity extends AppCompatActivity {
             c21.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    choice2.setVisibility(View.INVISIBLE);
                     if(choices[24] == 1 && choices[25] == 0){
                         f1_38();
                     }else if(choices[24] == 0 && choices[25] == 1){
@@ -2010,6 +2022,7 @@ public class subActivity extends AppCompatActivity {
             c22.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    choice2.setVisibility(View.INVISIBLE);
                     if(choices[57] == 1 || choices[19] == 1){
                         f1_9();
                     }else if(choices[2] == 1 && choices[5] == 0 && itemlist[1] == 0){
@@ -2301,6 +2314,23 @@ public class subActivity extends AppCompatActivity {
            }
        });
    }
+   public void f1_63(){
+       choices[63] = 1;
+       mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       mainText.setText(getString(R.string.f1_63));
+
+       choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
+       c11 = findViewById(R.id.choice1_1); c11.setText(getString(R.string.f1_63c1));
+
+       c11.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               choice1.setVisibility(View.INVISIBLE);
+               f1_9();
+           }
+       });
+   }
+
    public void f1_100(){
         mainText = findViewById(R.id.main_text);
         mainText.setText(getString(R.string.f1_100));
