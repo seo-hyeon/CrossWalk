@@ -274,6 +274,7 @@ public class subActivity extends AppCompatActivity {
                 c32.setText(getString(R.string.f1_0c2));
             }
         } else {
+            choice1.setVisibility(View.VISIBLE);
             c31 = findViewById(R.id.choice1_1);
             c31.setText(getString(R.string.f1_0c3));
         }
@@ -556,7 +557,7 @@ public class subActivity extends AppCompatActivity {
         c21.setText(getString(R.string.f1_6c1));
         c22.setText(getString(R.string.f1_6c2));
 
-        if(choices[2] == 1){
+        if(choices[2] == 1 && itemlist[4] == 0){
             c21.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -566,7 +567,7 @@ public class subActivity extends AppCompatActivity {
                 }
             });
         }
-        else{
+        else if(choices[2] == 0 || choices[5] == 1){
             c21.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -688,7 +689,7 @@ public class subActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice4.setVisibility(View.INVISIBLE);
-                if(choices[14] == 0 && choices[15] == 0) {
+                if(choices[14] == 0 && choices[16] == 0) {
                     prev[0] = 9;
                     f1_10();
                 } else {
@@ -2471,8 +2472,8 @@ public class subActivity extends AppCompatActivity {
        choices[62] = 1; prev[1] = 62;
        choice2 = findViewById(R.id.choice_no2);
        c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
-       choice2.setVisibility(View.VISIBLE);
        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+       choice2.setVisibility(View.VISIBLE);
        mainText.setText(getString(R.string.f1_62));
        c21.setText(getString(R.string.f1_62c1)); c22.setText(getString(R.string.f1_62c2));
        c21.setOnClickListener(new View.OnClickListener() {
