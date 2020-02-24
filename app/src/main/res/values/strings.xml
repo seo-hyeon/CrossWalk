@@ -130,10 +130,12 @@
     <string name = "f1_24">엥 인간모양의 하녀인형이라니 별일이네요ㅎㅎ 인간모양 인형을 최근에도 봤었는데!!1 신기하다1 먼 볼일인가요?</string>
     <string name = "f1_24c1">나갈래애ㅇㅐㅐㅐㅐ</string>
     <string name = "f1_24c2">엥 봤단거 뭔 말임????</string>
+    <string name = "f1_24c3">걍 인사하러 온거임. 난 갈게</string>
     <string name = "f1_25_1">님은 새로운 인형인가요? 인간모양이네요ㅎ 인간인형을 요새 자주 보는 듯, 옷도 화려하네요</string>
     <string name = "f1_25_2">드래곤님 취향이 바뀌셨나,,,, 쨌든 무슨 일이세요?</string>
     <string name = "f1_25c1">나갈뤠에에에</string>
     <string name = "f1_25c2">엥 자주 본다는게 뭔 말임????</string>
+    <string name = "f1_25c3">걍 인사하러 온거임. 난 갈게</string>
     <string name = "f1_26">허가증이잖아요?? 드래곤님이 직접 시키신 심부름이군요! 가세요, (item:허가증 -1) ~도망 엔딩~</string>
     <string name = "f1_27">기다려도 강아지는 안옴, 곰이 우유 필요하다고 했으니 밖으로 사러 나간듯, 한참 안 올 느낌임</string>
     <string name = "f1_27c1">새장을 살펴보자</string>
@@ -209,6 +211,11 @@
     <string name = "f1_62c2">나갈래애애</string>
     <string name = "f1_63">어서오세요, 신경써줘서 고맙지만 지금 주방에는 할 일이 없어요, 다른 일을 찾아보는게 좋을 것 같아요</string>
     <string name = "f1_63c1">ㅇㅋㅇㅋ</string>
+    <string name = "f1_64">넵, 조심히 가세요!</string>
+    <string name = "f1_64c1">알겟쉼다</string>
+    <string name = "f1_65">좀 쉬었다가 다시 책상으로 가자</string>
+    <string name = "f1_65c1">예에스</string>
+
     <string name = "f1_100">오류 발견 추카추카 로그를 스크립터 조따로에게 보내주세요. @mammosbeam </string>
 
 
