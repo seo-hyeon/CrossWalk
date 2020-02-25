@@ -12,7 +12,9 @@
     <string name="tigerP">호랑이 공주</string>
 
     //1F NPC
-    <string name="doll_dog">강아지 인형</string>
+    <string name = "doll_dog">강아지 인형</string>
+    <string name = "doll_bear">곰 인형</string>
+    <string name = "doll_guard">경비병 인형</string>
 
     //1F _ cage
     <string name="f1_51_1">정신을 차려보니 새장 안에 있다.\n 앞에 강아지 인형이 꾸벅꾸벅 졸다 나와 눈이 마주치고 벌떡 일어났다.</string>
