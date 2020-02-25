@@ -44,7 +44,7 @@ public class Princess {
     public void setF1_choices(int c){
         this.f1_choices[c] = 1;
     }
-    public Boolean getF1_choices(int c){
+    public Boolean getF1_choices(int c){ //if문에서 isInventory와 함께 수월하게 비교하기 위해, boolean 값으로 리턴.
         if(this.f1_choices[c] == 1){
             return true;
         } else{

@@ -628,7 +628,7 @@ public class subActivity extends AppCompatActivity {
         choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
         c11 = findViewById(R.id.choice1_1);
         character.setText(" "); mainText.setText(getString(R.string.f1_7));
-        if(choices[6] == 1){
+        if(player.getF1_choices(6)){//if(choices[6] == 1){
             c11.setText(getString(R.string.f1_7c1));
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -671,7 +671,7 @@ public class subActivity extends AppCompatActivity {
             character.setText(" ");
             mainText.setText(getString(R.string.f1_8));
             c11.setText(getString(R.string.click));
-            if (itemlist[2] == 1) {
+            if(player.isInventory(2)){//if (itemlist[2] == 1) {
                 c11.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -687,6 +687,7 @@ public class subActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         player.setF1_choices(53); //choices[53] = 1;
                         mainText.setText(getString(R.string.f1_53));
+                        player.damage(); b42 = findViewById(R.id.b42); b42.setText(String.valueOf(player.getHeart()));
                         choice1.setVisibility(View.INVISIBLE);
                         f1_8();
                     }
@@ -843,7 +844,8 @@ public class subActivity extends AppCompatActivity {
                         f1_56();
                     } else if(!player.getF1_choices(4) && !player.isInventory(4) && !player.getF1_choices(18)){//else if (choices[4] == 0 && itemlist[4] == 0 && choices[18] == 0) {
                         f1_18();
-                    } else if((player.getF1_choices(56) || player.getF1_choices(18)) && !player.isInventory(4) && !player.getF1_choices(29)) {//else if ((choices[56] == 1 || choices[18] == 1) && itemlist[4] == 0 && choices[29] == 0) {
+                    } else if((player.getF1_choices(56) || player.getF1_choices(18)) && !player.isInventory(4) && !player.getF1_choices(29)) {
+                        //else if ((choices[56] == 1 || choices[18] == 1) && itemlist[4] == 0 && choices[29] == 0) {
                         f1_29();
                     }else if((player.getF1_choices(17) && !player.getF1_choices(34)) ||(player.getF1_choices(55) && !player.getF1_choices(33))
                                 || (player.getF1_choices(33) && !player.getF1_choices(36) && !player.getF1_choices(35) )
@@ -1025,7 +1027,8 @@ public class subActivity extends AppCompatActivity {
         // 1. 15번 출력-> 버튼의 경우  2.15번출력 ->60번이나 61번 출력 -> 버튼의 경우
         character.setText(" ");
         mainText.setText(getString(R.string.f1_15)); //찐으로 처음와서 15번 출력하고 이 뒤에 60이나 61번 출력이 되는지 확인, 출력
-        if(!player.getF1_choices(60) && !player.getF1_choices(15) && (player.getF1_choices(20)) || player.getF1_choices(31)){//if (choices[60] == 0 && choices[15] == 0 && (choices[20] == 1 || choices[31] == 1)) { //60번 출력
+        if(!player.getF1_choices(60) && !player.getF1_choices(15) && (player.getF1_choices(20)) || player.getF1_choices(31)){
+            //if (choices[60] == 0 && choices[15] == 0 && (choices[20] == 1 || choices[31] == 1)) { //60번 출력
             choice1.setVisibility(View.VISIBLE);
             c11.setText(getString(R.string.click));
             c11.setOnClickListener(new View.OnClickListener() {
@@ -1038,7 +1041,8 @@ public class subActivity extends AppCompatActivity {
                     f1_152();
                 }
             });
-        } else if(player.getF1_choices(60) || (player.getF1_choices(30) || player.getF1_choices(20))){//else if (choices[60] == 1 || (choices[30] == 1 || choices[20] == 1)) { //61번 출력
+        } else if(player.getF1_choices(60) || (player.getF1_choices(30) || player.getF1_choices(20))){
+            //else if (choices[60] == 1 || (choices[30] == 1 || choices[20] == 1)) { //61번 출력
             choice1.setVisibility(View.VISIBLE);
             c11.setText(getString(R.string.click));
             c11.setOnClickListener(new View.OnClickListener() {
@@ -1114,7 +1118,7 @@ public class subActivity extends AppCompatActivity {
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         character.setText(" ");
         mainText.setText(getString(R.string.f1_16));
-        player.addInventory(9); //itemlist[9] = 1; //바늘
+        player.addInventory(9); //itemlist[9] = 1; //바늘 item
         c21.setText(getString(R.string.f1_16c1));
         c22.setText(getString(R.string.f1_16c2));
 
@@ -1187,14 +1191,15 @@ public class subActivity extends AppCompatActivity {
                     f1_17();
                 }
             });
-        } else if(player.getF1_choices(18)){//else if(choices[18] == 0){
+        } else if(!player.getF1_choices(18)){//else if(choices[18] == 0){
             player.setF1_choices(17); //choices[17] = 1;
             mainText.setText(getString(R.string.f1_17_1));
             f1_17();
         }
     }
     public void f1_55(){
-        choices[55] = 1; prev[1] = 55;
+        //choices[55] = 1;
+        player.setF1_choices(55); prev[1] = 55;
         choice1 = findViewById(R.id.choice_no1);
         c11 = findViewById(R.id.choice1_1);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
@@ -1217,7 +1222,7 @@ public class subActivity extends AppCompatActivity {
                 }
             });
         } else if(mainText.getText().toString().equals(getString(R.string.f1_55_3))){
-            if(player.isInventory(5)){//if(itemlist[5] == 0){
+            if(player.isInventory(5)){ //if(itemlist[5] == 0){
                 choice2 = findViewById(R.id.choice_no1);
                 c21 = findViewById(R.id.choice1_1);
             }
@@ -1266,7 +1271,7 @@ public class subActivity extends AppCompatActivity {
                     f1_55();
                 }
             });
-        } else if(player.getF1_choices(18)){ //else if(choices[18] == 0){
+        } else if(!player.getF1_choices(18)){ //else if(choices[18] == 0){
             mainText.setText(getString(R.string.f1_55_1));
             choice1.setVisibility(View.VISIBLE);
             c11.setText(getString(R.string.click));
@@ -1938,7 +1943,7 @@ public class subActivity extends AppCompatActivity {
             });
         }else if(mainText.getText().toString().equals(getString(R.string.f1_34_3))) {
             c22 = findViewById(R.id.choice2_2);
-            if(player.isInventory(5)){//if(itemlist[5] == 1) {
+            if(player.isInventory(5)){ //if(itemlist[5] == 1) {
                 c21 = findViewById(R.id.choice2_1);
                 choice1.setVisibility(View.INVISIBLE);
                 choice2.setVisibility(View.VISIBLE);
