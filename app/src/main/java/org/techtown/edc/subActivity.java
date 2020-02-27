@@ -61,6 +61,16 @@ public class subActivity extends AppCompatActivity {
             }
         });
 
+
+        Button map_open = (Button) findViewById(R.id.b43);
+        map_open.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(subActivity.this, map.class));
+            }
+        });
+
+        /*
         //미니맵 열기 -> b43('map')버튼 : map 레이아웃을 visible로, 닫기 -> map_c ('X')버튼 : mamp 레이아웃을 invisible로
         Button map_open = findViewById(R.id.b43);
         Button map_close = findViewById(R.id.map_c);
@@ -78,7 +88,7 @@ public class subActivity extends AppCompatActivity {
                 map.setVisibility((View.INVISIBLE));
             }
         });
-
+        */
         b42 = findViewById(R.id.b42);
         b42.setText(String.valueOf(player.getHeart()));
 
