@@ -14,8 +14,8 @@ import org.w3c.dom.Text;
 
 public class subActivity extends AppCompatActivity {
     //FrameLayout icon_pop;
-    LinearLayout map, choice1, choice2, choice3, choice4;
-    ConstraintLayout choice5;
+    LinearLayout map;
+    ConstraintLayout choice1, choice2, choice3, choice4, choice5;
     TextView character, mainText;
     Button c11, c21, c22, c31, c32, c33, c41, c42, c43, c44, c51, c52, c53, c54, c55;
     Button b42;

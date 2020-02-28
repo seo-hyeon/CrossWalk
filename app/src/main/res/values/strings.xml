@@ -17,18 +17,18 @@
     <string name="doll_guard">경비병 인형</string>
 
     //1F _ cage
-    <string name="f1_51_1">정신을 차려보니 새장 안에 있다.\n 앞에 강아지 인형이 꾸벅꾸벅 졸다 나와 눈이 마주치고 벌떡 일어났다.</string>
+    <string name="f1_51_1">정신을 차려보니 새장 안에 있다. 앞에 강아지 인형이 꾸벅꾸벅 졸다 나와 눈이 마주치고 벌떡 일어났다.</string>
     <string name="f1_51_2">으아 띠발 언제 깼누.... \n그.... 당신을 뭐라고 불러야함?</string>
     <string name="f1_52">글쿤요, 반가워요 %s 난 당신 담당이니 필요한게 있으면 말하셈</string>
     <string name="f1_52c1">날 꺼내줘</string>
     <string name="f1_52c2">나ㅏㄹ 꺼내 샹</string>
-    <string name="f1_0">안돼 뭐가 됐던 새장에서는 못꺼내줌. 뭔일인진 \n 모르지만 열어주지 말랬단 말임..열어주는 건 절대로 안됨, 대신 필요한건 다 해드림 필요한거 있음?</string>
+    <string name="f1_0">안돼 뭐가 됐던 새장에서는 못꺼내줌. 절대 꺼내지 말라고 하셨음, 대신 필요한건 다 해드림 필요한거 있음?</string>
     <string name="f1_0c1">여기 어디임?</string>
     <string name="f1_0c2">갈아입을 옷 좀</string>
     <string name="f1_0c3">배고팡</string>
     <string name="f1_0c4">(item:황금주머니)님 돈 줄테니 날 꺼내줘</string>
     <string name="f1_1">여기 드래곤님 성임. 님은 잡혀오심ㅠ 그밖에 필요한건?</string>
-    <string name="f1_2_1">헐 샹 진짜네, 옷 찢어져 있잖 옷 가져올테니 기달\n 재봉사한테 물어보고 옴</string>
+    <string name="f1_2_1">헐 샹 진짜네, 옷 찢어져 있잖 옷 가져올테니 기달 재봉사한테 물어보고 옴</string>
     <string name="f1_2_2">강아지 인형이 호다닥 가버렸다</string>
     <string name="f1_2c1">강아지 인형을 기다린다</string>
     <string name="f1_23c2">시발 이때다 새장을 탐색하자</string>
