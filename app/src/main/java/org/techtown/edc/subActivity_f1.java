@@ -10,9 +10,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-public class subActivity extends AppCompatActivity {
+public class subActivity_f1 extends AppCompatActivity {
     //FrameLayout icon_pop;
     LinearLayout map;
     ConstraintLayout choice1, choice2, choice3, choice4, choice5;
@@ -25,13 +23,15 @@ public class subActivity extends AppCompatActivity {
     int []prev = new int [2];
     int life = 5;
     Princess player = new Princess();
-    //0황금주머니, 1수정구슬, 2육감티아라, 3새장열쇠, 4하녀옷, 5우유, 7후추, 8지랫대, 9바늘, 10밧줄, 11맛있는 스튜, 12허가증
+    //0황금주머니, 1수정구슬, 2육감티아라, 3새장열쇠, 4하녀옷, 5우유,6 치즈 7후추,
+    // 8지랫대, 9바늘, 10밧줄, 11맛있는 스튜, 12허가증, 13 수선된 드레스, 14 잠드는 약, 15 빵조각, 16 동물과 말하는 약, 17 고대 마법책, 18 장검
+    // 19 보청기, 20 서랍열쇠;
     int [] itemlist = new int [20];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sub);
+        setContentView(R.layout.activity_subf1);
 
         choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.INVISIBLE);
         choice2 = findViewById(R.id.choice_no2); choice2.setVisibility(View.INVISIBLE);
@@ -66,7 +66,7 @@ public class subActivity extends AppCompatActivity {
         map_open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(subActivity.this, map.class));
+                startActivity(new Intent(subActivity_f1.this, map.class));
             }
         });
 
@@ -92,7 +92,9 @@ public class subActivity extends AppCompatActivity {
         b42 = findViewById(R.id.b42);
         b42.setText(String.valueOf(player.getHeart()));
 
-        f1_51();
+        //f1_51();
+        //위층 넘어가는지 시험.
+        f1_13();
     }
 
     public void choosePrincess() {
@@ -780,6 +782,7 @@ public class subActivity extends AppCompatActivity {
         choice1 = findViewById(R.id.choice_no1); choice2 = findViewById(R.id.choice_no2); choice3 = findViewById(R.id.choice_no3);
         c11 = findViewById(R.id.choice1_1);
 
+
         choice1.setVisibility(View.VISIBLE); character.setText(" ");
         mainText.setText(getString(R.string.f1_10_1));
         c11.setText(getString(R.string.click));
@@ -788,10 +791,19 @@ public class subActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mainText.setText(getString(R.string.f1_10_2));
                 choice1.setVisibility(View.INVISIBLE);
-
-                //재봉사 이야기 들었는지 여부에 의해 수정될 예정, 일단 틀만 만들어 두자.
-                choice3.setVisibility(View.VISIBLE);
-                c31 = findViewById(R.id.choice3_1);  c32 = findViewById(R.id.choice3_2);  c33 = findViewById(R.id.choice3_3);
+                if(player.getF2_choices(66) || player.getF2_choices(70) || player.getF2_choices(82)) {
+                    c31 = findViewById(R.id.choice3_1);
+                    c32 = findViewById(R.id.choice3_2);
+                    c33 = findViewById(R.id.choice3_3);
+                    choice3 = findViewById(R.id.choice_no3);
+                    choice3.setVisibility(View.VISIBLE);
+                }else {
+                    c31 = findViewById(R.id.choice2_1);
+                    c32 = findViewById(R.id.choice2_2);
+                    c33 = findViewById(R.id.choice3_3);
+                    choice3 = findViewById(R.id.choice_no2);
+                    choice3.setVisibility(View.VISIBLE);
+                }
                 c31.setText(getString(R.string.f1_10c1));
                 c32.setText(getString(R.string.f1_10c2));
                 c33.setText(getString(R.string.f1_10c3));
@@ -957,11 +969,15 @@ public class subActivity extends AppCompatActivity {
         character.setText(" "); mainText.setText(getString(R.string.f1_13));
         c31.setText(getString(R.string.f1_13c1));  c32.setText(getString(R.string.f1_13c2));  c33.setText(getString(R.string.f1_13c3));
 
+        //구현x
         c31.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
                 //3_1(); //위로
+                Intent intent = new Intent(getApplicationContext(), subActivity_f2.class);
+                intent.putExtra("player", player);
+                startActivity(intent);
             }
         });
         c32.setOnClickListener(new View.OnClickListener() {
@@ -2093,13 +2109,17 @@ public class subActivity extends AppCompatActivity {
         if(player.isInventory(0)){//if(itemlist[0] == 1){
             gold = 1;
         }
-        //maid와 pill 확인용 임시 조건 조건 정해지면 수정예정.
+        if((player.getF2_choices(10) || player.getF2_choices(22)) && !player.getF2_choices(25) && !player.getF2_choices(17)){
+            pill = 1;
+        }
+        //player_ 지하 1층 다녀온 선택지 구현 후 시종장 조건 구현하기.
+        /*//maid와 pill 확인용 임시 조건 조건 정해지면 수정예정.
         if(itemlist[3] == 1){
             maid = 1;
         }
         if(itemlist[4] == 1){
             pill = 1;
-        }
+        }*/
         //시종장의 경우 choices를 어캐할 건지 고민 후 구현,,
         //약사의 경우 2층 스크립터 완료 후 구현.
 
@@ -2719,7 +2739,25 @@ public class subActivity extends AppCompatActivity {
             }
         });
     }
+    public void f1_66(){
+        //choices[65] = 1;
+        player.setF1_choices(66); prev[1] = 66;
+        mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
+        character.setText(" ");
+        mainText.setText(getString(R.string.f1_66));
 
+        choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
+        c11 = findViewById(R.id.choice1_1); c11.setText(getString(R.string.f1_66c1));
+
+        c11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice1.setVisibility(View.INVISIBLE);
+                prev[0] = 66;
+                f1_13();
+            }
+        });
+    }
 
    public void f1_100(){
         mainText = findViewById(R.id.main_text);
@@ -2778,6 +2816,8 @@ public class subActivity extends AppCompatActivity {
         else if(prev == 63){choices[now] = 0;f1_63();}
         else if(prev == 64){choices[now] = 0;f1_64();}
         else if(prev == 65){choices[now] = 0;f1_65();}
+        else if(prev == 66){choices[now] = 0;f1_66();}
+
    }
 
 

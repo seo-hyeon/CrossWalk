@@ -12,8 +12,8 @@
     <string name="tigerP">호랑이 공주</string>
 
     //1F NPC
-    <string name="doll_dog">강아지 인형</string>
-    <string name="doll_bear">곰 인형</string>
+    <string name="doll_dog">강아지 인형(시종)</string>
+    <string name="doll_bear">곰 인형(요리사)</string>
     <string name="doll_guard">경비병 인형</string>
 
     //1F _ cage
@@ -64,8 +64,8 @@
     <string name="f1_10_2">러그 사이에서 반짝이는 뭔가가 보인다. 집을까?</string>
     <string name="f1_10c1">아 아이템 빳다죠, 개꿀</string>
     <string name="f1_10c2">ㄴㄴ 일단 지나친다.</string>
-    <string name="f1_10c3">아씨 바늘이네, 조심히 줍는다. // 현재 선택x</string>
-    <!--    10c3 _ 재봉사의 이야기를 들어야함, 나중에 구현,,, -->
+    <string name="f1_10c3">아씨 바늘이네, 조심히 줍는다.</string> //구현o
+
     <string name="f1_11">조리대로 넘어왔다. 무언가 끓이는 큰 곰 인형이 보인다. 끓고 있는 냄비에선 좋은 냄새가 난다.</string>
     <string name="f1_11c1">곰에게 말을 건다</string>
     <string name="f1_11c2">다시 돌아가서 다른 곳부터 본다.</string>
@@ -73,7 +73,7 @@
     <string name="f1_12c1">다른곳을 살펴보자</string>
     <string name="f1_12c2">(item : 지랫대)</string>
     <string name="f1_13">위로 가는 계단과 아래로 가는 계단이 있다.</string>
-    <string name="f1_13c1">위로 // 3_1 구현x</string>
+    <string name="f1_13c1">위로</string>//구현o
     <string name="f1_13c2">아래로 // 2_1 구현x</string>
     <string name="f1_13c3">탁자로 돌아가자</string>
     <string name="f1_14">아 아파!! 바늘에 찔렸다. 생명 -1 (item : 바늘) 추가</string>
@@ -172,7 +172,7 @@
     <string name="f1_37c1">힝구 찾으러 가자</string>
     <string name="f1_38">아 그래요? 누구 심부름인가요? 형식상 물어보는거예요ㅎㅎ</string>
     <string name="f1_38c5">요리사님이요</string>
-    <string name="f1_38c4">약사님이요 //현재 구현x</string>
+    <string name="f1_38c4">약사님이요 </string>
     <string name="f1_38c3">시종장님이요 //현재 구현x</string>
     <string name="f1_38c2">(item 황금주머니)큼큼,,, 바깥바람을 쐬고 싶음</string>
     <string name="f1_38c1">알빠ㅉ</string>
@@ -219,8 +219,175 @@
     <string name="f1_64c1">알겟쉼다</string>
     <string name="f1_65">좀 쉬었다가 다시 책상으로 가자</string>
     <string name="f1_65c1">예에스</string>
-
+    <string name="f1_66">2층에서 1층으로 내려왔다.</string>
+    <string name="f1_66c1">계단을 본다.</string>
     <string name="f1_100">오류 발견 추카추카 로그를 스크립터 조따로에게 보내주세요. @mammosbeam </string>
+
+
+    //f2 _ NPC
+    <string name="doll_sheep">양 인형(재봉사)</string>
+    <string name="doll_dear">사슴머리 장식</string>
+    <string name="doll_rabbit">토끼 인형(약사)</string>
+
+    //f2 _ 대사 목록
+    <string name="f2_0">당신은 계단을 올라와 2층에 도착했다.</string>
+    <string name="f2_1">2층은 고즈넠한 분위기의 서재다. 방 한가운데에는 큰 솥이 있고, 창가에는 물레가 있다. 방 끝에는 서랍장과 침대, 약장들이 보인다.</string>
+    <string name="f2_1c1">솥이 있는 곳으로 가보자</string>
+    <string name="f2_1c2">물레가 있는 곳으로 가보자</string>
+    <string name="f2_1c3">서랍장에 가보자</string>
+    <string name="f2_1c4">침대에 가보자</string>
+    <string name="f2_1c5">약장에 가보자</string>
+    <string name="f2_1c6">계단으로 가자</string>
+
+    <string name="f2_2">큰 솥 앞에서 토끼인형이 여러가지 약을 만들고 있다. 널부러진 책상 위에는 신기한 마법 재료들이 잔뜩 있다.</string>
+    <string name="f2_2c1">토끼에게 말건다.</string>
+    <string name="f2_2c2">다른 곳을 둘러보자</string>
+    <string name="f2_3">커다란 양인형이 창가에서 졸면서 물레를 돌리고 있다.</string>
+    <string name="f2_3c1">양인형에게 말을 건다.</string>
+    <string name="f2_3c2">보청기를 돌려드린다.</string>
+    <string name="f2_3c3">다른 곳을 둘러보자</string>
+    <string name="f2_4">드래곤과 인형들이 쓰는 것같은 서랍장이다. 서랍장 위에는 빵이 담긴 접시와 책꽂이가 놓여있고 서랍은 잠겨있다.</string>
+    <string name="f2_4c1">서랍을 연다.</string>
+    <string name="f2_4c2">책꽂이를 뒤진다.</string>
+    <string name="f2_4c3">남은 빵을 챙긴다.</string>
+    <string name="f2_5">이 침대는 드래곤이 누울 만큼 매우 크고 넓다. 특이한 점은 없어 보인다</string>
+    <string name="f2_5c2">침대 밑을 찾아본다.</string>
+    <string name="f2_5c1">다른 곳을 찾아본다.</string>
+    <string name="f2_6_1">약장이 있는 곳에 도착하자, 천장 쪽에서 목소리가 들렸다.</string>
+    <string name="f2_6_2">발소리? 아래에 누구 있어?</string>
+    <string name="f2_6_3">공주가 묻자, 목소리는 다급하게 말했다.</string>
+    <string name="f2_6_4">저기! 저기!!!! 가지 말고 나 좀 도와줘!!! 앞으로 쓰러졌는데 일어날 수가 없어</string>
+    <string name="f2_6c1">도와드릴게요, 어떻게 위로 올라가죠?</string>
+    <string name="f2_6c2">싫엉</string>
+    <string name="f2_7_1">그건 힘들어요, 이 약을 얼마나 열심히 만들었는데요!, 공주님을 대신할 재료를 찾으면 보내드리겠지만 그런걸 찾긴 아주 어려워요.</string>
+    <string name="f2_7_2">토끼는 말을 하면서 그릇에 가루를 쏟아붓고는 막대로 휘젔고 있다.</string>
+    <string name="f2_7_3">더 물어보실게 있나요?</string>
+    <string name="f2_7c1">다른 공주들은 어디에 있지?</string>
+    <string name="f2_7c2">아니, 그걸로 됐어,,,</string>
+    <string name="f2_8_1">네!, 공주님은 이 큰 솥에서 만들고 있는 마법약의 재료세요!!! 저희 드래곤님이 부러진 뿔을 언제나 콤플렉스로 여기셨는데</string>
+    <string name="f2_8_2">작년에 숲의 마녀님이 드래곤님을 위해 치료약 조합법을 가져다 주셨어요, 이 약은 거의 완성했고 마지막 재료인 공주님 4분만 구하면 끝이예요.</string>
+    <string name="f2_8_3">아시다시피 제일 가까운 왕국엔 공주님이 3분밖에 안 계셔서 곧 드래곤님이 나머지 한분을 모셔올꺼예요.</string>
+    <string name="f2_8c3">세 분? 그럼 다른 공주들은 어디에 있지?</string>
+    <string name="f2_8c2">난 마법약 재료가 되기 싫어!</string>
+    <string name="f2_8c1">그렇구나,,,</string>
+    <string name="f2_9_1">토끼 인형이 당신을 발견하고는 말했다.</string>
+    <string name="f2_9_2">응? 당신은 마법약 재료인 공주님이 아니신가요? 여기 어쩐일로 오셨죠??</string>
+    <string name="f2_9c1">마법약 재료?????</string>
+    <string name="f2_9c2">잘못 온거야, 난 돌아갈게</string>
+    <string name="f2_10_1">감사해요! 제가 개인적으로 만들고 있는 약이 있는데, 무려 동물과 말 할 수 있게 해주는 약이랍니다!</string>
+    <string name="f2_10_2">그런데 여기 들거나는 재료 설명이 애매해서 곤한하던 참이었어요. 어른이 되면서 모습이 바뀌는 동물,,,?</string>
+    <string name="f2_10_3">저는 지금까지 탑 안에서만 지내와서 생물들에 대해 잘 알지 못해요.</string>
+    <string name="f2_10_4">혹시 어떤 재료를 말하는지 아신다면 저쪽의 갈색 약장에 가져대 주세요. 부탁드려요!</string>
+    <string name="f2_10c1">어른이 되면 모습이 바뀌는 동물이라,,, 알았어.</string>
+    <string name="f2_11_1">엄, 그럼 어쩔 수 없죠 경비인형을 부르는 수 밖에요</string>
+    <string name="f2_11_2">당신이 말릴 틈도 없이 토끼가 품에서 호루라기를 꺼내 삑 불었다. 곧 경비병이 달려왔고, 당신은 열심히 도망쳤지만</string>
+    <string name="f2_11_3">결국 붙잡히고 말았다. 경비 인형은 당신을 새장으로 데려가 꼭꼭 가둬놨다. 탈출은 불가능 할 것 같다.~베드엔딩~</string>
+    <string name="f2_12_1">다른 공주님들이요? 잘 모르겠어요, 다만 1층에서 드래곤님이 여기저기 긁혀오셔서 공주님 3분이 모여 계시면</string>
+    <string name="f2_12_2"> 드래곤님이 이기기 힘들것 같다 하셨어요! 아마 공주님들은 다 다른 장소에 있지 않으실까요?</string>
+    <string name="f2_12_3">토끼는 말을 하면서 그릇에 가루를 쏟아붓고는 막대로 휘젓고 있다.</string>
+    <string name="f2_12_4"> 더 물어보실게 있나요?</string>
+    <string name="f2_12c2">난 마법약 재료가 되기 싫어!</string>
+    <string name="f2_12c1">아니, 그걸로 됐어</string>
+
+    <string name="f2_13_1">공주는 햄스터 인형이 계속 기침을 하고 있다고 설명했다.</string>
+    <string name="f2_13_2">인형에게 듣는 기침약이요? 그렇군요,,, 인형은 병에 걸리지 않으니까 약도 필요 없어요. 지금 지하를 정리하는 중이니까 제 생각엔</string>
+    <string name="f2_13_3">재채기를 유발하는 가루가 날아다니거나해서 기침을 하시는 걸 꺼예요, 한번 자리를 옮겨보시고 계속 기침이 나시는지 여쭤봐주세요.</string>
+    <string name="f2_13c1">ㅇㅋㅇㅋ 그대로 전달할게</string>
+    <string name="f2_14_1">토끼인형이 바쁘게 마법약을 만들고 있다 뒤늦게 공주를 알아챘다</string>
+    <string name="f2_14_2">돌아오셨군요! 뭔가 용무가 있으신가요?</string>
+    <string name="f2_14c1">ㄴㄴ</string>
+    <string name="f2_14c2">동물과 말하는 약의 재료를 가져왔어</string>
+    <string name="f2_14c3">시종장님이 인형에게 듣는 기침약을 받아오라셨어요</string>
+    <string name="f2_14c4">혹시 잠에 들게하는 약도 있나요?</string>
+    <string name="f2_14c5">잠드는 약 재료를 가져왔어.</string>
+    <string name="f2_15_1">당신이 말을 마치자 토끼인형이 당신의 눈치를 보다가 조심스럽게 말했다.</string>
+    <string name="f2_15_2">사실 공주님이 성에 얌전히 계시게 하는게 원래 계획이었지만 이왕 나오신 김에 저 좀 도와주세요.</string>
+    <string name="f2_15_3">지금 개인적으로 만드는 약도 있고 드래곤님이 시키신 약도 만들고 있어 너무 바쁘거든요, 절 도와주신다면 성 내부를 돌아다녀도 못 본 척 해드릴께요</string>
+    <string name="f2_15c1">좋아 그럼 내가 뭘하면 돼?</string>
+    <string name="f2_15c2">뭐? 싫어! 난 도망갈꺼야!!!</string>
+    <string name="f2_16_1">그럼 조심하세요!</string>
+    <string name="f2_16_2">토끼가 손을 흔들고는 다시 일에 열중한다.</string>
+    //선택지 대사는 click으로
+    <string name="f2_17_1">좋아요! 그럼 이제 이 재료를 넣고 약을 만들면,,,</string>
+    <string name="f2_17_2">토끼가 열심히 작은 그릇을 젓자 하얀 연기가 훅 올라왔다. </string>
+    <string name="f2_17_3">완성이예요! 혹시 성을 돌아다니다가 동물들을 만나면 이 약을 사용해 주실 수 있나요? 사용법은 약을 머리에 부으시면 돼요!</string>
+    <string name="f2_17_4">공주는 수락했고, 약사에게 동물과 말하는 약을 건내받았다.(item: 동물과 말하는 약 획득)</string>
+    <string name="f2_17c1">좋아, 동물을 만나면 이 약을 사용하자</string>
+    <string name="f2_18_1">좋아요 그럼 이제 이 재료를 넣고 약을 만들면,,,,,\n 어라? </string>
+    <string name="f2_18_2">갑자기 약이 펑!하고 터지면서 파란 가루가 흩날렸다. 가루를 맞자 산뜻한 느낌이 든다!(체력 +1)</string>
+    <string name="f2_18_3">이건 잘못된 재료가 들어가서 치료약이 되어버렸네요,, 그래도 약을 망친건 아니라 가루를 걷어내면 다시 쓸 수 있을 것 같아요!</string>
+    <string name="f2_18_4">그럼 올바른 재료를 찾아와주세요! 기다릴게요!</string>
+    <string name="f2_18c1">다시 다녀올게</string>
+    <string name="f2_19_1">좋아요! 그럼 이 재료를 넣고 약을 만들면,,, 어라? </string>
+    <string name="f2_19_2">갑자기 약이 검은색으로 변하며 딱딱하게 굳었다.</string>
+    <string name="f2_19_3">이건,, 잘못된 재료가 들어가서 약이 못쓰게 되어버렸내요. 괜찮아요, 아직 한 번 정도 더 시도할 재료가 남아있어요</string>
+    <string name="f2_19_4">다시 약을 만들고 있을테니까 이번에는 올바른 재료를 찾아와주세요!</string>
+    <string name="f2_19c1">다시 다녀와야겠다</string>
+    <string name="f2_20_1">좋아요! 그럼 이제 이 재료를 넣고 약을 만들면,,, 어라? 이건 전에 실패했던 재료들이 잖아요!!!!!</string>
+    <string name="f2_20_2">다시 가져다주세요! 이걸로는 약을 완성할 수 없어요,,,</string>
+    <string name="f2_20c1">다시 다녀와야겠다</string>
+    <string name="f2_21_1">좋아요! 그럼 이 재료를 넣고 약을 만들면,,, 어라? </string>
+    <string name="f2_21_2">갑자기 약이 검은색으로 변하며 딱딱하게 굳었다.</string>
+    <string name="f2_21_3">이건,, 잘못된 재료가 들어가서 약이 또 못쓰게 되어버렸내요. 남은 재료도 없는데,,, 어쩔 수 없죠, 제가 했어도 결과는 같았을테니까 너무 신경쓰지 마세요</string>
+    <string name="f2_21_4">괜찮다고 말했지만 토끼는 슬퍼보인다.</string>
+    <string name="f2_21c1">토끼를 위로하고 다른 할 일을 찾아보자</string>
+    <string name="f2_22_1">잠드는 약이요? 아하! 재봉사님이 시키셨죠? 요즘 잠을 못 주무시는 것 같아 제가 준비해둔게 있어요!</string>
+    <string name="f2_22_2">요즘 드래곤님이 잠에 못 드실 때마다 다른 나라에서 가져온 코코아?라는 약을 찾으셨는데 그 약의 재료를 제가 준비 해놨죠!</string>
+    <string name="f2_22_3">재료가 뭐였는지는 기억이 잘 안나지만 아마 보면 알것같아요! 하얀 약장에서 그 코코아의 재료를 가져다 주시겠어요?</string>
+    <string name="f2_22c1">코코아가 뭐지? 일단 찾아볼게</string>
+    <string name="f2_23">음.... 제 생각엔 이 재료를 써서 코코아가 나올 것 같지는 않아요, 다시 가져다 주시겠어요?</string>
+    <string name="f2_23c1">좋아</string>
+    <string name="f2_24_1">음,,, 아마 이걸로 될 것 같은 기분이 들어요!</string>
+    <string name="f2_24_2">토끼는 재료를 컵에 넣고 뜨거운 물을 부었다. 곧 컵에 불꽃이 크게 일었고 이내 산뜻한 향기가 방에 가득찼다.(체력+1)</string>
+    <string name="f2_24_3">어,, 이게 코코아는 아닌것 같죠? 제가 착각했었나봐요, 다시 재료를 가져다주시겠어요?</string>
+    <string name="f2_24c1">알았어</string>
+    <string name="f2_25_1">음,, 아마 이걸로 될 것 같은 기분이 들어요!</string>
+    <string name="f2_25_2">토끼는 재료를 컵에 넣고 뜨거운 물을 부었다. </string>
+    <string name="f2_25_3">완성! 따듯하고 달콤한 냄새가 나네요, 이게 코코아인게 확실해요! 아마 이걸 머리에 부으면 푹 잘 수 있겠죠? 재봉사님께 전해주세요</string>
+    <string name="f2_25_4">토끼에게 코코아를 건내받았다. (item: 코코아 추가)</string>
+    <string name="f2_25c1">좋아, 양인형을 잠들게 하자!</string>
+    <string name="f2_26">정말? 고마워! 약장 옆면을 보면 밧줄을 거는 곳이 있거든? 그걸 써서 위로 올라와줘! 밧줄은 재봉사가 가지고 있어</string>
+    <string name="f2_26c1">좋아 재봉사에게 밧줄을 받아오자</string>
+    <string name="f2_26c2">(item:육감의티아라)밧줄? 필요없어! 나에겐 튼튼한 발톱이 있다고</string>
+    <string name="f2_27_1">안돼,,, 계속 이 먼지구덩이에 머리를 박고 있어야하다니,,,</string>
+    <string name="f2_27_2">흑흑, 목소리가 슬픈 듯이 울기 시작했다.</string>
+    <string name="f2_27c1">약장이나 마저 살펴보자</string>
+    <string name="f2_28">약장은 두개이고 하나는 하얀색, 하나는 갈색이다. 흰색 약장에는 알록달록한 약재들이 들어있고, 갈색 약장에는 동물성 재료들이 들어있는 듯 하다.</string>
+    <string name="f2_29">위쪽에서는 간간히 울음소리가 들려온다.</string>
+    <string name="f2_28c1">그만 울어요. 도와드릴게요</string>
+    <string name="f2_28c2">밧줄을 써서 약장 위로 올라간다.</string>
+    <string name="f2_28c3">발톱을 써서 약장 위로 올라간다.</string>
+    <string name="f2_28c4">하얀약장을 살펴본다.</string>
+    <string name="f2_28c5">갈색약장을 살펴본다.</string>
+    <string name="f2_28c6">다른 곳을 살펴본다.</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <string name="cd">상황에 따른 일러</string>

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         Button start = findViewById(R.id.start);
         start.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(getApplicationContext(), subActivity.class);
+                Intent intent = new Intent(getApplicationContext(), subActivity_f1.class);
                 startActivity(intent);
             }
         });
