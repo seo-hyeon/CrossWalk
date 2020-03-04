@@ -100,7 +100,7 @@ public class subActivity_f2 extends AppCompatActivity {
         choice6 = findViewById(R.id.choice_no6); choice6.setVisibility(View.VISIBLE);
         c61 = findViewById(R.id.choice6_1); c62 = findViewById(R.id.choice6_2); c63 = findViewById(R.id.choice6_3);
         c64 = findViewById(R.id.choice6_4); c65 = findViewById(R.id.choice6_5); c66 = findViewById(R.id.choice6_6);
-
+        character.setText(" ");
         mainText.setText(getString(R.string.f2_1));
 
         c61.setText(getString(R.string.f2_1c1)); c62.setText(getString(R.string.f2_1c2));

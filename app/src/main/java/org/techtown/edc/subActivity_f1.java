@@ -7,13 +7,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class subActivity_f1 extends AppCompatActivity {
     //FrameLayout icon_pop;
     LinearLayout map;
-    ConstraintLayout choice1, choice2, choice3, choice4, choice5;
+    ImageView img;
+    ConstraintLayout choice1, choice2, choice3, choice4, choice5, choice6;
     TextView character, mainText;
     Button c11, c21, c22, c31, c32, c33, c41, c42, c43, c44, c51, c52, c53, c54, c55;
     Button b42;
@@ -38,6 +40,7 @@ public class subActivity_f1 extends AppCompatActivity {
         choice3 = findViewById(R.id.choice_no3); choice3.setVisibility(View.INVISIBLE);
         choice4 = findViewById(R.id.choice_no4); choice4.setVisibility(View.INVISIBLE);
         choice5 = findViewById(R.id.choice_no5); choice5.setVisibility(View.INVISIBLE);
+        choice6 = findViewById(R.id.choice_no6); choice6.setVisibility(View.INVISIBLE);
         //Button heart = findViewById(R.id.b42);
         //heart.setText(life);
 
@@ -92,9 +95,9 @@ public class subActivity_f1 extends AppCompatActivity {
         b42 = findViewById(R.id.b42);
         b42.setText(String.valueOf(player.getHeart()));
 
-        //f1_51();
+        f1_51();
         //위층 넘어가는지 시험.
-        f1_13();
+        //f1_13();
     }
 
     public void choosePrincess() {
@@ -158,11 +161,13 @@ public class subActivity_f1 extends AppCompatActivity {
         player.setF1_choices(51);
         //choices[51] = 1;
         prev[1] = 51;
+        img = findViewById(R.id.imageView);
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1);
         choice1.setVisibility(View.VISIBLE);
         c11 = findViewById(R.id.choice1_1);
 
+        img.setImageResource(R.drawable.a111);
         character.setText(" ");
         mainText.setText(getString(R.string.f1_51_1));
         c11.setText(getString(R.string.click));
@@ -171,6 +176,7 @@ public class subActivity_f1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 prev[0] = 51;
+                img.setImageResource(R.drawable.a112);
                 character.setText(getString(R.string.doll_dog));
                 mainText.setText(getString(R.string.f1_51_2));
                 choice1.setVisibility(View.INVISIBLE);
