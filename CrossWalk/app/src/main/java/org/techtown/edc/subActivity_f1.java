@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class subActivity_f1 extends AppCompatActivity {
     //FrameLayout icon_pop;
@@ -23,7 +24,7 @@ public class subActivity_f1 extends AppCompatActivity {
     String name = " ";
     int []choices = new int [70];
     int []prev = new int [2];
-    int life = 5;
+
     Princess player = new Princess();
     //0황금주머니, 1수정구슬, 2육감티아라, 3새장열쇠, 4하녀옷, 5우유,6 치즈 7후추,
     // 8지랫대, 9바늘, 10밧줄, 11맛있는 스튜, 12허가증, 13 수선된 드레스, 14 잠드는 약, 15 빵조각, 16 동물과 말하는 약, 17 고대 마법책, 18 장검
@@ -92,13 +93,16 @@ public class subActivity_f1 extends AppCompatActivity {
             }
         });
         */
+
         b42 = findViewById(R.id.b42);
         b42.setText(String.valueOf(player.getHeart()));
 
-        f1_51();
+        //f1_51();
         //위층 넘어가는지 시험.
-        //f1_13();
+        f1_13();
     }
+
+
 
     public void choosePrincess() {
         c31 = findViewById(R.id.choice3_1);
@@ -984,6 +988,7 @@ public class subActivity_f1 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), subActivity_f2.class);
                 intent.putExtra("player", player);
                 startActivity(intent);
+                finish();
             }
         });
         c32.setOnClickListener(new View.OnClickListener() {
