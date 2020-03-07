@@ -104,9 +104,9 @@
     <string name="f1_18_3">곰인형이 새장 윗부분을 때서 나를 대강 가둬놓고 조리대로 후다닥 갔다.</string>
     <string name="f1_18c1">탐색한다.</string>
     <string name="f1_18c2">기다린다.</string>
-    <string name="f1_57_1"> 옷을 든 강아지인형이 탁자 위에서 안절부절하다 곰인형이 나를 원상태로 두는 걸 보고 안심했다. 그리고 곰인형이 가고나서 쪼르륵 왔다.</string>
-    <string name="f1_57_2"> 옷 가져 달라고 하셔서 가져왔어요, 배고프시면 말씀하시지ㅠㅜ 그새를 못참고 요리사님께 가셨군요, 옷은 여기 있어요</string>
-    <string name="f1_57_3">제가 밥을 가져다드릴테니 얌전히 계세요, 놀랐잖아요! 그리고 강아지 인형은 밥을 가지러 갔다. (itme :하녀옷)</string>
+    <string name="f1_57_1"> 옷을 든 강아지인형이 탁자 위에서 안절부절하다 곰인형이 나를 원상태로 두는 걸 보고 안심했고 곰인형이 가고나서 쪼르륵 왔다.</string>
+    <string name="f1_57_2"> 옷 가져 달라고 하셔서 가져왔어요, 배고프시면 말씀하시지ㅠㅜ 그새를 못참고 요리사님께 가셨군요</string>
+    <string name="f1_57_3">옷은 여기 있어요 제가 밥을 가져다드릴테니 얌전히 계세요, 놀랐잖아요! 그리고 강아지 인형은 밥을 가지러 갔다. (itme :하녀옷)</string>
     //나중에 여유가 생긴다면 57의 경우 업적 추가. 배고픈건 못참아 등이 있음 재밌겠다.//
     //1-56은 1-18과 같음. 그리고 1-56c1은 18c1과 같음 재활용하자.
 
@@ -177,8 +177,8 @@
     <string name="f1_38c2">(item 황금주머니)큼큼,,, 바깥바람을 쐬고 싶음</string>
     <string name="f1_38c1">알빠ㅉ</string>
 
-    <string name="f1_39_1">어휴 말도 말요, 1층에 꼬까옷 입은 인간 인형이 있었는데 잘못 만들었나봐요, 드래곤님이 새장에 넣으려고 했는데 그 인형이 눈을 뜨고는</string>
-    <string name="f1_39_2">그 인형이 눈을 뜨고는 책상도 뒤집어 엎고, 새장도 뿌시고 난리였어요. 드래곤님을 도와 그 인형이 들고 있던</string>
+    <string name="f1_39_1">어휴 말도 말요, 1층에 꼬까옷 입은 인간 인형이 있었는데 잘못 만들었나봐요, 드래곤님이 새장에 넣으려고 했는데 </string>
+    <string name="f1_39_2">그 인형이 눈을 뜨고는 그 인형이 눈을 뜨고는 책상도 뒤집어 엎고, 새장도 뿌시고 난리였어요. 드래곤님을 도와 그 인형이 들고 있던</string>
     <string name="f1_39_3">흉기를 떨어트리는덴 성공했었는데,,, 그후로 머리를 맞고 기절했었어요. 깨어나보니 드래곤님도 없고, 그 인형도 없고, </string>
     <string name="f1_39_4">들고 있던 칼만 바닥에 있어 얼마나 무서웠는지 몰라요. 누가 다칠까봐 그 칼은 2층 사물함 안에 넣어놨구요,,, 어휴</string>
     <string name="f1_39_5">문지기가 말한 인간이 내 동생 같다, 동생을 찾으려면 단서가 더 필요할 것 같지만</string>
@@ -433,26 +433,128 @@
     <string name="f2_45_2">공주는 약장을 내려왔다.</string>
     <string name="f2_46">음,, 말 걸어줘서 고맙지만 무슨 이야기를 해줘야 할지 모르겠네, 그래도 와줘서 고마워!</string>
     <string name="f2_46c1">사슴에게 웃어준다.</string>
+    <string name="f2_47">공주는 침대 아래로 들어갔고, 이내 큰 금고를 발견했다.</string>
+    <string name="f2_47c1">다이얼을 돌려본다.</string>
+    <string name="f2_47c2">침대 밑에서 나온다.</string>
+    <string name="f2_47c3">귀를 기울여본다</string>
+    <string name="f2_47c4">보청기를 금고에 바짝 붙이고 소리를 들어본다</string>
+    <string name="f2_48">다이얼을 어느쪽으로 돌릴까?(5번)</string>
+    <string name="f2_48c1">오른쪽</string>
+    <string name="f2_48c2">왼쪽</string>
+    <string name="f2_49_1">금고가 반응이 없다. 더 돌려도 소용이 없을 것 같다.</string>
+    <string name="f2_49_2">열 수 있는 방법을 찾아봐야겠다. 금고에 귀를 대면 소리가 들리려나?</string>
+    <string name="f2_49c1">이런,,,</string>
+
+    //선택지 너무 길어서 수정 예정. f2_50
+    <string name="f2_50_1">금고가 열렸고, 안쪽에서 드레스를 입은 여인이 걸어나왔다. 공주는 달려가 여인을 꼭 끌어안았다.</string>
+    <string name="f2_50_2">날 구해준거구나. 계속 비밀번호를 못맞추길래 드래곤이 아닌 다른 이가 온거란걸 알고 있었지.</string>
+    <string name="f2_50_3">준비가 됐다면 성 가장 윗층으로 올라가서 봉화로 구조를 부르자.</string>
+    <string name="f2_50_4">아님, 내가 이곳에서 할 일이 있을까? 내 고대마법책이 있으면 좋지만, 없어도 어느정도의 마법약이나 간단한 마법은 다룰 수 있어.</string>
+    <string name="f2_50c3">마법약에 대해 물어보자</string>
+    <string name="f2_50c3_1">드래곤이 만드는 마법약이 이쓴ㄴ데, 우리 대신 넣을 수 있는 재료를 찾는 다면 우릴 돌려 보내준데요</string>
+    <string name="f2_50c3_2">언니가 그 약을 한 번 봐주실 수 있나요?</string>
+    <string name="f2_50c1">일단 기다려달라 하자</string>
+    <string name="f2_50c1_1">일단 여기서 기다려주세요, 언니의 도움이 필요한 일이 있는지 찾아볼게요</string>
+    <string name="f2_50c2">더 없어요. 빨리 올라가요</string>
+    <string name="f2_51_1"> 알았어. 그럼, 언니를 그 약이 있는 곳에 대려다 주렴. 힘닿는 데까지 노력해볼께. </string>
+    <string name="f2_51_2">공주는 고개를 끄덕이고는 언니 공주와 함께 침대 밑에서 나왔다.</string>
+    <string name="f2_51c1">언니와 함께 토끼 인형에게 가자</string>
+    <string name="f2_52_1"> 이 재료말고 깃털을 가져와야 한단다. </string>
+    <string name="f2_52_2"> 이 약이 어떤약인지 제대로 밝혀낸다면, 우리는 이 성에서 안전하게 나갈 수 있을거야. 부탁할게.</string>
+    <string name="f2_52_3">공주는 고개를 끄덕였다.</string>
+    <string name="f2_52c1">약장에서 깃털을 가져오자</string>
+
+    <string name="f2_72_1">양인형이 졸린 듯 눈을 비비다가 당신과 눈이 마주치고 웃었다. </string>
+    <string name="f2_72_2">제게 하실 말씀이 있으신가요?</string>
+    <string name="f2_72c1">ㄴㄴ</string>
+    <string name="f2_72c2">무엇을 만들고계신건가요?</string>
+    <string name="f2_72c3">그 보청기를 빌려주실 수 있나요?</string>
+    <string name="f2_72c4">저 서랍장 열쇠를 빌릴 수 있을까요?</string>
+    <string name="f2_72c5">제 옷이 찢어져 버려서 수선해 주실 수 있나요?</string>
+    <string name="f2_72c6">밧줄로 쓸만한 물건이 있나요?</string>
+
+    <string name="f2_73_1">이 보청기요?</string>
+    <string name="f2_73_2">양인형은 자신이 귀에 끼고 있는 큰 깔대기를 가리켰다.  </string>
+    <string name="f2_73_3">빌려드릴 수는 있지만, 저는 아주 오래된 인형이라 이 보청기를 써야만 소리를 들을수 있답니다. </string>
+    <string name="f2_73_4">그러니 쓰신 후 반드시 돌려주세요.양인형은 보청기를 건내줬다.(아이템 보청기 득)</string>
+    <string name="f2_73c1">감사합니다.</string>
+
+    <string name="f2_74_1"> 양인형의 눈앞에 보청기를 보여주자 양인형이 웃으면서 보청기를 받았다. </string>
+    <string name="f2_74_2">어디에 쓰셨는지는 모르겠지만, 도움이 되었다니 기쁘군요. </string>
+    <string name="f2_74c1">감사합니다.</string>
+
+    <string name="f2_75_1">서랍장 열쇠 말씀이신가요? 양이 허리춤에찬 열쇠를 보며 말했다.</string>
+    <string name="f2_75_2">지금 열쇠를 가지고 있긴 하지만 드리는건 안될 것같네요. </string>
+    <string name="f2_75_3">지금 제 서랍장에 경비인형이 맡겨놓은 무서운 흉기가 들어있거든요,,,하암,,,</string>
+    <string name="f2_75_4">말이 끝나기가 무섭게 양이 크게 하품하고는 뒤늦게 입을 가렸다.</string>
+    <string name="f2_75_5">자꾸 졸려하는 모습을 보여서 죄송합니다. 제가 원숭이 인형들을 잔뜩 만들어야해서 밤을 샜더니,,,</string>
+    <string name="f2_75_6">밤이되면 약사한테 잠에들 수 있는 약을 받아서 마셔야겠어요. 그럼 푹 잘 수 있겠죠</string>
+    <string name="f2_75c1">양을 재울 방법이 있을까?</string>
+    <string name="f2_76">양에게 코코아를 부으려고 왔더니 양은 이미 자고있다. 깨우기 힘들정도로 깊게 자는 듯하다.</string>
+    <string name="f2_76c1">발소리를 죽이고 다른 곳으로 간다</string>
+    <string name="f2_76c2">열쇠를 가져간다</string>
+    <string name="f2_76c3">보청기를 가져간다</string>
+    <string name="f2_77"> 양이 자는 틈을 타 옆에 놓인 보청기를 가져갔다.</string>
+    <string name="f2_77c1">조용히 움직이자.</string>
+    <string name="f2_78">양이 자는 틈을 타 옆구리에 걸려있던 서랍장 열쇠를 가져갔다.</string>
+    <string name="f2_78c1">조용히 움직이자.</string>
+    <string name="f2_79">성의 계단이다. 아래는 1층이고, 위로 가는 계단은 옥상과 이어져있다.</string>
+    <string name="f2_79c1">옥상으로 (구현x)</string>
+    <string name="f2_79c2">1층으로</string>
+    <string name="f2_80_1"> 음, 공주님은 작은 분이니까,,,이걸 쓰시면 되겠네요.</string>
+    <string name="f2_80_2">양은 물레에서 돌리던 실을 쪽가위로 톡 끊어서 공주에게 주었다.</string>
+    <string name="f2_80_3">이정도면 밧줄로 사용할 수 있을 것같다.(아이탬 로프 +) </string>
+    <string name="f2_80c1">로프를 사용하러 가자</string>
+    <string name="f2_81_1"> 도와드리고 싶지만 옷을 수선하는 동안  입고 계실 여유 옷이 없어서 힘들것같네요.</string>
+    <string name="f2_81_2">방금 강아지 인형이 공주님께 드린다고 여유분의 시녀옷을 가져갔으니 먼저 그 옷을 받아 갈아입어 주시겠어요?</string>
+    <string name="f2_81c1">음, 그럴 수 있으려나..?</string>
+    <string name="f2_82_1">오, 그런거라면 당연히 도와드려야죠</string>
+    <string name="f2_82_2">양인형은 공주에게 옷을 받았다.</string>
+    <string name="f2_82_3">그럼,,, 아이고, 내가 바늘을 못찾았구나. </string>
+    <string name="f2_82_4">옷을 들고 바느질 준비를 하던 양은 곤란해 하며 말했다</string>
+    <string name="f2_82_5">제가 1층의 식탁에서 바느질을 하다 바늘을 카펫에 떨어뜨렸는데 눈이 침침해 찾지 못했답니다.</string>
+    <string name="f2_82_6"> 혹시 그 근처에서 바늘을 찾아주신다면 옷을 고쳐드릴게요.</string>
+    <string name="f2_82c1">좋아요 바늘을 찾아올게요</string>
+    <string name="f2_83">공주는 서랍열쇠로 서랍을 열었고, 거기에서 긴 장검을 발견했다. 그외에는 쪽가위나 털실 등이 들어있다.(item:장검)</string>
+    <string name="f2_83c1">막내의 검을 발견했다.</string>
+    <string name="f2_84">쪽가위나 털실 등이 들어있는 서랍이다. 특별한 건 없어보인다.</string>
+    <string name="f2_84c1">다른걸 살피자</string>
+    <string name="f2_85">공주는 힘을 줘서 서랍을 열려했지만 서랍은 열리지 않는다.</string>
+    <string name="f2_85c1">어쩔 수 없지, 다른걸 살피자</string>
+    <string name="f2_86">공주는 사슴의 말을 기억해내고 책꽃이를 뒤졌고, 이내 드래곤이 숨겨놓은 허가증을 찾아냈다.</string>
+    <string name="f2_86c1">이걸로 뭘 할 수 있을까?</string>
+    <string name="f2_87_1"> 공주는 책꽃이를 뒤졌고, 깊숙한 곳에서 강아지 인형의 다이어리를 발견했다.</string>
+    <string name="f2_87_2"> x월 o일 시종장님이 나보고 빨래를 시키셨다. 손이 너무 시렸다. </string>
+    <string name="f2_87_3"> x월 x일 시종장님이 나보고 박스를 옮기라고 하셨다. 너무 무거웠다. </string>
+    <string name="f2_87_4"> x월 y일 시종장님이 나보고,,,</string>
+    <string name="f2_87c1">열심히 일하는 모양이다.</string>
+    <string name="f2_88">커다란 그릇위에 먹다남은 듯한 빵이 놓여있다. 챙길 수 있는 만큼만 빵을 때어갔다.</string>
+    <string name="f2_88c1">다른걸 살피자</string>
+    <string name="f2_89">언니가 말한 재료를 챙겼다. 그런데 이게 맞나,,,? 일단 다른 재료는 필요 없을 듯하다.</string>
+    <string name="f2_89c1">그럼 언니에게 가자</string>
+    <string name="f2_90">오래된 듯한 갈색 약장에는 여러가지 재료들이 들었다. 무언가를 꺼낼 필요는 없는 것같다.</string>
+    <string name="f2_90c1">돌아가자</string>
+
+    <string name="f2_91_1">숲의 마녀님을 모르시나요? 그 분은 멀리 보이는 숲에 사시는 커다란 새예요.</string>
+    <string name="f2_91_2">대체로 숲에서 안나오시고 식물들을 돌보거나 겨울잠을 주무시는 분이신데,</string>
+    <string name="f2_91_3">작년에 어찌된 영문인지 숲에서 나와서드래곤님을 찾아오셨어요.</string>
+    <string name="f2_91_4">분명 드래곤님이 뿔이 부러져 슬퍼한다는 이야기를 들으시고는 뿔을 고치는 방법을 알려주러 오신거겠지요.</string>
+    <string name="f2_91_5">생각보다 친절한 분이여서 깜짝놀랐다니까요! 뭐, 제가 아는 건 이 정도에요. 또 따로 질문하실게 남아있나요?</string>
+    <string name="f2_91c1">난 마법약 재료가 되기 싫어!</string>
+    <string name="f2_91c2">그렇구나</string>
+    <string name="f2_91c3">공주가 셋? 다른 공주들은 어디?</string>
+
+    <string name="f2_92_1">지금 이 물레로는 아주 튼튼한 실을 짜고 있지요, 이 실은 특별한 자수를 위한 특별한 실이랍니다.</string>
+    <string name="f2_92_2">아마 공주님이 매달리셔도 끊어지지 않을 만큼 강할 거예요.</string>
+    <string name="f2_92_3">재봉사는 입을 가리고 호호 웃었다. </string>
+    <string name="f2_92_4">이 전에 강아지 인형이 들려준 이야기가 있어요. 작년에 왕궁 벽에 걸렸다던 아름다운 꼬리깃에 대한 이야기였죠.</string>
+    <string name="f2_92_5">이미 아실지도 모르지만 그 깃털은 여왕이 눈이 내리던 겨울날 숲으로 멧돼지 사냥을 갔다가 가져왔다고 해요.</string>
+    <string name="f2_92_6">그 꼬리깃은 사람 키보다 길었고 신묘한 빛을 내서 여왕은 꼬리깃을 왕궁안에 걸어놓았다 하죠.</string>
+    <string name="f2_92_7"> 그 이야기에 영감을 받아서, 그 깃털을 자수로 놓아보려고 하고있어요. </string>
+    <string name="f2_92c1">그렇군요 이야기 들려줘서 고마워요</string>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <string name="f2_100">오류오류 </string>
 
 
 
