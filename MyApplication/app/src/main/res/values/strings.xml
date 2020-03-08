@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string name="text1">아이템을 입력하세요</string>
 </resources>

@@ -98,6 +98,15 @@ public class MainActivity extends AppCompatActivity {
         final Dialog loginDialog = new Dialog(this);
         loginDialog.setContentView(R.layout.inventory);
 
+        Button exit = (Button) loginDialog.findViewById(R.id.exit);
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loginDialog.dismiss();
+            }
+        });
+
         loginDialog.show();
     }
 }

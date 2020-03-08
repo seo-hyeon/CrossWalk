@@ -1,25 +1,25 @@
 package com.example.myapplication;
 
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class Inventory extends AppCompatActivity {
 
-    Princess princess = new Princess();
 
-    /*@Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inventory);
 
-        ImageButton b1 = (ImageButton)findViewById(R.id.imageButton);
-        ImageButton b2 = (ImageButton)findViewById(R.id.imageButton2);
-        ImageButton b3 = (ImageButton)findViewById(R.id.imageButton3);
+        TextView textView1 = (TextView) findViewById(R.id.text);
+        textView1.setText(String.format("아이템 설명설명"));
 
-        b2.setImageResource(R.drawable.img_464209);
+        Button b1 = (Button)findViewById(R.id.button0);
+        b1.setBackgroundResource(R.drawable.star);
+    }
 
-        if (princess.getInvNum() != 0)
-        {
-            b1.setImageResource(R.drawable.img_464209);
-        }
-    }*/
 }
