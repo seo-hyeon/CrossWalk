@@ -1,6 +1,7 @@
 package org.techtown.edc;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Princess implements Serializable {
     private int heart = 5;
@@ -44,7 +45,17 @@ public class Princess implements Serializable {
     }
 
     public void removeInventory (int item) {
-        inventory.remove(item);
+        Iterator it = inventory.iterator();
+
+        while(it.hasNext()) {
+            int value = (int)it.next();
+            if(value == item)
+            {
+                it.remove();
+                //invNum--;
+                break;
+            }
+        }
     }
 
     public void setF2Recipe(int a, int b){

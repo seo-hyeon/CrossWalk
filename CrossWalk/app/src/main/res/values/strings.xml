@@ -4,7 +4,7 @@
     <string name="start">Start</string>
     <string name="load">Load Data</string>
     <string name="collection">Collection</string>
-    <string name="click">click</string>
+    <string name="click">next</string>
 
     //캐릭터
     <string name="goldP">황금 공주</string>
@@ -183,7 +183,7 @@
     <string name="f1_39_3">흉기를 떨어트리는덴 성공했었는데,,, 그후로 머리를 맞고 기절했었어요. 깨어나보니 드래곤님도 없고, 그 인형도 없고, </string>
     <string name="f1_39_4">들고 있던 칼만 바닥에 있어 얼마나 무서웠는지 몰라요. 누가 다칠까봐 그 칼은 2층 사물함 안에 넣어놨구요,,, 어휴</string>
     <string name="f1_39_5">문지기가 말한 인간이 내 동생 같다, 동생을 찾으려면 단서가 더 필요할 것 같지만</string>
-    <string name="f1_39c1">일단 탈출한 뒤 성으로 돌아가 도움을 구하자</string>
+    <string name="f1_39c1">일단 탈출한 뒤 성으로 돌아가 도움을 구하자,, 나갈래</string>
     <string name="f1_39c2">좀 더 이 성을 수색해보자</string>
 
     <string name="f1_40">오잉? 당신 시종 인형이었나요? 시종복이 부족했던건가? 어쨌든 이제 외출이 가능하시겠네요, 나가실건가요?</string>
