@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class subActivity_f1 extends AppCompatActivity {
     //FrameLayout icon_pop;
@@ -23,8 +24,8 @@ public class subActivity_f1 extends AppCompatActivity {
     String name = " ";
     int []choices = new int [70];
     int []prev = new int [2];
-    int life = 5;
-    Princess player = new Princess();
+
+    Princess player;
     //0황금주머니, 1수정구슬, 2육감티아라, 3새장열쇠, 4하녀옷, 5우유,6 치즈 7후추,
     // 8지랫대, 9바늘, 10밧줄, 11맛있는 스튜, 12허가증, 13 수선된 드레스, 14 잠드는 약, 15 빵조각, 16 동물과 말하는 약, 17 고대 마법책, 18 장검
     // 19 보청기, 20 서랍열쇠;
@@ -92,13 +93,23 @@ public class subActivity_f1 extends AppCompatActivity {
             }
         });
         */
-        b42 = findViewById(R.id.b42);
-        b42.setText(String.valueOf(player.getHeart()));
 
-        f1_51();
-        //위층 넘어가는지 시험.
-        //f1_13();
+        Intent intent = getIntent();
+
+        if(intent.getIntExtra("floor", 1) == 2) {
+            player = (Princess) intent.getSerializableExtra("player");
+            b42 = findViewById(R.id.b42);
+            b42.setText(String.valueOf(player.getHeart()));
+            f1_13();
+        } else{
+            player = new Princess();
+            b42 = findViewById(R.id.b42);
+            b42.setText(String.valueOf(player.getHeart()));
+            f1_51();
+        }
     }
+
+
 
     public void choosePrincess() {
         c31 = findViewById(R.id.choice3_1);
@@ -967,12 +978,15 @@ public class subActivity_f1 extends AppCompatActivity {
 
     public void f1_13(){
         //choices[13] = 1;
-        player.setF1_choices(13); prev[1] = 13;
+        player.setF1_choices(13);
+
+        prev[1] = 13;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice3 = findViewById(R.id.choice_no3); choice3.setVisibility(View.VISIBLE);
         c31 = findViewById(R.id.choice3_1); c32 = findViewById(R.id.choice3_2); c33 = findViewById(R.id.choice3_3);
         character.setText(" "); mainText.setText(getString(R.string.f1_13));
+
         c31.setText(getString(R.string.f1_13c1));  c32.setText(getString(R.string.f1_13c2));  c33.setText(getString(R.string.f1_13c3));
 
         //구현x
@@ -984,6 +998,7 @@ public class subActivity_f1 extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), subActivity_f2.class);
                 intent.putExtra("player", player);
                 startActivity(intent);
+                finish();
             }
         });
         c32.setOnClickListener(new View.OnClickListener() {
@@ -2021,7 +2036,8 @@ public class subActivity_f1 extends AppCompatActivity {
         choice1 = findViewById(R.id.choice_no1);
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
-        if(mainText.getText().toString().equals(getString(R.string.f1_35_2))){
+        b42 = findViewById(R.id.b42);
+        if(mainText.getText().toString().equals(getString(R.string.f1_35_3))){
             c11.setText(getString(R.string.f1_35c1));
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -2040,9 +2056,15 @@ public class subActivity_f1 extends AppCompatActivity {
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mainText.setText(getString(R.string.f1_35_2));
-                    player.removeInventory(5); player.addInventory(11); //itemlist[5] = 0; itemlist[11] = 1;
-                    f1_35();
+                    if(mainText.getText().toString().equals(getString(R.string.f1_35_1))) {
+                        mainText.setText(getString(R.string.f1_35_2));
+                        player.removeInventory(5);
+                        player.addInventory(11); //itemlist[5] = 0; itemlist[11] = 1;
+                    } else if(mainText.getText().toString().equals(getString(R.string.f1_35_2))) {
+                        mainText.setText(getString(R.string.f1_35_3));
+                        player.heal(); b42.setText(String.valueOf(player.getHeart()));
+                        f1_35();
+                    }
                 }
             });
         }
@@ -2405,7 +2427,7 @@ public class subActivity_f1 extends AppCompatActivity {
        character.setText(getString(R.string.doll_guard));
        if(mainText.getText().toString().equals(getString(R.string.f1_41_2))) {
            c22 = findViewById(R.id.choice2_2);
-           if(itemlist[12] == 1) {
+           if(player.isInventory(12)) {
                c21 = findViewById(R.id.choice2_1);
                choice1.setVisibility(View.INVISIBLE);
                choice2 = findViewById(R.id.choice_no2);
