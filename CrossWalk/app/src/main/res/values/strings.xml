@@ -252,7 +252,8 @@
     <string name="f2_4">드래곤과 인형들이 쓰는 것같은 서랍장이다. 서랍장 위에는 빵이 담긴 접시와 책꽂이가 놓여있고 서랍은 잠겨있다.</string>
     <string name="f2_4c1">서랍을 연다.</string>
     <string name="f2_4c2">책꽂이를 뒤진다.</string>
-    <string name="f2_4c3">남은 빵을 챙긴다.</string>
+    <string name="f2_4c3">다시 돌아간다</string>
+    <string name="f2_4c4">남은 빵을 챙긴다.</string>
     <string name="f2_5">이 침대는 드래곤이 누울 만큼 매우 크고 넓다. 특이한 점은 없어 보인다</string>
     <string name="f2_5c2">침대 밑을 찾아본다.</string>
     <string name="f2_5c1">다른 곳을 찾아본다.</string>

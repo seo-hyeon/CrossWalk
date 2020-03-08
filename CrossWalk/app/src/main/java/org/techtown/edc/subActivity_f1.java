@@ -1127,7 +1127,9 @@ public class subActivity_f1 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     choice2.setVisibility(View.INVISIBLE);
-                    if(player.getF1_choices(61) && !player.getF1_choices(23)){//if (choices[61] == 1 && choices[23] == 0) {
+                    if (player.getF1_choices(45)){//else if (choices[45] == 1) {
+                        f1_47();
+                    } else if(player.getF1_choices(61) && !player.getF1_choices(23)){//if (choices[61] == 1 && choices[23] == 0) {
                         f1_23();
                     }else if(player.getF1_choices(60) && !player.getF1_choices(22)){// else if (choices[60] == 1 && choices[22] == 0) {
                         f1_22();
@@ -1140,8 +1142,6 @@ public class subActivity_f1 extends AppCompatActivity {
                     } else if(player.getF1_choices(24) || player.getF1_choices(25)){
                         //else if (choices[24] == 1 || choices[25] == 1) {
                         f1_62();
-                    } else if (player.getF1_choices(45)){//else if (choices[45] == 1) {
-                        f1_47();
                     } else {
                         f1_100();
                     }
