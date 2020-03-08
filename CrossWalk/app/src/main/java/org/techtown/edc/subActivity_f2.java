@@ -112,7 +112,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice1.setVisibility(View.INVISIBLE);
-                f2_1();
+                f2_67();
             }
         });
     }
@@ -2873,10 +2873,21 @@ public class subActivity_f2<player> extends AppCompatActivity {
             choice2 = findViewById(R.id.choice_no2);
             c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
             c21.setText(getString(R.string.f2_67c1)); c22.setText(getString(R.string.f2_67c2));
-        }else{
-            choice2 = findViewById(R.id.choice_no1);
-            c21 = findViewById(R.id.choice1_1); c22 = findViewById(R.id.choice2_2);
-            c21.setText(getString(R.string.f2_67c1)); c22.setText(getString(R.string.f2_67c2));
+
+            c21.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice2.setVisibility(View.INVISIBLE);
+                    f2_68();
+                }
+            });
+            c22.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice2.setVisibility(View.INVISIBLE);
+                    f2_71();
+                }
+            });
         }
 
         mainText.setText(getString(R.string.f2_67_1)); c11.setText(getString(R.string.click));
@@ -2886,26 +2897,19 @@ public class subActivity_f2<player> extends AppCompatActivity {
             public void onClick(View v) {
                 if(mainText.getText().toString().equals(getString(R.string.f2_67_1))){
                     mainText.setText(getString(R.string.f2_67_2));
+                    if(player.isInventory(9)){
+                        choice2.setVisibility(View.VISIBLE);
+                        choice1.setVisibility(View.INVISIBLE);
+                    } else{
+                        c11.setText(getString(R.string.f2_67c1));
+                    }
+                } else if(!player.isInventory(9) && mainText.getText().toString().equals(getString(R.string.f2_67_2))){
                     choice1.setVisibility(View.INVISIBLE);
-                    choice2.setVisibility(View.VISIBLE);
+                    f2_68();
                 }
             }
         });
 
-        c21.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
-                f2_68();
-            }
-        });
-        c22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
-                f2_71();
-            }
-        });
 
     }
     public void f2_68(){
@@ -2957,10 +2961,21 @@ public class subActivity_f2<player> extends AppCompatActivity {
             choice2 = findViewById(R.id.choice_no2);
             c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
             c21.setText(getString(R.string.f2_70c1)); c22.setText(getString(R.string.f2_70c2));
-        }else{
-            choice2 = findViewById(R.id.choice_no1);
-            c21 = findViewById(R.id.choice1_1); c22 = findViewById(R.id.choice2_2);
-            c21.setText(getString(R.string.f2_70c1)); c22.setText(getString(R.string.f2_70c2));
+
+            c21.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice2.setVisibility(View.INVISIBLE);
+                    f2_69();
+                }
+            });
+            c22.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice2.setVisibility(View.INVISIBLE);
+                    f2_71();
+                }
+            });
         }
 
 
@@ -2977,26 +2992,20 @@ public class subActivity_f2<player> extends AppCompatActivity {
                     mainText.setText(getString(R.string.f2_70_4));
                 } else if(mainText.getText().toString().equals(getString(R.string.f2_70_4))){
                     mainText.setText(getString(R.string.f2_70_5));
+
+                    if(player.isInventory(9)) {
+                        choice1.setVisibility(View.INVISIBLE);
+                        choice2.setVisibility(View.VISIBLE);
+                    }  else{
+                        c11.setText(getString(R.string.f2_67c1));
+                    }
+                } else if(!player.isInventory(9) && mainText.getText().toString().equals(getString(R.string.f2_67_2))){
                     choice1.setVisibility(View.INVISIBLE);
-                    choice2.setVisibility(View.VISIBLE);
+                    f2_68();
                 }
             }
         });
 
-        c21.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
-                f2_69();
-            }
-        });
-        c22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
-                f2_71();
-            }
-        });
     }
     public void f2_71(){
         player.setF2_choices(71);

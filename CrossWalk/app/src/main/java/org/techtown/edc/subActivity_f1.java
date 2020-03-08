@@ -74,6 +74,15 @@ public class subActivity_f1 extends AppCompatActivity {
             }
         });
 
+        Button item_view = (Button) findViewById(R.id.b44);
+        item_view.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Inventory_Activity.class);
+                intent.putExtra("player", player);
+                startActivity(intent);
+            }
+        });
+
         /*
         //미니맵 열기 -> b43('map')버튼 : map 레이아웃을 visible로, 닫기 -> map_c ('X')버튼 : mamp 레이아웃을 invisible로
         Button map_open = findViewById(R.id.b43);

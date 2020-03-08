@@ -2,12 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inventory_c"
     android:layout_width="300dp"
     android:layout_height="320dp"
-    android:background="#fff"
     android:layout_gravity="center_horizontal"
+    android:background="#fff"
     android:orientation="vertical"
-    tools:context=".Inventory">
+    tools:context=".Inventory_Activity">
+
 
     <LinearLayout
         android:id="@+id/bar"
@@ -26,6 +28,7 @@
             android:layout_gravity="right|top"
 
             android:background="@android:color/holo_red_light"
+            android:onClick="onClick"
             android:text="X" />
     </LinearLayout>
 
@@ -33,8 +36,8 @@
         android:id="@+id/itemView"
         android:layout_width="280dp"
         android:layout_height="180dp"
-        android:paddingVertical="10dp"
         android:layout_marginTop="15dp"
+        android:paddingVertical="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bar">
@@ -56,23 +59,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:background="@drawable/img_464209"
-                    android:text="Button 1" />
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/i1"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:background="@drawable/star"
-                    android:text="Button 2" />
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/i2"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="onClick" />
             </LinearLayout>
 
             <LinearLayout
@@ -87,21 +88,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/i4"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/i5"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="onClick" />
             </LinearLayout>
 
             <LinearLayout
@@ -116,21 +117,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/i7"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/i8"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="onClick" />
             </LinearLayout>
 
             <LinearLayout
@@ -145,21 +146,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/i10"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/i11"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="onClick" />
             </LinearLayout>
 
             <LinearLayout
@@ -373,20 +374,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:orientation="horizontal"
+        android:background="@android:color/holo_blue_light"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@android:color/holo_blue_light">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
             android:id="@+id/choice"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="10dp">
-        </Button>
+            android:layout_margin="10dp"></Button>
 
         <TextView
-            android:id="@+id/text"
+            android:id="@+id/item_text"
             android:layout_width="180dp"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="10dp"
@@ -394,5 +394,4 @@
             android:text="아이템을 선택하세요" />
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

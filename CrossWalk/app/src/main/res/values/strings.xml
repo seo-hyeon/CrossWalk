@@ -64,7 +64,8 @@
     <string name="f1_10_2">러그 사이에서 반짝이는 뭔가가 보인다. 집을까?</string>
     <string name="f1_10c1">아 아이템 빳다죠, 개꿀</string>
     <string name="f1_10c2">ㄴㄴ 일단 지나친다.</string>
-    <string name="f1_10c3">아씨 바늘이네, 조심히 줍는다.</string> //구현o
+    <string name="f1_10c3">아씨 바늘이네, 조심히 줍는다.</string>
+    //구현o
 
     <string name="f1_11">조리대로 넘어왔다. 무언가 끓이는 큰 곰 인형이 보인다. 끓고 있는 냄비에선 좋은 냄새가 난다.</string>
     <string name="f1_11c1">곰에게 말을 건다</string>
@@ -649,7 +650,6 @@
 
 
     <string name="f2_100">오류오류 </string>
-
 
 
     <string name="cd">상황에 따른 일러</string>

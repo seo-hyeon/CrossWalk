@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         textView2.setText(String.format("인벤토리 수: %d", princess.getInvNum()));
 
         txtResult = (TextView)findViewById(R.id.txtResult);
+
+        Button inventory = findViewById(R.id.button);
+
+
     }
 
     public void mOnPopupClick(View v) {
