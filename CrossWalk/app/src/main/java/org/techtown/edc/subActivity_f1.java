@@ -2036,7 +2036,8 @@ public class subActivity_f1 extends AppCompatActivity {
         choice1 = findViewById(R.id.choice_no1);
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
-        if(mainText.getText().toString().equals(getString(R.string.f1_35_2))){
+        b42 = findViewById(R.id.b42);
+        if(mainText.getText().toString().equals(getString(R.string.f1_35_3))){
             c11.setText(getString(R.string.f1_35c1));
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -2055,9 +2056,15 @@ public class subActivity_f1 extends AppCompatActivity {
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mainText.setText(getString(R.string.f1_35_2));
-                    player.removeInventory(5); player.addInventory(11); //itemlist[5] = 0; itemlist[11] = 1;
-                    f1_35();
+                    if(mainText.getText().toString().equals(getString(R.string.f1_35_1))) {
+                        mainText.setText(getString(R.string.f1_35_2));
+                        player.removeInventory(5);
+                        player.addInventory(11); //itemlist[5] = 0; itemlist[11] = 1;
+                    } else if(mainText.getText().toString().equals(getString(R.string.f1_35_2))) {
+                        mainText.setText(getString(R.string.f1_35_3));
+                        player.heal(); b42.setText(String.valueOf(player.getHeart()));
+                        f1_35();
+                    }
                 }
             });
         }
