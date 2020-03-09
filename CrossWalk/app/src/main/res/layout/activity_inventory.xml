@@ -59,21 +59,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainI0" />
 
                 <Button
                     android:id="@+id/i1"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT1" />
 
                 <Button
                     android:id="@+id/i2"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT2" />
             </LinearLayout>
 
             <LinearLayout
@@ -88,21 +88,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT3" />
 
                 <Button
                     android:id="@+id/i4"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT4" />
 
                 <Button
                     android:id="@+id/i5"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT5" />
             </LinearLayout>
 
             <LinearLayout
@@ -117,21 +117,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT6" />
 
                 <Button
                     android:id="@+id/i7"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT7" />
 
                 <Button
                     android:id="@+id/i8"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT8" />
             </LinearLayout>
 
             <LinearLayout
@@ -146,21 +146,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT9" />
 
                 <Button
                     android:id="@+id/i10"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT10" />
 
                 <Button
                     android:id="@+id/i11"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="onClick" />
+                    android:onClick="explainT11" />
             </LinearLayout>
 
             <LinearLayout
@@ -175,21 +175,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT12"/>
 
                 <Button
                     android:id="@+id/i13"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT13"/>
 
                 <Button
                     android:id="@+id/i14"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT14"/>
             </LinearLayout>
 
             <LinearLayout
@@ -204,21 +204,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT15"/>
 
                 <Button
                     android:id="@+id/i16"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT16" />
 
                 <Button
                     android:id="@+id/i17"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT17" />
             </LinearLayout>
 
             <LinearLayout
@@ -233,21 +233,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT18" />
 
                 <Button
                     android:id="@+id/i19"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT19" />
 
                 <Button
                     android:id="@+id/i20"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT20"/>
             </LinearLayout>
 
             <LinearLayout
@@ -262,21 +262,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT21" />
 
                 <Button
                     android:id="@+id/i22"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT22" />
 
                 <Button
                     android:id="@+id/i23"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT23" />
             </LinearLayout>
 
             <LinearLayout
@@ -291,21 +291,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT24"/>
 
                 <Button
                     android:id="@+id/i25"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT25" />
 
                 <Button
                     android:id="@+id/i26"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT26" />
             </LinearLayout>
 
             <LinearLayout
@@ -320,50 +320,20 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT27" />
 
                 <Button
                     android:id="@+id/i28"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:onClick="explainT28" />
 
                 <Button
                     android:id="@+id/i29"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_margin="8dp"
-                    android:text="Button 6" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="10dp">
-
-                <Button
-                    android:id="@+id/i30"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="8dp"
-                    android:text="Button 6" />
-
-                <Button
-                    android:id="@+id/i31"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="8dp"
-                    android:text="Button 6" />
-
-                <Button
-                    android:id="@+id/i32"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="8dp"
-                    android:text="Button 6" />
+                    android:layout_margin="8dp" />
             </LinearLayout>
 
 
