@@ -42,7 +42,7 @@ public class Inventory_Activity extends Activity implements View.OnClickListener
                         break;
                     case 1 :
                         i0 = findViewById(R.id.i0);
-                        i0.setBackgroundResource(R.drawable.star);
+                        i0.setBackgroundResource(R.drawable.crown);
                         break;
                     case 2 :
                         i0 = findViewById(R.id.i0);
@@ -175,7 +175,7 @@ public class Inventory_Activity extends Activity implements View.OnClickListener
         }
         else if (player.isInventory(1)){
             choice = findViewById(R.id.choice);
-            choice.setBackgroundResource(R.drawable.star);
+            choice.setBackgroundResource(R.drawable.crown);
             text = findViewById(R.id.item_text);
             text.setText(String.format("수정구슬"));
         }
