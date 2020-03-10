@@ -223,6 +223,10 @@
     <string name="f1_65c1">예에스</string>
     <string name="f1_66">2층에서 1층으로 내려왔다.</string>
     <string name="f1_66c1">계단을 본다.</string>
+    <string name="f1_67">이어진 창틀을 따라 창문에 도착했다. 창문은 열려있고 상쾌한 공기가 창 밖에서 불어온다</string>
+    <string name="f1_67c1">아직 할 일이 있다. 돌아가자</string>
+    <string name="f1_67c2">이 성에서 탈출하자!</string>
+
     <string name="f1_100">오류 발견 추카추카 로그를 스크립터 조따로에게 보내주세요. @mammosbeam </string>
 
 

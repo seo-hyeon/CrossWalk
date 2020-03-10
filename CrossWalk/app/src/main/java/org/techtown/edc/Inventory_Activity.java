@@ -4,19 +4,20 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class Inventory_Activity extends Activity implements View.OnClickListener{
     private Princess player;
     Button i0, i1, i2,i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19;
-    Button i20, i21, i22, i23, i24, i25, i26, i27,i28,i29, choice;
+    Button i20, i21, i22, i23, i24, i25, i26, i27,i28, choice;
     TextView text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_inventory);
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         Intent intent = getIntent();
         player = (Princess) intent.getSerializableExtra("player");
@@ -46,7 +47,7 @@ public class Inventory_Activity extends Activity implements View.OnClickListener
                         break;
                     case 2 :
                         i0 = findViewById(R.id.i0);
-                        i0.setBackgroundResource(R.drawable.img_464209);
+                        i0.setBackgroundResource(R.drawable.crown);
                         break;
                     case 3 :
                         i1 = findViewById(R.id.i1);
