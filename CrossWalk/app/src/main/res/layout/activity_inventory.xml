@@ -59,21 +59,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainI0" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i1"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT1" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i2"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT2" />
+                    android:onClick="explain" />
             </LinearLayout>
 
             <LinearLayout
@@ -88,21 +88,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT3" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i4"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT4" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i5"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT5" />
+                    android:onClick="explain" />
             </LinearLayout>
 
             <LinearLayout
@@ -117,21 +117,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT6" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i7"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT7" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i8"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT8" />
+                    android:onClick="explain" />
             </LinearLayout>
 
             <LinearLayout
@@ -146,21 +146,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT9" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i10"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT10" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i11"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT11" />
+                    android:onClick="explain" />
             </LinearLayout>
 
             <LinearLayout
@@ -175,21 +175,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT12"/>
+                    android:onClick="explain"/>
 
                 <Button
                     android:id="@+id/i13"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT13"/>
+                    android:onClick="explain"/>
 
                 <Button
                     android:id="@+id/i14"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT14"/>
+                    android:onClick="explain"/>
             </LinearLayout>
 
             <LinearLayout
@@ -204,21 +204,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT15"/>
+                    android:onClick="explain"/>
 
                 <Button
                     android:id="@+id/i16"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT16" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i17"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT17" />
+                    android:onClick="explain" />
             </LinearLayout>
 
             <LinearLayout
@@ -233,21 +233,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT18" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i19"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT19" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i20"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT20"/>
+                    android:onClick="explain"/>
             </LinearLayout>
 
             <LinearLayout
@@ -262,21 +262,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT21" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i22"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT22" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i23"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT23" />
+                    android:onClick="explain" />
             </LinearLayout>
 
             <LinearLayout
@@ -291,21 +291,21 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT24"/>
+                    android:onClick="explain"/>
 
                 <Button
                     android:id="@+id/i25"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT25" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i26"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT26" />
+                    android:onClick="explain" />
             </LinearLayout>
 
             <LinearLayout
@@ -320,14 +320,14 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT27" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i28"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="8dp"
-                    android:onClick="explainT28" />
+                    android:onClick="explain" />
 
                 <Button
                     android:id="@+id/i29"

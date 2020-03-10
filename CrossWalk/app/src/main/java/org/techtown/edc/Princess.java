@@ -6,8 +6,9 @@ import java.util.Iterator;
 public class Princess implements Serializable {
     private int heart = 5;
     private int type = -1; //0황금, 1별, 2호랑이
+    private int invNum = 0;
 
-    private boolean inventory[] = new boolean[32];
+    ArrayList<Integer> inventory = new ArrayList<>();
     //0황금주머니, 1수정구슬, 2육감티아라, 3새장열쇠, 4하녀옷, 5우유,6 치즈 7후추,
     // 8지랫대, 9바늘, 10밧줄, 11맛있는 스튜, 12허가증, 13 수선된 드레스, 14 잠드는 약, 15 빵조각, 16 동물과 말하는 약, 17 고대 마법책, 18 장검
     // 19 보청기, 20 서랍열쇠, (하얀 약장~)21 갈색의 고운 가루, 22 파란색의 단단한 금속, 23 빨간색의 뜨거운 기름, 24 하얀색의 말랑한 고체, 25 초록색의 푹신한 섬유
@@ -23,6 +24,7 @@ public class Princess implements Serializable {
     public int getHeart() {return heart;}
     public void setType(int type) {this.type = type;}
     public int getType() {return type;}
+    public int getInvNum() {return invNum;}
 
     public void damage() {this.heart -= 1;}
     public void heal() {
@@ -32,21 +34,34 @@ public class Princess implements Serializable {
             this.heart = 5;
     }
 
-    public Princess() {
-        for (int i = 0; i < 32; i++)
-            inventory[i] = false;
-    }
-
     public void addInventory (int item) {
-        inventory[item] = true;
+
+        inventory.add(item);
+        invNum++;
     }
 
     public boolean isInventory (int item) {
-        return inventory[item];
+        for(int i: inventory)
+        {
+            if (i == item)
+                return true;
+        }
+
+        return false;
     }
 
     public void removeInventory (int item) {
-        inventory[item] = false;
+        Iterator it = inventory.iterator();
+
+        while(it.hasNext()) {
+            int value = (int)it.next();
+            if(value == item)
+            {
+                it.remove();
+                invNum--;
+                break;
+            }
+        }
     }
 
     public void setF2Recipe(int a, int b){
