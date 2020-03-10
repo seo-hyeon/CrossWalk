@@ -254,6 +254,7 @@
     <string name="f2_4c2">책꽂이를 뒤진다.</string>
     <string name="f2_4c3">다시 돌아간다</string>
     <string name="f2_4c4">남은 빵을 챙긴다.</string>
+    <string name="f2_4c5">나가고 싶다,,,</string>
     <string name="f2_5">이 침대는 드래곤이 누울 만큼 매우 크고 넓다. 특이한 점은 없어 보인다</string>
     <string name="f2_5c2">침대 밑을 찾아본다.</string>
     <string name="f2_5c1">다른 곳을 찾아본다.</string>
@@ -586,7 +587,7 @@
     <string name="f2_75_5">자꾸 졸려하는 모습을 보여서 죄송합니다. 제가 원숭이 인형들을 잔뜩 만들어야해서 밤을 샜더니,,,</string>
     <string name="f2_75_6">밤이되면 약사한테 잠에들 수 있는 약을 받아서 마셔야겠어요. 그럼 푹 잘 수 있겠죠</string>
     <string name="f2_75c1">양을 재울 방법이 있을까?</string>
-    <string name="f2_76">양에게 코코아를 부으려고 왔더니 양은 이미 자고있다. 깨우기 힘들정도로 깊게 자는 듯하다.</string>
+    <string name="f2_76">양은 이미 자고있다. 깨우기 힘들정도로 깊게 자는 듯하다.</string>
     <string name="f2_76c1">발소리를 죽이고 다른 곳으로 간다</string>
     <string name="f2_76c2">열쇠를 가져간다</string>
     <string name="f2_76c3">보청기를 가져간다</string>
@@ -622,7 +623,10 @@
     <string name="f2_87_1"> 공주는 책꽃이를 뒤졌고, 깊숙한 곳에서 강아지 인형의 다이어리를 발견했다.</string>
     <string name="f2_87_2"> x월 o일 시종장님이 나보고 빨래를 시키셨다. 손이 너무 시렸다. </string>
     <string name="f2_87_3"> x월 x일 시종장님이 나보고 박스를 옮기라고 하셨다. 너무 무거웠다. </string>
-    <string name="f2_87_4"> x월 y일 시종장님이 나보고,,,</string>
+    <string name="f2_87_4"> x월 y일 시종장님이 나보고 약장을 정리하고 하셨다. 종류가 너무 많아 힘들었다.</string>
+    <string name="f2_87_5"> 이 금속은 어느 약에도 안쓰이는데 버려도 되냐고 시종장님이 불같이 화를 내셨다.</string>
+    <string name="f2_87_6"> 이 금속을 양초에 그을리며 가고싶은 장소를 생각하면 마법의 힘으로 도착할 수 있다는 모양이다.</string>
+    <string name="f2_87_7"> 드래곤님이 성 밖에 나가실 때 종종 쓰신다고 하시니 버렸다간 큰일 날 뻔 했다.</string>
     <string name="f2_87c1">열심히 일하는 모양이다.</string>
     <string name="f2_88">커다란 그릇위에 먹다남은 듯한 빵이 놓여있다. 챙길 수 있는 만큼만 빵을 때어갔다.</string>
     <string name="f2_88c1">다른걸 살피자</string>
@@ -648,6 +652,10 @@
     <string name="f2_92_6">그 꼬리깃은 사람 키보다 길었고 신묘한 빛을 내서 여왕은 꼬리깃을 왕궁안에 걸어놓았다 하죠.</string>
     <string name="f2_92_7"> 그 이야기에 영감을 받아서, 그 깃털을 자수로 놓아보려고 하고있어요. </string>
     <string name="f2_92c1">그렇군요 이야기 들려줘서 고마워요</string>
+
+    <string name="f2_93_1">금속이 달구어지며 푸른 빛이 몸을 감쌌다. 시야가 점점 하얗게 변하더니 성 밖의 풍경으로 변했다.</string>
+    <string name="f2_93_2">발에 닿는 풀의 감촉이 내가 탈출에 성공했다고 말한다!</string>
+    <string name="f2_93c1">탈출했다.</string>
 
 
     <string name="f2_100">오류오류 </string>

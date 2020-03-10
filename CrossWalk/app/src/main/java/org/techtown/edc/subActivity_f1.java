@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,7 +21,7 @@ public class subActivity_f1 extends AppCompatActivity {
     TextView character, mainText;
     Button c11, c21, c22, c31, c32, c33, c41, c42, c43, c44, c51, c52, c53, c54, c55;
     Button b42;
-    String position = " ";
+
     String name = " ";
     int []choices = new int [70];
     int []prev = new int [2];
@@ -70,7 +71,10 @@ public class subActivity_f1 extends AppCompatActivity {
         map_open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(subActivity_f1.this, map.class));
+                Intent intent = new Intent(subActivity_f1.this, map.class);
+                intent.putExtra("player", player);
+                intent.putExtra("floor", 1);
+                startActivity(intent);
             }
         });
 
@@ -118,8 +122,6 @@ public class subActivity_f1 extends AppCompatActivity {
         }
     }
 
-
-
     public void choosePrincess() {
         c31 = findViewById(R.id.choice3_1);
         c32 = findViewById(R.id.choice3_2);
@@ -138,6 +140,9 @@ public class subActivity_f1 extends AppCompatActivity {
                 Button who = findViewById(R.id.b41);
                 player.setType(0);
                 player.addInventory(0);
+                Toast toast = Toast.makeText(getApplicationContext(), "item : 황금 주머니를 얻었다", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+                toast.show();
                 //who.setText(String.valueOf(player.getType()));
                 who.setText(getString(R.string.goldP));
                 //itemlist[0] = 1;
@@ -153,6 +158,9 @@ public class subActivity_f1 extends AppCompatActivity {
                 Button who = findViewById(R.id.b41);
                 player.setType(1);
                 player.addInventory(1);
+                Toast toast = Toast.makeText(getApplicationContext(), "item : 수정 구슬을 얻었다", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+                toast.show();
                 who.setText(getString(R.string.starP));
                 //itemlist[1] = 1;
                 name = getString(R.string.starP);
@@ -167,6 +175,9 @@ public class subActivity_f1 extends AppCompatActivity {
                 Button who = findViewById(R.id.b41);
                 player.setType(2);
                 player.addInventory(2);
+                Toast toast = Toast.makeText(getApplicationContext(), "item : 육감의 티아라를 얻었다", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+                toast.show();
                 who.setText(getString(R.string.tigerP));
                 //itemlist[2] = 1;
                 name = getString(R.string.tigerP);
@@ -179,6 +190,7 @@ public class subActivity_f1 extends AppCompatActivity {
 
     public void f1_51(){
         player.setF1_choices(51);
+        player.setLocation(0);
         //choices[51] = 1;
         prev[1] = 51;
         img = findViewById(R.id.imageView);
@@ -207,6 +219,7 @@ public class subActivity_f1 extends AppCompatActivity {
 
     public void f1_52(){
         player.setF1_choices(52);
+        player.setLocation(0);
         //choices[52] = 1;
         prev[1] = 52;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
@@ -216,7 +229,7 @@ public class subActivity_f1 extends AppCompatActivity {
 
         character.setText(getString(R.string.doll_dog));
         mainText.setText(String.format(getString(R.string.f1_52), name));
-        player.addInventory(5);
+
         c21.setText(getString(R.string.f1_52c1));
         c22.setText(getString(R.string.f1_52c2));
 
@@ -225,7 +238,6 @@ public class subActivity_f1 extends AppCompatActivity {
             public void onClick(View v) {
                 prev[0] = 52;
                 choice2.setVisibility(View.INVISIBLE);
-                player.removeInventory(5);
                 f1_0();
             }
         });
@@ -242,6 +254,7 @@ public class subActivity_f1 extends AppCompatActivity {
 
     public void f1_0(){
         player.setF1_choices(0);
+        player.setLocation(0);
         //choices[0] = 1;
         prev[1] = 0;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
@@ -307,6 +320,7 @@ public class subActivity_f1 extends AppCompatActivity {
 
     public void f1_1(){
         player.setF1_choices(1);
+        player.setLocation(0);
         //choices[1] = 1;
         prev[1] = 1;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
@@ -377,8 +391,8 @@ public class subActivity_f1 extends AppCompatActivity {
                 if(itemlist[0] == 1){ f1_4(); }
                 else if(choices[2] == 0){ f1_2(); }
                  */
-                if(player.isInventory(0)){f1_4();}
-                else if(!player.getF1_choices(2)){ f1_2();}
+                if(c32.getText().toString().equals(getString(R.string.f1_0c4))){f1_4();}
+                else if(c32.getText().toString().equals(getString(R.string.f1_0c2))){ f1_2();}
             }
         });
 
@@ -386,53 +400,54 @@ public class subActivity_f1 extends AppCompatActivity {
 
     public void f1_2(){
         //choices[2] = 1;
+        player.setLocation(0);
         player.setF1_choices(2); prev[1] = 2;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice2 = findViewById(R.id.choice_no2); choice1 = findViewById(R.id.choice_no1);
         c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
         c11 = findViewById(R.id.choice1_1);
 
-        if(mainText.getText().toString().equals(getString(R.string.f1_2_2))){
-            choice2.setVisibility(View.VISIBLE);
-            c21.setText(getString(R.string.f1_2c1));
-            c22.setText(getString(R.string.f1_23c2));
-            c21.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    choice2.setVisibility(View.INVISIBLE);
-                    prev[0] = 2;
-                    f1_5();
-                }
-            });
-            c22.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    choice2.setVisibility(View.INVISIBLE);
-                    prev[0] = 2;
-                    f1_6();
-                }
-            });
-        }else {
-            choice1.setVisibility(View.VISIBLE);
-            character.setText(getString(R.string.doll_dog));
-            mainText.setText(getString(R.string.f1_2_1));
-            c11.setText(getString(R.string.click));
+        choice1.setVisibility(View.VISIBLE);
+        character.setText(getString(R.string.doll_dog));
+        mainText.setText(getString(R.string.f1_2_1));
+        c11.setText(getString(R.string.click));
 
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    choice1.setVisibility(View.INVISIBLE);
+        c11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mainText.getText().toString().equals(getString(R.string.f1_2_1))) {
                     character.setText(" ");
                     mainText.setText(getString(R.string.f1_2_2));
-                    f1_2();
+                    choice2.setVisibility(View.VISIBLE);
+                    choice1.setVisibility(View.INVISIBLE);
+                    c21.setText(getString(R.string.f1_2c1));
+                    c22.setText(getString(R.string.f1_23c2));
                 }
-            });
-        }
+            }
+        });
+        c21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice2.setVisibility(View.INVISIBLE);
+                prev[0] = 2;
+                f1_5();
+            }
+        });
+        c22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice2.setVisibility(View.INVISIBLE);
+                prev[0] = 2;
+                f1_6();
+            }
+        });
+
 
     }
 
     public void f1_3(){
         //choices[3] = 1;
+        player.setLocation(0);
         player.setF1_choices(3); prev[1] = 3;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
@@ -465,160 +480,130 @@ public class subActivity_f1 extends AppCompatActivity {
 
     public void f1_4(){
         //choices[4] = 1;
+        player.setLocation(0);
         player.setF1_choices(4); prev[1] = 4;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
         c11 = findViewById(R.id.choice1_1);
 
-        if(mainText.getText().toString().equals(getString(R.string.f1_4_2))){
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        character.setText(getString(R.string.doll_dog));
+        mainText.setText(getString(R.string.f1_4_1));
+
+        c11.setText(getString(R.string.click));
+        c11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mainText.getText().toString().equals(getString(R.string.f1_4_1))) {
+                    mainText.setText(getString(R.string.f1_4_2));
+                } else if(mainText.getText().toString().equals(getString(R.string.f1_4_2))) {
                     character.setText(" ");
                     mainText.setText(getString(R.string.f1_4_3));
-                    c11.setText(getString(R.string.f1_4c1));
-                    //토스트 메세지 : 새장 열쇠를 얻었다!
-                    f1_4();
-                }
-            });
-        }
-        else if(mainText.getText().toString().equals(getString(R.string.f1_4_3))){
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mainText.setText(getString(R.string.f1_4_4)); //이후 토스트 삭제 후 인벤에서 확인 가능하면 삭제 예정  itemlist[3] = 1;
-                    player.addInventory(3);
+                } else  if(mainText.getText().toString().equals(getString(R.string.f1_4_3))) {
+                    character.setText(" ");
+                    mainText.setText(getString(R.string.f1_4_4));
+                    c11.setText(getString(R.string.f1_4c1)); player.addInventory(3);
+
+                    Toast toast = Toast.makeText(getApplicationContext(), "item : 새장열쇠를 얻었다", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+                    toast.show();
+                } else {
                     choice1.setVisibility(View.INVISIBLE);
                     prev[0] = 4;
                     f1_9();
                 }
-            });
-        }
-        else {
-            character.setText(getString(R.string.doll_dog));
-            mainText.setText(getString(R.string.f1_4_1));
+            }
+        });
 
-            c11.setText(getString(R.string.click));
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mainText.setText(getString(R.string.f1_4_2));
-                    f1_4();
-                }
-            });
-        }
     }
     public void f1_5(){
         //choices[5] = 1;
+        player.setLocation(0);
         player.setF1_choices(5); prev[1] = 5;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
-        choice1 = findViewById(R.id.choice_no1); choice2 = findViewById(R.id.choice_no2);
-        c11 = findViewById(R.id.choice1_1); c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
-        choice3 = findViewById(R.id.choice_no3);
-        c31 = findViewById(R.id.choice3_1); c32 = findViewById(R.id.choice3_2); c33 = findViewById(R.id.choice3_3);
+        choice1 = findViewById(R.id.choice_no1); c11 = findViewById(R.id.choice1_1);
 
-        if(mainText.getText().toString().equals(getString(R.string.f1_5_2))) {
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        //황금 주머니가 있거나 여기 어디임?(0c1) 선택지 안 들렸을 경우 이를 보여주는 조건 set
+        if (player.isInventory(0) && !player.getF1_choices(1)) {
+            choice3 = findViewById(R.id.choice_no3);
+            c31 = findViewById(R.id.choice3_1); c32 = findViewById(R.id.choice3_2); c33 = findViewById(R.id.choice3_3);
+            c31.setText(getString(R.string.f1_0c1));
+            c32.setText(R.string.f1_0c3);
+            c33.setText(getString(R.string.f1_0c4));
+        } else if(player.isInventory(0) || !player.getF1_choices(1)) {
+            choice3 = findViewById(R.id.choice_no2);
+            c31 = findViewById(R.id.choice2_1); c32 = findViewById(R.id.choice2_2); c33 = findViewById(R.id.choice3_3);
+            if (player.isInventory(0)) {  //if (itemlist[0] == 1) {
+                c31.setText(R.string.f1_0c3);
+                c32.setText(getString(R.string.f1_0c4));
+            } else if (!player.getF1_choices(1)) {  //choices[1] == 0){
+                c31.setText(R.string.f1_0c3);
+                c32.setText(getString(R.string.f1_0c1));
+            }
+        }
+        choice1.setVisibility(View.VISIBLE);
+        character.setText(getString(R.string.doll_dog));
+        mainText.setText(getString(R.string.f1_5_1));
+        c11.setText(getString(R.string.click));
+
+        c11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mainText.getText().toString().equals(getString(R.string.f1_5_1))) {
+                    mainText.setText(getString(R.string.f1_5_2));
+                } else if (mainText.getText().toString().equals(getString(R.string.f1_5_2))) {
                     mainText.setText(getString(R.string.f1_5_3));
                     player.addInventory(4);
+                    Toast toast = Toast.makeText(getApplicationContext(), "item : 하녀복을 얻었다", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+                    toast.show();
                     //토스트 메세지 하녀옷을 얻었다!  itemlist[4] = 1;
                     choice1.setVisibility(View.INVISIBLE);
-                    f1_5();
+                    choice3.setVisibility(View.VISIBLE);
                 }
-            });
-        } else if(mainText.getText().toString().equals(getString(R.string.f1_5_3))) {
-            //if(itemlist[0] ==1 && choices[1] == 0){
-            if (player.isInventory(0) && !player.getF1_choices(1)){
-                choice3.setVisibility(View.VISIBLE);
-                c31.setText(getString(R.string.f1_0c1));
-                c32.setText(R.string.f1_0c3);
-                c33.setText(getString(R.string.f1_0c4));
-                c31.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        choice3.setVisibility(View.INVISIBLE);
-                        prev[0] = 5;
-                        f1_1();
-                    }
-                });
-                c32.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        choice3.setVisibility(View.INVISIBLE);
-                        prev[0] = 5;
-                        f1_3();
-                    }
-                });
-                c33.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        choice3.setVisibility(View.INVISIBLE);
-                        prev[0] = 5;
-                        f1_4();
-                    }
-                });
-            //}else if(itemlist[0] == 1 || choices[1] == 0){
-            }else if(player.isInventory(0) || !player.getF1_choices(1)){
-                if (player.isInventory(0)){  //if (itemlist[0] == 1) {
-                    choice2.setVisibility(View.VISIBLE);
-                    c21.setText(R.string.f1_0c3);
-                    c22.setText(getString(R.string.f1_0c4));
-                } else if (!player.getF1_choices(1)){  //choices[1] == 0){
-                    choice2.setVisibility(View.VISIBLE);
-                    c21.setText(R.string.f1_0c3);
-                    c22.setText(getString(R.string.f1_0c1));
-                }
-                c21.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        choice2.setVisibility(View.INVISIBLE);
-                        prev[0] = 5;
-                        f1_3();
-                    }
-                });
-                c22.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        choice2.setVisibility(View.INVISIBLE);
-                        prev[0] = 5;
-                        if(c22.getText().toString().equals(getString(R.string.f1_0c4))){f1_4();}
-                        else if(c22.getText().toString().equals(getString(R.string.f1_0c1))){f1_1();}
-                    }
-                });
-            } else {
-                choice1.setVisibility(View.VISIBLE);
-                c11.setText(getString(R.string.f1_0c3));
-                c11.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        choice1.setVisibility(View.INVISIBLE);
-                        prev[0] = 5;
-                        f1_3();
-                    }
-                });
             }
-        } else{
-            choice1.setVisibility(View.VISIBLE);
-            character.setText(getString(R.string.doll_dog));
-            mainText.setText(getString(R.string.f1_5_1));
-            c11.setText(getString(R.string.click));
-
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mainText.setText(getString(R.string.f1_5_2));
-                    f1_5();
+        });
+        c31.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice3.setVisibility(View.INVISIBLE);
+                prev[0] = 5;
+                if(c31.getText().toString().equals(getString(R.string.f1_0c1))){
+                    f1_1();
+                } else if(c31.getText().toString().equals(getString(R.string.f1_0c3))){
+                    f1_3();
                 }
-            });
-        }
+            }
+        });
+        c32.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice3.setVisibility(View.INVISIBLE);
+                prev[0] = 5;
+                if(c32.getText().toString().equals(getString(R.string.f1_0c1))){
+                    f1_1();
+                } else if(c32.getText().toString().equals(getString(R.string.f1_0c3))){
+                    f1_3();
+                }  else if(c32.getText().toString().equals(getString(R.string.f1_0c4))){
+                    f1_4();
+                }
+            }
+        });
+        c33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice3.setVisibility(View.INVISIBLE);
+                prev[0] = 5;
+                f1_4();
+            }
+        });
+
     }
 
     public void f1_6(){
         //choices[6] = 1;
+        player.setLocation(0);
         player.setF1_choices(6);  prev[1] = 6;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
@@ -630,25 +615,19 @@ public class subActivity_f1 extends AppCompatActivity {
         c21.setText(getString(R.string.f1_6c1));
         c22.setText(getString(R.string.f1_6c2));
 
-        if(player.getF1_choices(2) && !player.isInventory(4)){ //if(choices[2] == 1 && itemlist[4] == 0){
-            c21.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    choice2.setVisibility(View.INVISIBLE);
-                    prev[0] = 6;
-                    f1_5();
-                }
-            });
-        } else if (!player.getF1_choices(2) || player.getF1_choices(5)){ //else if(choices[2] == 0 || choices[5] == 1){
-            c21.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    choice2.setVisibility(View.INVISIBLE);
-                    prev[0] = 6;
+        c21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice2.setVisibility(View.INVISIBLE);
+                prev[0] = 6;
+                if(player.getF1_choices(2) && !player.isInventory(4)){ //if(choices[2] == 1 && itemlist[4] == 0){
+                     f1_5();
+                } else if (!player.getF1_choices(2) || player.getF1_choices(5)){ //else if(choices[2] == 0 || choices[5] == 1){
                     f1_7();
                 }
-            });
-        }
+            }
+        });
+
         c22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -661,6 +640,7 @@ public class subActivity_f1 extends AppCompatActivity {
 
     public void f1_7(){
         //choices[7] = 1;
+        player.setLocation(0);
         player.setF1_choices(7); prev[1] = 7;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
@@ -691,53 +671,43 @@ public class subActivity_f1 extends AppCompatActivity {
     }
     public void f1_8(){
         //choices[8] = 1;
+        player.setLocation(0);
         player.setF1_choices(8); prev[1] = 8;
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1); choice1.setVisibility(View.VISIBLE);
         c11 = findViewById(R.id.choice1_1);
+        character.setText(" ");
+        mainText.setText(getString(R.string.f1_8));
+        c11.setText(getString(R.string.click));
+        c11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mainText.getText().toString().equals(getString(R.string.f1_8))) {
+                    if (player.isInventory(2)) {//if (itemlist[2] == 1) { //호랑이 공주 티아라 ~ 체력 감소x
+                        player.setF1_choices(54);//choices[54] = 1;
+                        mainText.setText(getString(R.string.f1_54));
+                    } else { // 그 외 공주 낙법x 체력 감소o
+                        player.setF1_choices(53); //choices[53] = 1;
+                        mainText.setText(getString(R.string.f1_53));
+                        player.damage(); b42 = findViewById(R.id.b42); b42.setText(String.valueOf(player.getHeart()));
 
-        if(mainText.getText().toString().equals(getString(R.string.f1_53)) || (mainText.getText().toString().equals(getString(R.string.f1_54)))){
-            c11.setText(getString(R.string.f1_8c1));
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+                        Toast toast = Toast.makeText(getApplicationContext(), " : 체력이 -1 감소했다", Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -340);
+                        toast.show();
+                    }
+                } else { //8은 이미 출력해서 써 먹었고, maintext가 54 (육감의 티아라 발동~이나, 53 (~라기엔 너무 아팠다) 일 경우
                     choice1.setVisibility(View.INVISIBLE);
                     prev[0] = 8;
                     f1_9();
                 }
-            });
-        }else {
-            character.setText(" ");
-            mainText.setText(getString(R.string.f1_8));
-            c11.setText(getString(R.string.click));
-            if(player.isInventory(2)){//if (itemlist[2] == 1) {
-                c11.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        player.setF1_choices(54);//choices[54] = 1;
-                        mainText.setText(getString(R.string.f1_54));
-                        choice1.setVisibility(View.INVISIBLE);
-                        f1_8();
-                    }
-                });
-            } else {
-                c11.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        player.setF1_choices(53); //choices[53] = 1;
-                        mainText.setText(getString(R.string.f1_53));
-                        player.damage(); b42 = findViewById(R.id.b42); b42.setText(String.valueOf(player.getHeart()));
-                        choice1.setVisibility(View.INVISIBLE);
-                        f1_8();
-                    }
-                });
             }
-        }
+        });
 
     }
 
     public void f1_9(){
         //choices[9] = 1;
+        player.setLocation(1);
         player.setF1_choices(9); prev[1] = 9;
 
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
@@ -819,6 +789,7 @@ public class subActivity_f1 extends AppCompatActivity {
                 choice3.setVisibility(View.VISIBLE);
             }
         });
+        //c33 아 씨 바늘이네의 선택지 생성 조건 ( 만족시 3택, 불만족시 2택)
         if(player.getF2_choices(66) || player.getF2_choices(70) || player.getF2_choices(82)) {
             c31 = findViewById(R.id.choice3_1);
             c32 = findViewById(R.id.choice3_2);
@@ -830,6 +801,7 @@ public class subActivity_f1 extends AppCompatActivity {
             c33 = findViewById(R.id.choice3_3);
             choice3 = findViewById(R.id.choice_no2);
         }
+
         c31.setText(getString(R.string.f1_10c1));
         c32.setText(getString(R.string.f1_10c2));
         c33.setText(getString(R.string.f1_10c3));
@@ -944,6 +916,7 @@ public class subActivity_f1 extends AppCompatActivity {
         choice1 = findViewById(R.id.choice_no1); choice2 = findViewById(R.id.choice_no2);
         character.setText(" ");
         mainText.setText(getString(R.string.f1_12));
+        //c22 : 지랫대 유무에 따라 선택지 개수 유무.
         if(player.isInventory(8)){//if(itemlist[8] == 1) {
             c21 = findViewById(R.id.choice2_1);
             c22 = findViewById(R.id.choice2_2);
@@ -1042,6 +1015,10 @@ public class subActivity_f1 extends AppCompatActivity {
         character.setText(" "); mainText.setText(getString(R.string.f1_14));
         b42 = findViewById(R.id.b42); player.damage(); b42.setText(String.valueOf(player.getHeart()));
         player.addInventory(9); //itemlist[9] = 1;
+        Toast toast = Toast.makeText(getApplicationContext(), "item : 바늘을 얻었다 \n 체력이 -1 감소했다.", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+        toast.show();
+
         c21.setText(getString(R.string.f1_14c1));  c22.setText(getString(R.string.f1_14c2));
 
         c21.setOnClickListener(new View.OnClickListener() {
@@ -1173,6 +1150,9 @@ public class subActivity_f1 extends AppCompatActivity {
         character.setText(" ");
         mainText.setText(getString(R.string.f1_16));
         player.addInventory(9); //itemlist[9] = 1; //바늘 item
+        Toast toast = Toast.makeText(getApplicationContext(), "item : 바늘을 얻었다", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+        toast.show();
         c21.setText(getString(R.string.f1_16c1));
         c22.setText(getString(R.string.f1_16c2));
 
@@ -1207,87 +1187,96 @@ public class subActivity_f1 extends AppCompatActivity {
         c11 = findViewById(R.id.choice1_1);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         character.setText(getString(R.string.doll_bear));
-        if(mainText.getText().toString().equals(getString(R.string.f1_17_1))){
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+
+        //5859 부터 시작할지 17_1 부터 시작할지 결정
+        if(player.getF1_choices(18)) {//else if(choices[18] == 1){
+            player.setF1_choices(59); //choices[59] = 1;
+            mainText.setText(getString(R.string.f1_5859));
+            c11.setText(getString(R.string.click));
+        } else if(!player.getF1_choices(18)){
+            player.setF1_choices(17); //choices[17] = 1;
+            mainText.setText(getString(R.string.f1_17_1));
+            c11.setText(getString(R.string.click));
+        }
+
+        c11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mainText.getText().toString().equals(getString(R.string.f1_5859))) {
+                    player.setF1_choices(17); //choices[17] = 1;
+                    mainText.setText(getString(R.string.f1_17_1));
+                } else if(mainText.getText().toString().equals(getString(R.string.f1_17_1))) {
                     mainText.setText(getString(R.string.f1_17_2));
-                    f1_17();
-                }
-            });
-        } else if(mainText.getText().toString().equals(getString(R.string.f1_17_2))){
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+                } else if(mainText.getText().toString().equals(getString(R.string.f1_17_2))){
                     mainText.setText(getString(R.string.f1_17_3));
-                    f1_17();
-                }
-            });
-        } else if(mainText.getText().toString().equals(getString(R.string.f1_17_3))){
-            c11.setText(getString(R.string.f1_17c1));
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+                    c11.setText(getString(R.string.f1_17c1));
+                } else {
                     choice1.setVisibility(View.INVISIBLE);
                     prev[0] = 17;
                     f1_11();
                 }
-            });
-        } else if(player.getF1_choices(18)){//else if(choices[18] == 1){
-            player.setF1_choices(59); //choices[59] = 1;
-            mainText.setText(getString(R.string.f1_5859));
-            c11.setText(getString(R.string.click));
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    player.setF1_choices(17); //choices[17] = 1;
-                    mainText.setText(getString(R.string.f1_17_1));
-                    f1_17();
-                }
-            });
-        } else if(!player.getF1_choices(18)){//else if(choices[18] == 0){
-            player.setF1_choices(17); //choices[17] = 1;
-            mainText.setText(getString(R.string.f1_17_1));
-            f1_17();
-        }
+            }
+        });
+
     }
     public void f1_55(){
         //choices[55] = 1;
         player.setF1_choices(55); prev[1] = 55;
         choice1 = findViewById(R.id.choice_no1);
         c11 = findViewById(R.id.choice1_1);
+        choice2 = findViewById(R.id.choice_no2);
+        c21 = findViewById(R.id.choice2_1);
+        c22 = findViewById(R.id.choice2_2);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         character.setText(getString(R.string.doll_bear));
-        if(mainText.getText().toString().equals(getString(R.string.f1_55_1))){
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+        if(!mainText.getText().toString().equals(getString(R.string.f1_55_3))) {
+            //처음 55에 진입 했을 때 5859할건지 55_1 출력할건지 결정
+            if (player.getF1_choices(18)) {//else if(choices[18] == 1){
+                player.setF1_choices(58); //choices[59] = 1;
+                mainText.setText(getString(R.string.f1_5859));
+                c11.setText(getString(R.string.click));
+                choice1.setVisibility(View.VISIBLE);
+            } else {
+                player.setF1_choices(55); //choices[17] = 1;
+                mainText.setText(getString(R.string.f1_55_1));
+                c11.setText(getString(R.string.click));
+                choice1.setVisibility(View.VISIBLE);
+            }
+        }
+        c11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mainText.getText().toString().equals(getString(R.string.f1_5859))) {
+                    player.setF1_choices(55); //choices[55] = 1;
+                    mainText.setText(getString(R.string.f1_55_1));
+                } else if(mainText.getText().toString().equals(getString(R.string.f1_55_1))) {
                     mainText.setText(getString(R.string.f1_55_2));
-                    f1_55();
-                }
-            });
-        } else if(mainText.getText().toString().equals(getString(R.string.f1_55_2))){
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    choice1.setVisibility(View.INVISIBLE);
+                } else if(mainText.getText().toString().equals(getString(R.string.f1_55_2))){
                     mainText.setText(getString(R.string.f1_55_3));
+                    choice1.setVisibility(View.INVISIBLE);
                     f1_55();
                 }
-            });
-        } else if(mainText.getText().toString().equals(getString(R.string.f1_55_3))){
-            if(player.isInventory(5)){ //if(itemlist[5] == 0){
+            }
+        });
+
+        //55_3 출력 후 선택 1개인지 2개인지 조건 결정
+        if(mainText.getText().toString().equals(getString(R.string.f1_55_3))) {
+            if(!player.isInventory(5)){ //if(itemlist[5] == 0){
                 choice2 = findViewById(R.id.choice_no1);
                 c21 = findViewById(R.id.choice1_1);
+                c22 = findViewById(R.id.choice2_2);
+                c21.setText(getString(R.string.f1_55c1));
+                c22.setText(getString(R.string.f1_55c2));
+                choice2.setVisibility(View.VISIBLE);
             }
             else {
                 choice2 = findViewById(R.id.choice_no2);
                 c21 = findViewById(R.id.choice2_1);
                 c22 = findViewById(R.id.choice2_2);
+                c21.setText(getString(R.string.f1_55c1));
                 c22.setText(getString(R.string.f1_55c2));
+                choice2.setVisibility(View.VISIBLE);
             }
-            choice2.setVisibility(View.VISIBLE);
-            c21.setText(getString(R.string.f1_55c1));
             c21.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -1302,7 +1291,6 @@ public class subActivity_f1 extends AppCompatActivity {
                     }else{
                         f1_11();
                     }
-
                 }
             });
             c22.setOnClickListener(new View.OnClickListener() {
@@ -1313,31 +1301,8 @@ public class subActivity_f1 extends AppCompatActivity {
                     f1_50();
                 }
             });
-        }  else if(player.getF1_choices(18)){ //else if(choices[18] == 1){
-            choice1.setVisibility(View.VISIBLE);
-            player.setF1_choices(58); //choices[58] = 1;
-            mainText.setText(getString(R.string.f1_5859));
-            c11.setText(getString(R.string.click));
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mainText.setText(getString(R.string.f1_55_1));
-                    f1_55();
-                }
-            });
-        } else if(!player.getF1_choices(18)){ //else if(choices[18] == 0){
-            mainText.setText(getString(R.string.f1_55_1));
-            choice1.setVisibility(View.VISIBLE);
-            c11.setText(getString(R.string.click));
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mainText.setText(getString(R.string.f1_55_2));
-                    f1_55();
-                }
-            });
-
         }
+
     }
     public void f1_18(){
         choice1 = findViewById(R.id.choice_no1);
@@ -1431,6 +1396,9 @@ public class subActivity_f1 extends AppCompatActivity {
                     mainText.setText(getString(R.string.f1_57_3));
                     choice1.setVisibility(View.INVISIBLE);
                     player.addInventory(4); //itemlist[4] = 1;
+                    Toast toast = Toast.makeText(getApplicationContext(), "item : 하녀복을 얻었다", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+                    toast.show();
                     prev[0] = 57;
                     f1_18();
                 }
@@ -1783,6 +1751,9 @@ public class subActivity_f1 extends AppCompatActivity {
         character.setText(getString(R.string.doll_guard));
         mainText.setText(getString(R.string.f1_26));
         player.removeInventory(12); //itemlist[12] = 0;
+        Toast toast = Toast.makeText(getApplicationContext(), "item : 허가증이 사라졌다.", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+        toast.show();
         c11.setText(getString(R.string.click));
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1917,6 +1888,9 @@ public class subActivity_f1 extends AppCompatActivity {
                     character.setText(" ");
                     mainText.setText(getString(R.string.f1_31_2));
                     player.addInventory(4); //itemlist[4] = 1;
+                    Toast toast = Toast.makeText(getApplicationContext(), "item : 하녀 복을 얻었다", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+                    toast.show();
                     f1_31();
                 }
             });
@@ -1952,6 +1926,9 @@ public class subActivity_f1 extends AppCompatActivity {
                     character.setText(getString(R.string.doll_bear));
                     mainText.setText(getString(R.string.f1_33_3));
                     player.removeInventory(5); //itemlist[5] = 0;
+                    Toast toast = Toast.makeText(getApplicationContext(), "item : 우유가 사라졌다.", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+                    toast.show();
                     f1_33();
                 }
             });
@@ -1987,6 +1964,9 @@ public class subActivity_f1 extends AppCompatActivity {
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
 
         if(mainText.getText().toString().equals(getString(R.string.f1_34_2))){
+            Toast toast = Toast.makeText(getApplicationContext(), "item : 후추가 사라졌다.", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -420);
+            toast.show();
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -2045,6 +2025,10 @@ public class subActivity_f1 extends AppCompatActivity {
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         b42 = findViewById(R.id.b42);
         if(mainText.getText().toString().equals(getString(R.string.f1_35_3))){
+            player.heal(); b42.setText(String.valueOf(player.getHeart()));
+            Toast toast = Toast.makeText(getApplicationContext(), " : 체력을 +1 회복했다", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -340);
+            toast.show();
             c11.setText(getString(R.string.f1_35c1));
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -2067,9 +2051,11 @@ public class subActivity_f1 extends AppCompatActivity {
                         mainText.setText(getString(R.string.f1_35_2));
                         player.removeInventory(5);
                         player.addInventory(11); //itemlist[5] = 0; itemlist[11] = 1;
+                        Toast toast = Toast.makeText(getApplicationContext(), "item : 우유가 사라졌다\nitem : 맛있는 스튜를 얻었다", Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+                        toast.show();
                     } else if(mainText.getText().toString().equals(getString(R.string.f1_35_2))) {
                         mainText.setText(getString(R.string.f1_35_3));
-                        player.heal(); b42.setText(String.valueOf(player.getHeart()));
                         f1_35();
                     }
                 }
@@ -2081,13 +2067,24 @@ public class subActivity_f1 extends AppCompatActivity {
         c11 = findViewById(R.id.choice1_1); choice1.setVisibility(View.VISIBLE);
         mainText = findViewById(R.id.main_text); character = findViewById(R.id.character);
         if(mainText.getText().toString().equals(getString(R.string.f1_36_2))){
-            c11.setText(getString(R.string.f1_36c1));
+            Toast toast = Toast.makeText(getApplicationContext(), "item : 우유가 사라졌다\nitem : 맛있는 스튜를 얻었다", Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+            toast.show();
             c11.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    choice1.setVisibility(View.INVISIBLE);
-                    prev[0] = 36;
-                    f1_11();
+                    if(mainText.getText().toString().equals(getString(R.string.f1_36_2))) {
+                        mainText.setText(getString(R.string.f1_35_3));
+                        c11.setText(getString(R.string.f1_36c1));
+                        player.heal(); b42.setText(String.valueOf(player.getHeart()));
+                        Toast toast = Toast.makeText(getApplicationContext(), " : 체력을 +1 회복했다", Toast.LENGTH_LONG);
+                        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, -380);
+                        toast.show();
+                    }else {
+                        choice1.setVisibility(View.INVISIBLE);
+                        prev[0] = 36;
+                        f1_11();
+                    }
                 }
             });
         } else {
@@ -2100,7 +2097,8 @@ public class subActivity_f1 extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     mainText.setText(getString(R.string.f1_36_2));
-                    player.removeInventory(5); player.addInventory(11); //itemlist[5] = 0; itemlist[11] = 1;
+                    player.addInventory(11); //itemlist[5] = 0; itemlist[11] = 1;
+                    player.removeInventory(5);
                     f1_36();
                 }
             });
