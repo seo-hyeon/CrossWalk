@@ -282,8 +282,8 @@ public class subActivity_f2<player> extends AppCompatActivity {
         player.setF2_choices(4);
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         mainText.setText(getString(R.string.f2_4));
-        if(!player.getF2_choices(88) || (player.isInventory(23)) && player.getF2_choices(87)){
-            if(!player.getF2_choices(88) && (player.isInventory(23)) && player.getF2_choices(87)){
+        if(!player.getF2_choices(88) || (player.isInventory(22)) && player.getF2_choices(87)){
+            if(!player.getF2_choices(88) && (player.isInventory(22)) && player.getF2_choices(87)){
                 choice5 = findViewById(R.id.choice_no5);
                 choice5.setVisibility(View.VISIBLE);
                 c51 = findViewById(R.id.choice5_1);
@@ -306,8 +306,8 @@ public class subActivity_f2<player> extends AppCompatActivity {
             c54 = findViewById(R.id.choice5_4); c55 = findViewById(R.id.choice5_5);
         }
         c51.setText(getString(R.string.f2_4c1)); c52.setText(getString(R.string.f2_4c2)); c53.setText(getString(R.string.f2_4c3));
-        if(!player.getF2_choices(88) || (player.isInventory(23)) && player.getF2_choices(87)) {
-            if (!player.getF2_choices(88) && (player.isInventory(23)) && player.getF2_choices(87)) {
+        if(!player.getF2_choices(88) || (player.isInventory(22)) && player.getF2_choices(87)) {
+            if (!player.getF2_choices(88) && (player.isInventory(22)) && player.getF2_choices(87)) {
                 c54.setText(getString(R.string.f2_4c4)); c55.setText(getString(R.string.f2_4c5));
             } else {
                 if(!player.getF2_choices(88)){
@@ -400,52 +400,40 @@ public class subActivity_f2<player> extends AppCompatActivity {
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         choice1 = findViewById(R.id.choice_no1); c11 = findViewById(R.id.choice1_1);
         choice2 = findViewById(R.id.choice_no2); c21 = findViewById(R.id.choice2_1); c22 = findViewById(R.id.choice2_2);
-        if(mainText.getText().toString().equals(getString(R.string.f2_6_4))){
-            choice1.setVisibility(View.INVISIBLE);
-            choice2.setVisibility(View.VISIBLE);
-            c21.setText(getString(R.string.f2_6c1)); c22.setText(getString(R.string.f2_6c2));
-            c21.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    choice2.setVisibility(View.INVISIBLE);
-                    f2_26();
-                }
-            });
-            c22.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    choice2.setVisibility(View.INVISIBLE);
-                    f2_27();
-                }
-            });
-        }else if(mainText.getText().toString().equals(getString(R.string.f2_6_3))){
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mainText.setText(getString(R.string.f2_6_4));
-                    choice1.setVisibility(View.INVISIBLE);
-                    f2_6();
-                }
-            });
-        }else if(mainText.getText().toString().equals(getString(R.string.f2_6_2))){
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mainText.setText(getString(R.string.f2_6_3));
-                    f2_6();
-                }
-            });
-        } else {
-            choice1.setVisibility(View.VISIBLE); c11.setText(getString(R.string.click));
-            mainText.setText(getString(R.string.f2_6_1));
-            c11.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+
+        choice1.setVisibility(View.VISIBLE); c11.setText(getString(R.string.click));
+        mainText.setText(getString(R.string.f2_6_1));
+        c11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mainText.getText().toString().equals(getString(R.string.f2_6_1))) {
                     mainText.setText(getString(R.string.f2_6_2));
-                    f2_6();
+                } else if(mainText.getText().toString().equals(getString(R.string.f2_6_2))){
+                    mainText.setText(getString(R.string.f2_6_3));
+                } else if(mainText.getText().toString().equals(getString(R.string.f2_6_3))) {
+                    mainText.setText(getString(R.string.f2_6_4));
+                } else if(mainText.getText().toString().equals(getString(R.string.f2_6_4))) {
+                    choice1.setVisibility(View.INVISIBLE);
+                    choice2.setVisibility(View.VISIBLE);
                 }
-            });
-        }
+            }
+        });
+
+        c21.setText(getString(R.string.f2_6c1)); c22.setText(getString(R.string.f2_6c2));
+        c21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice2.setVisibility(View.INVISIBLE);
+                f2_26();
+            }
+        });
+        c22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice2.setVisibility(View.INVISIBLE);
+                f2_27();
+            }
+        });
     }
     public void f2_7(){
         player.setF2_choices(7);
@@ -869,13 +857,13 @@ public class subActivity_f2<player> extends AppCompatActivity {
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         int c2 = 0, c3 = 0, c4 = 0, c5 = 0, sumC = 0; //f2_14c2 ~ f2_14c5의 선택지 조건들 flag 변수
         int brown = 0, white = 0; //갈색약장/하얀약장 아이템 중 1개 이상 있는지 체크여부, 갈색(27-31), 하얀(22-26)
-        for(int i = 22; i <= 26; i++){ //하얀약장 아이템 유무 체크
+        for(int i = 21; i <= 25; i++){ //하얀약장 아이템 유무 체크
             if(player.isInventory(i)){
                 white = 1;
                 break;
             }
         }
-        for(int i = 27; i <= 31; i++){ //갈색약장~
+        for(int i = 26; i <= 30; i++){ //갈색약장~
             if(player.isInventory(i)){
                 brown = 1;
                 break;
@@ -1001,15 +989,15 @@ public class subActivity_f2<player> extends AppCompatActivity {
         mainText = findViewById(R.id.main_text);
         if(txt.equals(getString(R.string.f2_14c2))){
             //mainText.setText("동물과 말하는 약");
-            if(player.isInventory(28) && player.isInventory(31)){
+            if(player.isInventory(27) && player.isInventory(30)){
                 //28 나비의 날개 31 개구리 알
                 f2_17();
-            }else if(player.isInventory(29) && player.isInventory(30) && !player.getF2_choices(18)){
+            }else if(player.isInventory(28) && player.isInventory(29) && !player.getF2_choices(18)){
                 f2_18();
                 //29 고양이 수염 30 송어의 알
             } else if(player.getF2Recipe(0) == 0){ //첫번째 실패 레시피1
                 int a = 0, b = 0;
-                for(int i = 27; i <= 31; i++){ //갈색약장 아이템 뭐 있는지 체크, 저장
+                for(int i = 26; i <= 30; i++){ //갈색약장 아이템 뭐 있는지 체크, 저장
                     if(player.isInventory(i)){
                         if(a == 0){
                             a = i;
@@ -1024,7 +1012,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             } else{
                 int a = player.getF2Recipe(0), b = player.getF2Recipe(1);
                 int c = 0, d = 0;
-                for(int i = 27; i <= 31; i++){ //갈색약장 체크,
+                for(int i = 26; i <= 30; i++){ //갈색약장 체크,
                     if(player.isInventory(i)){
                         if(c == 0){
                             c = i;
@@ -1049,10 +1037,10 @@ public class subActivity_f2<player> extends AppCompatActivity {
         } else  if(txt.equals(getString(R.string.f2_14c4))){
             f2_22();
         } else  if(txt.equals(getString(R.string.f2_14c5))){
-            if(player.isInventory(22) && player.isInventory(25)){
+            if(player.isInventory(21) && player.isInventory(24)){
                 //갈색가루 22 , 하얀 고체 25
                 f2_25();
-            } else if(player.isInventory(24) && player.isInventory(26)){
+            } else if(player.isInventory(23) && player.isInventory(25)){
                 //빨간 기름 24, 초록 섬유 26
                 f2_24();
             } else {
@@ -1479,7 +1467,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
     public void f2_28go(){
         int c4 = 0, c5 = 0, c6 = 0, q456 = 0;
 
-        if(player.getF2_choices(29) && !player.getF2_choices(26)){
+        if(player.getF2_choices(27) && !player.getF2_choices(26) && !player.getF2_choices(26)){
             c4 = 1;
         } else{
             if(player.getF2_choices(26) && player.isInventory(10)) { //item 10 = 밧줄
@@ -1489,83 +1477,105 @@ public class subActivity_f2<player> extends AppCompatActivity {
                 c6 = 1;
             }
         }
+        if(true) {
+            if (c5 == 1 && c6 == 1) {
+                choice5 = findViewById(R.id.choice_no5);
+                c51 = findViewById(R.id.choice5_1);
+                c52 = findViewById(R.id.choice5_2);
+                c53 = findViewById(R.id.choice5_3);
+                c54 = findViewById(R.id.choice5_4);
+                c55 = findViewById(R.id.choice5_5);
 
-        if(c5 == 1 && c6 == 1){
-            choice5 = findViewById(R.id.choice_no5);
-            c51 = findViewById(R.id.choice5_1); c52 = findViewById(R.id.choice5_2); c53 = findViewById(R.id.choice5_3);
-            c54 = findViewById(R.id.choice5_4); c55 = findViewById(R.id.choice5_5);
-            c54.setText(getString(R.string.f2_28c5));
-            c55.setText(getString(R.string.f2_28c6));
-        } else if(c4 == 1 || c5 == 1 || c6 == 1){
-            choice5 = findViewById(R.id.choice_no4);
-            c51 = findViewById(R.id.choice4_1); c52 = findViewById(R.id.choice4_2); c53 = findViewById(R.id.choice4_3);
-            c54 = findViewById(R.id.choice4_4); c55 = findViewById(R.id.choice5_5);
-        }
-        choice5.setVisibility(View.VISIBLE);
-        c51.setText(getString(R.string.f2_28c1));
-        c52.setText(getString(R.string.f2_28c2));
-        c53.setText(getString(R.string.f2_28c3));
+                c51.setText(getString(R.string.f2_28c1));
+                c52.setText(getString(R.string.f2_28c2));
+                c53.setText(getString(R.string.f2_28c3));
+                c54.setText(getString(R.string.f2_28c5));
+                c55.setText(getString(R.string.f2_28c6));
+            } else if (c4 == 1 || c5 == 1 || c6 == 1) {
+                choice5 = findViewById(R.id.choice_no4);
+                c51 = findViewById(R.id.choice4_1);
+                c52 = findViewById(R.id.choice4_2);
+                c53 = findViewById(R.id.choice4_3);
+                c54 = findViewById(R.id.choice4_4);
+                c55 = findViewById(R.id.choice5_5);
 
-        if(c4 == 1) {
-            c54.setText(getString(R.string.f2_28c4));
-        } else if(c5 == 1){
-            c54.setText(getString(R.string.f2_28c5));
-        } else if (c6 == 1){
-            c54.setText(getString(R.string.f2_28c6));
-        }
-
-        c51.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice5.setVisibility(View.INVISIBLE);
-                if(player.getF2_choices(22) && !player.getF2_choices(25)){
-                    f2_30();
-                } else{
-                    f2_36();
+                c51.setText(getString(R.string.f2_28c1));
+                c52.setText(getString(R.string.f2_28c2));
+                c53.setText(getString(R.string.f2_28c3));
+                if (c4 == 1) {
+                    c54.setText(getString(R.string.f2_28c4));
+                } else if (c5 == 1) {
+                    c54.setText(getString(R.string.f2_28c5));
+                } else if (c6 == 1) {
+                    c54.setText(getString(R.string.f2_28c6));
                 }
+            } else {
+                choice5 = findViewById(R.id.choice_no3);
+                c51 = findViewById(R.id.choice3_1);
+                c52 = findViewById(R.id.choice3_2);
+                c53 = findViewById(R.id.choice3_3);
+                c54 = findViewById(R.id.choice4_4);
+                c55 = findViewById(R.id.choice5_5);
+                c51.setText(getString(R.string.f2_28c1));
+                c52.setText(getString(R.string.f2_28c2));
+                c53.setText(getString(R.string.f2_28c3));
             }
-        });
-        c52.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice5.setVisibility(View.INVISIBLE);
-                if(player.getF2_choices(10) && (!player.getF2_choices(17) || !player.getF2_choices(21))
-                        || player.getF2_choices(54) && !player.getF2_choices(56)){
-                    f2_31();
-                } else{
-                    f2_90();
-                }
-            }
-        });
-        c53.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice5.setVisibility(View.INVISIBLE);
-                f2_1();
-            }
-        });
-        final int finalC4 = c4, finalC5 = c5, finalC6 = c6;
 
-        c54.setOnClickListener(new View.OnClickListener() { //c4 c5 c6 셋 중 하나 가능
-            @Override
-            public void onClick(View v) {
-                choice5.setVisibility(View.INVISIBLE);
-                if(finalC4 == 1){
-                    f2_26();
-                } else if(finalC5 == 1){
-                    f2_41();
-                } else if(finalC6 == 1){
+            choice5.setVisibility(View.VISIBLE);
+            c51.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice5.setVisibility(View.INVISIBLE);
+                    if (player.getF2_choices(22) && !player.getF2_choices(25)) {
+                        f2_30();
+                    } else {
+                        f2_36();
+                    }
+                }
+            });
+            c52.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice5.setVisibility(View.INVISIBLE);
+                    if (player.getF2_choices(10) && (!player.getF2_choices(17) || !player.getF2_choices(21))
+                            || player.getF2_choices(54) && !player.getF2_choices(56)) {
+                        f2_31();
+                    } else {
+                        f2_90();
+                    }
+                }
+            });
+            c53.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    choice5.setVisibility(View.INVISIBLE);
+                    f2_1();
+                }
+            });
+            final int finalC4 = c4, finalC5 = c5, finalC6 = c6;
+
+            c54.setOnClickListener(new View.OnClickListener() { //c4 c5 c6 셋 중 하나 가능
+                @Override
+                public void onClick(View v) {
+                    choice5.setVisibility(View.INVISIBLE);
+                    if (finalC4 == 1) {
+                        f2_26();
+                    } else if (finalC5 == 1) {
+                        f2_41();
+                    } else if (finalC6 == 1) {
+                        f2_39();
+                    }
+                }
+            });
+
+            c55.setOnClickListener(new View.OnClickListener() { //c55는 무조건 발톱을 써서 위로 밖에 없음.
+                @Override
+                public void onClick(View v) {
+                    choice5.setVisibility(View.INVISIBLE);
                     f2_39();
                 }
-            }
-        });
-        c55.setOnClickListener(new View.OnClickListener() { //c55는 무조건 발톱을 써서 위로 밖에 없음.
-            @Override
-            public void onClick(View v) {
-                choice5.setVisibility(View.INVISIBLE);
-                f2_39();
-            }
-        });
+            });
+        }
     }
     public void f2_30(){
         player.setF2_choices(30);
@@ -1586,7 +1596,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             }
         });
         //아이템 선택 전 하얀 약장 아이템이 전부 사라짐.
-        for(int i = 22; i <= 26; i++){
+        for(int i = 21; i <= 25; i++){
             if(player.isInventory(i)){
                 player.removeInventory(i);
             }
@@ -1596,7 +1606,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(22); //갈색가루
+                player.addInventory(21); //갈색가루
                 f2_37();
             }
         });
@@ -1604,7 +1614,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(23); //파란색 금속
+                player.addInventory(22); //파란색 금속
                 f2_37();
             }
         });
@@ -1612,7 +1622,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(24); //빨간 기름름
+                player.addInventory(23); //빨간 기름름
                f2_37();
             }
         });
@@ -1637,7 +1647,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             }
         });
         //아이템 선택 전 갈색 약장 아이템이 전부 사라짐.
-        for(int i = 27; i <= 31; i++){
+        for(int i = 26; i <= 30; i++){
             if(player.isInventory(i)){
                 player.removeInventory(i);
             }
@@ -1647,7 +1657,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(27); //울새 깃털
+                player.addInventory(26); //울새 깃털
                 if(player.getF2_choices(54) && !player.getF2_choices(56)){
                     f2_34();
                 } else{
@@ -1659,7 +1669,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(28); //나비 날개
+                player.addInventory(27); //나비 날개
                 if(player.getF2_choices(54) && !player.getF2_choices(56)){
                     f2_89();
                 } else{
@@ -1671,7 +1681,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(29); //구양이 수염
+                player.addInventory(28); //구양이 수염
                 if(player.getF2_choices(54) && !player.getF2_choices(56)){
                     f2_89();
                 } else{
@@ -1697,7 +1707,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(30); //송어
+                player.addInventory(29); //송어
                 f2_35();
             }
         });
@@ -1705,7 +1715,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(31); //개구리
+                player.addInventory(30); //개구리
                 f2_35();
             }
         });
@@ -1744,7 +1754,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(30); //송어
+                player.addInventory(29); //송어
                 f2_35();
             }
         });
@@ -1752,7 +1762,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(31); //개구리
+                player.addInventory(30); //개구리
                 f2_35();
             }
         });
@@ -1815,7 +1825,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(25); //하얀 고체
+                player.addInventory(24); //하얀 고체
                 f2_35();
             }
         });
@@ -1823,7 +1833,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(26); //초록 섬유
+                player.addInventory(25); //초록 섬유
                 f2_35();
             }
         });
@@ -1861,7 +1871,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(25); //하얀 고체
+                player.addInventory(24); //하얀 고체
                 f2_35();
             }
         });
@@ -1869,7 +1879,7 @@ public class subActivity_f2<player> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
-                player.addInventory(26); //초록 섬유
+                player.addInventory(25); //초록 섬유
                 f2_35();
             }
         });
@@ -2337,9 +2347,9 @@ public class subActivity_f2<player> extends AppCompatActivity {
         character = findViewById(R.id.character); mainText = findViewById(R.id.main_text);
         mainText.setText(getString(R.string.f2_55));
         int c1 = 0, c2 = 0, c3 = 0, sumC = 0;
-        if(player.isInventory(27)){ c1 = 1;}
-        if((player.isInventory(28) || player.isInventory(29)) && !player.getF2_choices(52)){c2 = 1;}
-        if((player.isInventory(28) || player.isInventory(29)) && player.getF2_choices(52)){c3 = 1;}
+        if(player.isInventory(26)){ c1 = 1;}
+        if((player.isInventory(27) || player.isInventory(28)) && !player.getF2_choices(52)){c2 = 1;}
+        if((player.isInventory(27) || player.isInventory(28)) && player.getF2_choices(52)){c3 = 1;}
         sumC = c1 + c2 + c3;
         switch(sumC){
             case 0 :

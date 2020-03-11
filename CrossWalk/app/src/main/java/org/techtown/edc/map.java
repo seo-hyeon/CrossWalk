@@ -60,7 +60,10 @@ public class map extends Activity implements View.OnClickListener {
             }
              */
         } else if(intent.getIntExtra("floor", 0) == 2){
-            //
+            //intent로 받은 floor 데이터가 2일 경우 //2층
+            
+        } else if(intent.getIntExtra("floor", 0) == -1){
+            //intent로 받은 floor 데이터가 -1일 경우 //1층
         }
         findViewById(R.id.map_c).setOnClickListener(this);
     }
