@@ -995,6 +995,10 @@ public class subActivity_f1 extends AppCompatActivity {
             public void onClick(View v) {
                 choice3.setVisibility(View.INVISIBLE);
                 //2_1(); // 아래로
+                Intent intent = new Intent(getApplicationContext(), subActivity_B1.class);
+                intent.putExtra("player", player);
+                startActivity(intent);
+                finish();
             }
         });
         c33.setOnClickListener(new View.OnClickListener() {
