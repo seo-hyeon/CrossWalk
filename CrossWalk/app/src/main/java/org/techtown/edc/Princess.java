@@ -20,6 +20,9 @@ public class Princess implements Serializable {
 
     private int f2Recipe[] = new int[2]; //2층 14번 선택지 _ 사용한 레시피 저장용.
     private int cnt = 0; //2층 48번 선택지
+    private boolean sword = false; //검공주 구출 시 true로 바뀜
+    private boolean book = false;  //책공주 구출 여부
+
     public void setHeart(int heart) {this.heart = heart;}
 
     public int getHeart() {return heart;}
@@ -80,6 +83,11 @@ public class Princess implements Serializable {
     }
     public void setCnt() {cnt = cnt + 1;}
     public int getCnt() {return cnt;}
+
+    public void setSword() {sword = true;}
+    public void setBook() {book = true;}
+    public boolean getSword() {return sword;}
+    public boolean getBook() {return book;}
 
     public void setF1_choices(int c){
         this.f1_choices[c] = 1;

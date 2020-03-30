@@ -2189,6 +2189,9 @@ public class subActivity_f2<player> extends AppCompatActivity {
         choice1 = findViewById(R.id.choice_no1); c11 = findViewById(R.id.choice1_1);
         mainText.setText(getString(R.string.f2_50_1)); c11.setText(getString(R.string.click));
         choice1.setVisibility(View.VISIBLE);
+
+        player.setBook();  //책 공주 구출 완료!
+
         if(player.getF1_choices(13)){
             choice3 = findViewById(R.id.choice_no3);
             c31 = findViewById(R.id.choice3_1); c32 = findViewById(R.id.choice3_2); c33 = findViewById(R.id.choice3_3);
