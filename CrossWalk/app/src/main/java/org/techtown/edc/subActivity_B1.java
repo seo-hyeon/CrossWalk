@@ -18,7 +18,7 @@ public class subActivity_B1<player> extends AppCompatActivity {
     Button b42, b41;
 
     //도박 구현때 필요한 변수
-    int i = 0, pr = -1, mo = -1, A = -1, B = -1;
+    int pr = -1, mo = -1, A = -1, B = -1;
 
     Princess player;
 
@@ -221,15 +221,13 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_3a))
                 {
                     mainText.setText(R.string.b1_3b);
                     c11.setText(R.string.b1_3_1);
-                    i = 1;
                 }
                 else
                 {
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     if (player.getB1_choices(15))
@@ -254,28 +252,22 @@ public class subActivity_B1<player> extends AppCompatActivity {
         choice1.setVisibility(View.VISIBLE);
         c11 = findViewById(R.id.choice1_1);
 
-        choice2 = findViewById(R.id.choice_no2);
-        c21 = findViewById(R.id.choice2_1);
-        c22 = findViewById(R.id.choice2_2);
-
         mainText.setText(R.string.b1_4a);
 
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_4a))
                {
                    mainText.setText(R.string.b1_4b);
-                   i = 1;
                }
-               else if (i == 1)
+               else if (mainText.getText().toString().equals(R.string.b1_4b))
                {
                    mainText.setText(R.string.b1_4c);
-                   i = 2;
                }
-               else if (i == 2)
-               {
-                   if (player.getType() == 0)
+               else
+                {
+                   if (player.getType() == 2)
                    {
                        mainText.setText(R.string.b1_31);
                    }
@@ -288,66 +280,67 @@ public class subActivity_B1<player> extends AppCompatActivity {
                        mainText.setText(R.string.b1_33);
                    }
 
-                   i = 3;
-
                    if (player.getF2_choices(42)) {
                        choice1.setVisibility(View.INVISIBLE);
-                       choice2.setVisibility(View.VISIBLE);
+                       choice3 = findViewById(R.id.choice_no2);
+                       choice3.setVisibility(View.VISIBLE);
+                       c31 = findViewById(R.id.choice2_1);
+                       c33 = findViewById(R.id.choice2_2);
 
-                       c21.setText(R.string.b1_4_1);
-                       c22.setText(R.string.b1_4_3);
+                       c31.setText(R.string.b1_4_1);
+                       c32.setText(R.string.b1_4_3);
                    }
                    else if (player.getType() == 1)
                    {
                        choice1.setVisibility(View.INVISIBLE);
-                       choice2.setVisibility(View.VISIBLE);
-                       i = 4;
+                       choice3 = findViewById(R.id.choice_no2);
+                       choice3.setVisibility(View.VISIBLE);
+                       c32 = findViewById(R.id.choice2_1);
+                       c33 = findViewById(R.id.choice2_2);
 
                        c21.setText(R.string.b1_4_2);
                        c22.setText(R.string.b1_4_3);
                    }
                    else
                    {
-                       c11.setText(R.string.b1_4_3);
+                       choice1.setVisibility(View.INVISIBLE);
+                       choice3 = findViewById(R.id.choice_no1);
+                       choice3.setVisibility(View.VISIBLE);
+                       c33 = findViewById(R.id.choice1_1);
+
+                       c33.setText(R.string.b1_4_3);
                    }
                }
-               else
-               {
-                   i = 0;
-                   choice1.setVisibility(View.INVISIBLE);
-
-                   if (player.getB1_choices(15)) { b1_12();}
-                   else { b1_2();}
-               }
             }
         });
 
-        c21.setOnClickListener(new View.OnClickListener() {
+        c31.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
+                choice3.setVisibility(View.INVISIBLE);
 
-                if (i == 3)
-                {
-                    i = 0;
-                    b1_3();
-                }
+                b1_3();
+            }
+        });
+
+        c32.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice3.setVisibility(View.INVISIBLE);
+
+                b1_30();
+            }
+        });
+
+        c33.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                choice3.setVisibility(View.INVISIBLE);
+
+                if (player.getB1_choices(15))
+                    b1_12();
                 else
-                {
-                    i = 0;
-                    b1_30();
-                }
-            }
-        });
-
-        c22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
-                i = 0;
-
-                if (player.getB1_choices(15)) { b1_12();}
-                else { b1_2();}
+                    b1_2();
             }
         });
     }
@@ -367,20 +360,17 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_5a))
                 {
                     mainText.setText(R.string.b1_5b);
-                    i = 1;
                 }
-                else if (i == 1)
+                else if (mainText.getText().toString().equals(R.string.b1_5b))
                 {
                     mainText.setText(R.string.b1_5c);
                     c11.setText(R.string.b1_5_1);
-                    i = 2;
                 }
                 else
                 {
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     b1_13();
@@ -406,20 +396,17 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_24a))
                 {
                     mainText.setText(R.string.b1_24b);
-                    i = 1;
                 }
-                else if (i == 1)
+                else if (mainText.getText().toString().equals(R.string.b1_24b))
                 {
                     mainText.setText(R.string.b1_24c);
                     c11.setText(R.string.b1_24_1);
-                    i = 2;
                 }
                 else
                 {
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     b1_13();
@@ -443,14 +430,12 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_6a))
                 {
-                    i = 1;
                     mainText.setText(R.string.b1_6b);
                 }
                 else
                 {
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     b1_2();
@@ -465,82 +450,48 @@ public class subActivity_B1<player> extends AppCompatActivity {
         mainText = findViewById(R.id.main_text);
         character = findViewById(R.id.character);
 
-        choice1 = findViewById(R.id.choice_no1);
-        c11 = findViewById(R.id.choice1_1);
-
-        choice2 = findViewById(R.id.choice_no2);
-        c21 = findViewById(R.id.choice2_1);
-        c22 = findViewById(R.id.choice2_2);
-
-        choice3 = findViewById(R.id.choice_no3);
-        c31 = findViewById(R.id.choice3_1);
-        c32 = findViewById(R.id.choice3_2);
-        c33 = findViewById(R.id.choice3_3);
-
         mainText.setText(R.string.b1_7);
 
         if (player.getB1_choices(13) && (player.getF1_choices(17) || player.getF1_choices(33)))
         {
+            choice3 = findViewById(R.id.choice_no3);
             choice3.setVisibility(View.VISIBLE);
+            c31 = findViewById(R.id.choice3_1);
+            c32 = findViewById(R.id.choice3_2);
+            c33 = findViewById(R.id.choice3_3);
+
             c31.setText(R.string.b1_7_1);
             c32.setText(R.string.b1_7_2);
             c33.setText(R.string.b1_7_3);
         }
         else if (player.getB1_choices(13))
         {
-            choice2.setVisibility(View.VISIBLE);
-            c21.setText(R.string.b1_7_1);
-            c22.setText(R.string.b1_7_3);
-            i = 1;
+            choice3 = findViewById(R.id.choice_no2);
+            choice3.setVisibility(View.VISIBLE);
+            c31 = findViewById(R.id.choice2_1);
+            c32 = findViewById(R.id.choice2_2);
+
+            c31.setText(R.string.b1_7_1);
+            c33.setText(R.string.b1_7_3);
         }
         else if (player.getF1_choices(17) || player.getF1_choices(33))
         {
-            choice2.setVisibility(View.VISIBLE);
-            c21.setText(R.string.b1_7_2);
-            c22.setText(R.string.b1_7_3);
-            i = 2;
+            choice3 = findViewById(R.id.choice_no2);
+            choice3.setVisibility(View.VISIBLE);
+            c32 = findViewById(R.id.choice2_1);
+            c33 = findViewById(R.id.choice2_2);
+
+            c32.setText(R.string.b1_7_2);
+            c33.setText(R.string.b1_7_3);
         }
         else
         {
-            choice1.setVisibility(View.VISIBLE);
-            c11.setText(R.string.b1_7_3);
+            choice3 = findViewById(R.id.choice_no1);
+            choice3.setVisibility(View.VISIBLE);
+            c33 = findViewById(R.id.choice1_1);
+
+            c33.setText(R.string.b1_7_3);
         }
-
-        c11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice1.setVisibility(View.INVISIBLE);
-                b1_6();
-            }
-        });
-
-        c21.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
-
-                if (i == 1)
-                {
-                    i = 0;
-                    b1_25();
-                }
-                else
-                {
-                    i = 0;
-                    b1_15();
-                }
-            }
-        });
-
-        c22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
-                i = 0;
-
-                b1_6();
-            }
-        });
 
         c31.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -553,7 +504,7 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c32.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
+                choice3.setVisibility(View.INVISIBLE);
                 b1_15();
             }
         });
@@ -583,15 +534,13 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_8a))
                 {
                     mainText.setText(R.string.b1_8b);
                     c11.setText(R.string.b1_8_1);
-                    i = 1;
                 }
                 else
                 {
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     if (player.getB1_choices(37))
@@ -609,96 +558,50 @@ public class subActivity_B1<player> extends AppCompatActivity {
         mainText = findViewById(R.id.main_text);
         character = findViewById(R.id.character);
 
-        choice1 = findViewById(R.id.choice_no1);
-        c11 = findViewById(R.id.choice1_1);
-
-        choice2 = findViewById(R.id.choice_no2);
-        c21 = findViewById(R.id.choice2_1);
-        c22 = findViewById(R.id.choice2_2);
-
-        choice3 = findViewById(R.id.choice_no3);
-        c31 = findViewById(R.id.choice3_1);
-        c32 = findViewById(R.id.choice3_2);
         c33 = findViewById(R.id.choice3_3);
 
         mainText.setText(R.string.b1_9);
 
         if (((player.getF1_choices(34) || player.getF1_choices(55)) && player.isInventory(5) == false && player.getF1_choices(35) == false && player.getF1_choices(36) == false && player.getF1_choices(33) == false) && (player.getF1_choices(17) || player.getF1_choices(33)))
         {
+            choice3 = findViewById(R.id.choice_no3);
             choice3.setVisibility(View.VISIBLE);
+            c31 = findViewById(R.id.choice3_1);
+            c32 = findViewById(R.id.choice3_2);
+            c33 = findViewById(R.id.choice3_3);
+
             c31.setText(R.string.b1_9_1);
             c32.setText(R.string.b1_9_2);
             c33.setText(R.string.b1_9_3);
         }
         else if ((player.getF1_choices(34) || player.getF1_choices(55)) && player.isInventory(5) == false && player.getF1_choices(35) == false && player.getF1_choices(36) == false && player.getF1_choices(33) == false)
         {
-            choice2.setVisibility(View.VISIBLE);
-            c21.setText(R.string.b1_9_1);
-            c22.setText(R.string.b1_9_2);
-            i = 1;
+            choice3 = findViewById(R.id.choice_no2);
+            choice3.setVisibility(View.VISIBLE);
+            c31 = findViewById(R.id.choice2_1);
+            c32 = findViewById(R.id.choice2_2);
+
+            c31.setText(R.string.b1_9_1);
+            c32.setText(R.string.b1_9_2);
         }
         else if (player.getF1_choices(17) || player.getF1_choices(33))
         {
-            choice2.setVisibility(View.VISIBLE);
-            c21.setText(R.string.b1_9_1);
-            c22.setText(R.string.b1_9_3);
+            choice3 = findViewById(R.id.choice_no2);
+            choice3.setVisibility(View.VISIBLE);
+            c31 = findViewById(R.id.choice2_1);
+            c33 = findViewById(R.id.choice2_2);
+
+            c31.setText(R.string.b1_9_1);
+            c33.setText(R.string.b1_9_3);
         }
         else
         {
-            choice1.setVisibility(View.VISIBLE);
-            c11.setText(R.string.b1_9_1);
+            choice3 = findViewById(R.id.choice_no1);
+            choice3.setVisibility(View.VISIBLE);
+            c31 = findViewById(R.id.choice1_1);
+
+            c31.setText(R.string.b1_9_1);
         }
-
-        c11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice1.setVisibility(View.INVISIBLE);
-
-                if (player.getB1_choices(37))
-                {
-                    b1_44();
-                }
-                else
-                {
-                    b1_12();
-                }
-            }
-        });
-
-        c21.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
-                i = 0;
-
-                if (player.getB1_choices(37))
-                {
-                    b1_44();
-                }
-                else
-                {
-                    b1_12();
-                }
-            }
-        });
-
-        c22.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                choice2.setVisibility(View.INVISIBLE);
-
-                if (i == 1)
-                {
-                    i = 0;
-                    b1_18();
-                }
-                else
-                {
-                    i = 0;
-                    b1_26();
-                }
-            }
-        });
 
         c31.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1054,24 +957,21 @@ public class subActivity_B1<player> extends AppCompatActivity {
         mainText.setText(R.string.b1_13a);
         c11.setText("next");
 
-        c44.setOnClickListener(new View.OnClickListener() {
+        c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_13a))
                 {
                     mainText.setText(R.string.b1_13b);
-                    i = 1;
                 }
-                else if (i == 1)
+                else if (mainText.getText().toString().equals(R.string.b1_13b))
                 {
                     mainText.setText(R.string.b1_13c);
                     c11.setText(R.string.b1_13_1);
-                    i = 2;
                 }
                 else
                 {
                     choice1.setVisibility(View.INVISIBLE);
-                    i = 0;
 
                     b1_2();
                 }
@@ -1163,26 +1063,22 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_15a))
                 {
                     mainText.setText(R.string.b1_15b);
-                    i = 1;
                 }
-                else if (i == 1)
+                else if (mainText.getText().toString().equals(R.string.b1_15b))
                 {
                     mainText.setText(R.string.b1_15c);
-                    i = 2;
                 }
-                else if (i == 2)
+                else if (mainText.getText().toString().equals(R.string.b1_15c))
                 {
                     mainText.setText(R.string.b1_15d);
                     c11.setText(R.string.b1_15_1);
-                    i = 3;
                 }
                 else
                 {
                     choice1.setVisibility(View.INVISIBLE);
-                    i = 0;
 
                     b1_12();
                 }
@@ -1209,15 +1105,13 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_17a))
                 {
                     mainText.setText(R.string.b1_17b);
-                    i = 1;
                 }
-                else if (i == 1)
+                else if (mainText.getText().toString().equals(R.string.b1_17b))
                 {
                     mainText.setText(R.string.b1_17c);
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     if ((player.getF1_choices(33) || player.getF1_choices(17)) && player.getF2_choices(13))
@@ -1309,15 +1203,13 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_18a))
                 {
                     mainText.setText(R.string.b1_18b);
                     c11.setText(R.string.b1_18_1);
-                    i = 1;
                 }
                 else
                 {
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     if (player.getB1_choices(37))
@@ -1346,21 +1238,18 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_19a))
                 {
                     mainText.setText(R.string.b1_19b);
-                    i = 1;
                 }
-                else if (i == 1)
+                else if (mainText.getText().toString().equals(R.string.b1_19b))
                 {
                     mainText.setText(R.string.b1_19c);
                     c11.setText(R.string.b1_19_1);
-                    i = 2;
                 }
                 else
                 {
                     choice1.setVisibility(View.INVISIBLE);
-                    i = 0;
 
                     player.addInventory(8);
 
@@ -1391,15 +1280,13 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_20a))
                 {
                     mainText.setText(R.string.b1_20b);
-                    i = 1;
                 }
                 else
                 {
                     mainText.setText(R.string.b1_20c);
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     if (player.getType() == 0 || player.isInventory(12))
@@ -1459,15 +1346,13 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_21a))
                 {
                     mainText.setText(R.string.b1_21b);
                     c11.setText(R.string.b1_21_1);
-                    i = 1;
                 }
                 else
                 {
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     b1_12();
@@ -1493,20 +1378,17 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_22a))
                 {
                     mainText.setText(R.string.b1_22b);
-                    i = 1;
                 }
-                else if (i == 1)
+                else if (mainText.getText().toString().equals(R.string.b1_22b))
                 {
                     mainText.setText(R.string.b1_22c);
-                    i = 2;
                 }
                 else
                 {
                     mainText.setText(R.string.b1_22d);
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     if (player.isInventory(8))
@@ -1566,25 +1448,21 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_23a))
                 {
                     mainText.setText(R.string.b1_23b);
-                    i = 1;
                 }
-                else if (i == 1)
+                else if (mainText.getText().toString().equals(R.string.b1_23b))
                 {
                     mainText.setText(R.string.b1_23c);
-                    i = 2;
                 }
-                else if (i == 2)
+                else if (mainText.getText().toString().equals(R.string.b1_23c))
                 {
                     mainText.setText(R.string.b1_23d);
                     c11.setText(R.string.b1_23_1);
-                    i = 3;
                 }
                 else
                 {
-                    i = 0;
                     player.setSword();
                     choice1.setVisibility(View.INVISIBLE);
 
@@ -1614,30 +1492,25 @@ public class subActivity_B1<player> extends AppCompatActivity {
         c44.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (i == 0)
+                if (mainText.getText().toString().equals(R.string.b1_25a))
                 {
                     mainText.setText(R.string.b1_25b);
-                    i = 1;
                 }
-                else if (i == 1)
+                else if (mainText.getText().toString().equals(R.string.b1_25b))
                 {
                     mainText.setText(R.string.b1_25c);
-                    i = 2;
                 }
-                else if (i == 2)
+                else if (mainText.getText().toString().equals(R.string.b1_25c))
                 {
                     mainText.setText(R.string.b1_25d);
-                    i = 3;
                 }
-                else if (i == 3)
+                else if (mainText.getText().toString().equals(R.string.b1_25d))
                 {
                     mainText.setText(R.string.b1_25e);
                     c11.setText(R.string.b1_25_1);
-                    i = 4;
                 }
                 else
                 {
-                    i = 0;
                     choice1.setVisibility(View.INVISIBLE);
 
                     b1_12();
