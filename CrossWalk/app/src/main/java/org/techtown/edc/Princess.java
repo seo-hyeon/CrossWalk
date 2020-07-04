@@ -16,6 +16,8 @@ public class Princess implements Serializable {
     private int f1_choices[] = new int[70]; //1층 다녀간 선택지 표시용.
     private int f2_choices[] = new int[100]; //2층 다녀간 선택지 표시용.
     private int b1_choices[] = new int[100]; //지하 1층 다녀간 선택지 표시용(2층 구현시 조건으로 너무 많이 나와서 내가 임의로 변수 진정해 둘께요;
+    private int f3_choices[] = new int[50];
+    private int end[] = new int[10];
     private int location; //1층 0 : 새장, 1 : 큰문, 2 : 조리대, 3: 창문, 4 : 식탁, 5 : 계단
 
     private int f2Recipe[] = new int[2]; //2층 14번 선택지 _ 사용한 레시피 저장용.
@@ -116,6 +118,15 @@ public class Princess implements Serializable {
     }
     public Boolean getB1_choices(int c){
         if(this.b1_choices[c] == 1){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
+    public void setF3_choices(int c) {this.f3_choices[c] = 1;}
+    public Boolean getF3_choices(int c) {
+        if(this.f3_choices[c] == 1){
             return true;
         } else{
             return false;
