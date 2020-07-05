@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "9052423090",
+    "firebase_url": "https://edc-project-3550a.firebaseio.com",
+    "project_id": "edc-project-3550a",
+    "storage_bucket": "edc-project-3550a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9052423090:android:92efbdb3677c3604cfdaab",
+        "android_client_info": {
+          "package_name": "org.techtown.edc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "9052423090-ri6k8akctvofksb8c25l28sr2l9ipdci.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.techtown.edc",
+            "certificate_hash": "42bed9fc4e4c37f0ab1919885dc7124de6f16823"
+          }
+        },
+        {
+          "client_id": "9052423090-krh4u9k0rltfq8hm106sh0vf0g22db47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr6ClDupaS62-eIkt_IqljSdhY1t8FB4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "9052423090-krh4u9k0rltfq8hm106sh0vf0g22db47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
