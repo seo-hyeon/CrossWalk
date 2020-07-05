@@ -70,7 +70,7 @@ public class subActivity_f3<player> extends AppCompatActivity {
         map_open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(subActivity_B1.this, map.class));
+                startActivity(new Intent(subActivity_f3.this, map.class));
             }
         });
 
@@ -634,7 +634,7 @@ public class subActivity_f3<player> extends AppCompatActivity {
                 if (player.getF2_choices(90))
                     f3_21();
                 else
-                    f3_22()
+                    f3_22();
             }
         });
     }

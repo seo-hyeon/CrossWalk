@@ -19,7 +19,7 @@ public class subActivity_end<player> extends AppCompatActivity {
         textView = findViewById(R.id.textView);
         exit = findViewById(R.id.exit);
 
-        int i = 0 //엔딩 오기 전 무슨 엔딩으로 가야하는지 변수 받았다고 가정.
+        int i = 0; //엔딩 오기 전 무슨 엔딩으로 가야하는지 변수 받았다고 가정.
 
         if (i == 0) {
             textView.setText(R.string.end00);
