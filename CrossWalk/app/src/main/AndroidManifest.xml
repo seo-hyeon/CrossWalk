@@ -12,9 +12,6 @@
         <activity
             android:name=".Inventory_Activity"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
-
-        <activity android:name=".subActivity_f2" />
-        <activity android:name=".subActivity_B1" />
         <activity
             android:name=".map"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
@@ -29,6 +26,7 @@
         <activity android:name=".subActivity_end">
 
         </activity>
+        <activity android:name=".collection" />
     </application>
 
 </manifest>

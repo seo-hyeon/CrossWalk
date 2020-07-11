@@ -21,6 +21,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button collection = (Button) findViewById(R.id.collect);
+        collection.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), collection.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
