@@ -20,14 +20,14 @@
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
         <activity android:name=".subActivity_f1" />
         <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".subActivity_end">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".subActivity_end">
+
         </activity>
     </application>
 

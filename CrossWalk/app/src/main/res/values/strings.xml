@@ -236,7 +236,7 @@
     <string name="doll_rabbit">토끼 인형(약사)</string>
 
     //f2 _ 대사 목록
-    <string name="f2_0">당신은 계단을 올라와 2층에 도착했다.</string>
+    <string name="f2_0">당신은 2층에 도착했다.</string>
     <string name="f2_1_1">2층은 고즈넠한 분위기의 서재다. 방 한가운데에는 큰 솥이 있고, 창가에는 물레가 있다.</string>
     <string name="f2_1_2">방 끝에는 서랍장과 침대, 약장들이 보인다.</string>
     <string name="f2_1c1">솥이 있는 곳으로 가보자</string>
