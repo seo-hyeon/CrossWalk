@@ -105,25 +105,6 @@ public class subActivity_end<player> extends AppCompatActivity {
         });
     }
 
-
-    private void cntDB_handler() {
-        cntDatabase.getReference().child("endingCnt").child(String.valueOf(i)).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                EndingCount ec = dataSnapshot.getValue(EndingCount.class);
-                Map<String, Object> map = new HashMap<>();
-
-                map.put("count", ec.getCount() + 1);
-                cntDatabase.getReference().child("endingCnt").child(String.valueOf(i)).updateChildren(map);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
-
     private void increase_cnt(DatabaseReference postRef) {
         postRef.runTransaction(new Transaction.Handler() {
             @NonNull
