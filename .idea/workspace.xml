@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d9d7e97-b1ea-4e2b-a432-14198c22bf92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CrossWalk/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrossWalk/app/src/main/java/org/techtown/edc/subActivity_end.java" beforeDir="false" afterPath="$PROJECT_DIR$/CrossWalk/app/src/main/java/org/techtown/edc/subActivity_end.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CrossWalk/app/src/main/java/org/techtown/edc/subActivity_f3.java" beforeDir="false" afterPath="$PROJECT_DIR$/CrossWalk/app/src/main/java/org/techtown/edc/subActivity_f3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrossWalk/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CrossWalk/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +20,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CrossWalk" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -50,5 +47,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1594901871496">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594901871496" />
   </component>
 </project>
